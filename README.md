@@ -18,6 +18,7 @@
 ---
 
 > **🔬 科研增强版** — 基于 [leiting-eric/DailyBrief](https://github.com/leiting-eric/DailyBrief) 修改。
+> 在原始项目基础上新增**科研前沿**、**科研 Trending**、**科研 AI 动态**三大板块，精简市场行情为指数+黄金。
 > 新增：**科研前沿**（Nature/Science/JACS/Cell/PNAS 等 8 顶刊，含领域标注+中文摘要）、
 > **科研 Trending**（研究工具/可视化/学术写作相关仓库）、
 > **科研 AI 动态**（AI 驱动科研发现的新闻聚合）。
