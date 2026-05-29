@@ -22,6 +22,7 @@ export interface DailyReport {
   tech_briefs: BriefItem[];
   finance_briefs: BriefItem[];
   politics_briefs: BriefItem[];
+  research_briefs: BriefItem[];
   editor_note: string;
   keywords: string[];
   /** Optional trading-signals section, present when scripts/daily.ts ran successfully. */
@@ -48,6 +49,7 @@ const PER_CATEGORY_LIMIT: Record<Category, number> = {
   tech: 25,
   finance: 20,
   politics: 15,
+  research: 15,
 };
 
 const MAX_AGE_DAYS = 14;
@@ -188,6 +190,7 @@ async function callOnce(userPayloadJson: string): Promise<DailyReport> {
     tech_briefs: parsed.tech_briefs ?? [],
     finance_briefs: parsed.finance_briefs ?? [],
     politics_briefs: parsed.politics_briefs ?? [],
+    research_briefs: parsed.research_briefs ?? [],
     editor_note: parsed.editor_note ?? "",
     keywords: parsed.keywords ?? [],
   };
@@ -200,6 +203,7 @@ export async function generateDailyReport(
     tech: [],
     finance: [],
     politics: [],
+    research: [],
   };
   for (const a of articles) grouped[a.category].push(a);
 

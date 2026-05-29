@@ -28,6 +28,7 @@ const TEXTS_ZH = {
   catTech: "技术动态",
   catFinance: "财经要点",
   catPolitics: "时政观察",
+  catResearch: "科研前沿",
   catTrading: "市场行情",
   catCommunity: "社区讨论",
   subAiNews: "AI 媒体",
@@ -77,6 +78,7 @@ const TEXTS_EN: typeof TEXTS_ZH = {
   catTech: "Tech",
   catFinance: "Finance",
   catPolitics: "World",
+  catResearch: "Research",
   catTrading: "Markets",
   catCommunity: "Community",
   subAiNews: "AI Media",
@@ -153,12 +155,14 @@ const CATEGORY_LABELS: Record<Category, string> = {
   tech: STR.catTech,
   finance: STR.catFinance,
   politics: STR.catPolitics,
+  research: STR.catResearch,
 };
 
 const CATEGORY_DIGEST_LABELS: Record<Category, string> = {
   tech: STR.catTech,
   finance: STR.catFinance,
   politics: STR.catPolitics,
+  research: STR.catResearch,
 };
 
 /**
@@ -171,16 +175,20 @@ const SUBCATEGORY_ORDER: Partial<Record<Category, string[]>> = {
   // Locale filtering at registry level decides which actually appears:
   // zh mode keeps cn-community (V2EX / LinuxDo); en mode keeps
   // overseas-community (Hacker News / r/stocks).
-  tech: ["github-trending", "trending-papers", "x-viral", "ai-news", "cn-community", "overseas-community"],
+  tech: ["github-research-trending", "github-trending", "trending-papers", "ai-for-science", "x-viral", "ai-news", "cn-community", "overseas-community"],
   finance: ["news"],
   politics: ["world"],
+  research: ["journals"],
 };
 
-const TECH_MAIN_SUBS = new Set(["github-trending", "trending-papers", "x-viral", "ai-news"]);
+const TECH_MAIN_SUBS = new Set(["github-research-trending", "github-trending", "trending-papers", "ai-for-science", "x-viral", "ai-news"]);
 const TECH_COMMUNITY_SUBS = new Set(["cn-community", "overseas-community"]);
 
 const SUBCATEGORY_LABELS: Record<string, string> = {
+  "github-research-trending": "科研 Trending",
   "github-trending": "GitHub Trending",
+  "ai-for-science": "科研 AI 动态",
+  "journals": "顶刊速递",
   "trending-papers": STR.subTrendingPapers,
   "cn-community": STR.subCnCommunity,
   "overseas-community": STR.subOverseasCommunity,
@@ -200,6 +208,8 @@ const SUBCATEGORY_LABELS: Record<string, string> = {
  * finance:news, politics:world) ignore this — they use MERGED_SUBGROUP_LIMITS.
  */
 const SOURCE_DISPLAY_LIMITS: Record<string, number> = {
+  "tech:ai-for-science": 20,
+  "tech:github-research-trending": 20,
   "tech:github-trending": 20,
   "tech:cn-community": 10,
   "tech:x-viral": 20,
@@ -235,6 +245,7 @@ function displayLimitFor(
  * Exported so daily.ts can read the cap to keep enrichment in sync.
  */
 export const MERGED_SUBGROUP_LIMITS: Record<string, number> = {
+  "tech:ai-for-science": 20,
   "tech:ai-news": 15,
   "finance:news": 12,
   "politics:world": 15,
@@ -282,6 +293,7 @@ export function groupRaw(
     tech: new Map(),
     finance: new Map(),
     politics: new Map(),
+    research: new Map(),
   };
   // Pre-seed empty buckets for every enabled source so per-source-tabbed
   // subcategories (e.g. cn-community) still render a tab for sources that
@@ -342,7 +354,7 @@ export function groupRaw(
     });
   }
 
-  const out: RawByCategory = { tech: [], finance: [], politics: [] };
+  const out: RawByCategory = { tech: [], finance: [], politics: [], research: [] };
 
   for (const cat of Object.keys(buckets) as Category[]) {
     const order = SUBCATEGORY_ORDER[cat];
@@ -547,6 +559,7 @@ export function renderHtml(
     finance: sumItems(raw.finance),
     politics: sumItems(raw.politics),
     community: sumItems(techCommunitySubs),
+    research: sumItems(raw.research),
   };
 
   return `<!doctype html>
@@ -1199,6 +1212,7 @@ export function renderHtml(
     ${trading ? `<button class="tab" data-tab="trading">${STR.catTrading}<span class="count">${trading.tickers.length}</span></button>` : ""}
     <button class="tab" data-tab="politics">${CATEGORY_LABELS.politics}<span class="count">${counts.politics}</span></button>
     <button class="tab" data-tab="finance">${CATEGORY_LABELS.finance}<span class="count">${counts.finance}</span></button>
+    <button class="tab" data-tab="research">${CATEGORY_LABELS.research}<span class="count">${counts.research}</span></button>
     ${techCommunitySubs.length > 0 ? `<button class="tab" data-tab="community">${STR.catCommunity}<span class="count">${counts.community}</span></button>` : ""}
   </nav>
 
@@ -1211,6 +1225,9 @@ export function renderHtml(
   </section>
   <section class="panel" data-panel="finance">
     ${renderRawCategoryPanel("finance", raw.finance)}
+  </section>
+  <section class="panel" data-panel="research">
+    ${renderRawCategoryPanel("research", raw.research)}
   </section>
   ${techCommunitySubs.length > 0 ? `<section class="panel" data-panel="community">
     ${renderRawCategoryPanel("tech", techCommunitySubs)}
@@ -1427,68 +1444,18 @@ function renderCryptoWidgets(t: TradingSection): string {
 }
 
 function renderTradingPanel(trading: TradingSection): string {
-  const tickers = trading.tickers;
-  const groupCounts: Record<AssetGroup, number> = {
-    "us-equity": 0,
-    crypto: 0,
-    "china-equity": 0,
-    "commodity-fx": 0,
-    macro: 0,
-  };
-  for (const t of tickers) groupCounts[t.group as AssetGroup] = (groupCounts[t.group as AssetGroup] ?? 0) + 1;
-
-  const groupTabs = ASSET_GROUP_ORDER.map(
-    (g, i) =>
-      `<button class="trading-group-tab${i === 0 ? " active" : ""}" data-group="${g}">${escapeHtml(ASSET_GROUP_LABELS_LOCALIZED[g])}<span class="count">${groupCounts[g] ?? 0}</span></button>`,
-  ).join("");
-
-  const groupPanels = ASSET_GROUP_ORDER.map((g, i) => {
-    const groupTickers = tickers.filter((t) => t.group === g);
-    // Crypto sub-tab carries an extra header widget panel (F&G + global stats)
-    const cryptoWidgets =
-      g === "crypto" ? renderCryptoWidgets(trading) : "";
-    return `<div class="trading-group-content${i === 0 ? " active" : ""}" data-group="${g}">
-      ${cryptoWidgets}
-      ${groupTickers.length === 0 ? `<p class="empty">${STR.emptyGroup}</p>` : groupTickers.map(renderTickerCard).join("")}
-    </div>`;
-  }).join("");
-
   const overview = escapeHtml(trading.market_overview ?? "");
   const risk = escapeHtml(trading.risk_caveat ?? "");
-
   return `<section class="trading-overview-card">
     <span class="eyebrow">${STR.tradingMarketOverview}</span>
     <p class="overview-text trading-overview-text">${overview}</p>
   </section>
-
-  ${
-    trading.watchlist.length > 0
-      ? `<section class="trading-watchlist">
-    <h2 class="category-title trading-section-title">${STR.tradingTodayFocus}</h2>
-    <div class="trading-picks">
-      ${trading.watchlist.map(renderPickCard).join("\n")}
-    </div>
-  </section>`
-      : ""
-  }
-
   <section class="trading-tickers">
-    <h2 class="category-title trading-section-title">${STR.tradingAllAssets}</h2>
-    <nav class="trading-group-tabs">${groupTabs}</nav>
-    <div class="trading-group-contents">${groupPanels}</div>
+    <h2 class="category-title trading-section-title">指数 / 黄金</h2>
+    ${trading.tickers.map(renderTickerCard).join("")}
   </section>
-
-  ${
-    risk
-      ? `<section class="trading-risk">
-    <span class="eyebrow">${STR.tradingRiskCaveat}</span>
-    <p>${risk}</p>
-  </section>`
-      : ""
-  }`;
+  ${risk ? `<section class="trading-risk"><span class="eyebrow">${STR.tradingRiskCaveat}</span><p>${risk}</p></section>` : ""}`;
 }
-
-// ----- markdown -----
 
 function renderBriefMarkdown(b: BriefItem): string {
   const importance = Number.isFinite(b.importance) ? b.importance : 0;

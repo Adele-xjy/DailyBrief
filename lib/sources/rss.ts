@@ -1,4 +1,4 @@
-import Parser from "rss-parser";
+﻿import Parser from "rss-parser";
 import { curlFetch } from "./curl-fetch";
 import type { Category, RawArticle } from "./types";
 
@@ -30,7 +30,7 @@ export async function fetchRss(
   const limit = options.limit ?? 30;
 
   let feed;
-  if (options.useCurl) {
+  if (options.useCurl || process.env.HTTPS_PROXY || process.env.HTTP_PROXY) {
     const xml = await curlFetch(url, CURL_HEADERS);
     feed = await parser.parseString(xml);
   } else {

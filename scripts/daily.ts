@@ -26,6 +26,7 @@ import { analyzeWatchlist } from "../lib/trading/runner";
 import { fetchCryptoFearGreed } from "../lib/trading/fear-greed";
 import { fetchCryptoGlobal } from "../lib/trading/coingecko";
 import { generateTradingCommentary } from "../lib/ai/trading-commentary";
+import { enrichResearchPapers } from "../lib/ai/enrich-research";
 import type { TradingSection } from "../lib/ai/pipeline";
 import { todayKey } from "../lib/utils";
 
@@ -48,10 +49,10 @@ async function fetchAll(): Promise<ArticleInput[]> {
 }
 
 async function enrichGhTrending(articles: ArticleInput[]): Promise<void> {
-  const gh = articles.filter((a) => a.sourceId === "github-trending");
+  const gh = articles.filter((a) => a.sourceId === "github-trending" || a.sourceId === "github-research-trending");
   if (gh.length === 0) return;
   console.log(
-    `[daily] enriching ${gh.length} GitHub Trending repos with ${REPORT_LOCALE} summaries…`,
+    `[daily] enriching ${gh.length} GitHub repos with ${REPORT_LOCALE} summaries…`,
   );
   const t0 = Date.now();
   const summaries = await enrichGithubTrendingSummaries(gh);
@@ -81,6 +82,17 @@ async function enrichPolitics(articles: ArticleInput[]): Promise<void> {
 
 async function enrichAiNews(articles: ArticleInput[]): Promise<void> {
   await enrichMergedSubgroup(articles, "tech", "ai-news");
+}
+async function enrichAiForScience(articles: ArticleInput[]): Promise<void> {
+  await enrichMergedSubgroup(articles, "tech", "ai-for-science");
+}
+async function enrichResearch(articles: ArticleInput[]): Promise<void> {
+  const ra = articles.filter((a) => a.category === "research");
+  if (ra.length === 0) return;
+  console.log(`[daily] enriching ${ra.length} research papers with zh summaries + field tags...`);
+  const t0 = Date.now();
+  await enrichResearchPapers(ra);
+  console.log(`[daily] research enrichment done in ${((Date.now() - t0) / 1000).toFixed(1)}s`);
 }
 
 /**
@@ -229,6 +241,8 @@ async function main() {
   await enrichFinanceNews(articles);
   await enrichPolitics(articles);
   await enrichAiNews(articles);
+  await enrichAiForScience(articles);
+  await enrichResearch(articles);
   await enrichXViral(articles);
 
   // Trading signals: Yahoo fetch + indicators + commentary. Non-fatal —

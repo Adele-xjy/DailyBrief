@@ -19,7 +19,7 @@
     "url": "https://www.v2ex.com/api/topics/show.json",
     "category": "tech",
     "subcategory": "cn-community",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh"
     ]
@@ -31,7 +31,7 @@
     "url": "https://linux.do/top.rss?period=daily",
     "category": "tech",
     "subcategory": "cn-community",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh"
     ],
@@ -56,7 +56,7 @@
     "url": "https://hacker-news.firebaseio.com/v0",
     "category": "tech",
     "subcategory": "overseas-community",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "en"
     ]
@@ -137,7 +137,13 @@
       "zh",
       "en"
     ],
-    "keywords": ["LLM", "agent", "RAG", "reasoning", "coding"],
+    "keywords": [
+      "LLM",
+      "agent",
+      "RAG",
+      "reasoning",
+      "coding"
+    ],
     "notes": "Daily trending papers from HuggingFace. Set keywords to filter; empty array or omit for all papers."
   },
   {
@@ -496,7 +502,7 @@
     "category": "tech",
     "subcategory": "overseas-community",
     "useCurl": true,
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "en"
     ],
@@ -672,5 +678,134 @@
     "locales": [
       "zh"
     ]
+  },
+  {
+    "id": "github-research-trending",
+    "name": "GitHub 科研 Trending",
+    "type": "scrape",
+    "url": "https://github.com/trending",
+    "category": "tech",
+    "subcategory": "github-research-trending",
+    "enabled": true,
+    "locales": [
+      "zh",
+      "en"
+    ]
+  },
+  {
+    "id": "sciencedaily-ai",
+    "name": "ScienceDaily AI",
+    "type": "rss",
+    "url": "https://www.sciencedaily.com/rss/computers_math/artificial_intelligence.xml",
+    "category": "tech",
+    "subcategory": "ai-for-science",
+    "enabled": true
+  },
+  {
+    "id": "marktechpost",
+    "name": "MarkTechPost",
+    "type": "rss",
+    "url": "https://www.marktechpost.com/feed/",
+    "category": "tech",
+    "subcategory": "ai-for-science",
+    "enabled": true
+  },
+  {
+    "id": "aihub",
+    "name": "AIhub",
+    "type": "rss",
+    "url": "https://aihub.org/feed/",
+    "category": "tech",
+    "subcategory": "ai-for-science",
+    "enabled": true
+  },
+  {
+    "id": "sciencenews-ai",
+    "name": "Science News AI",
+    "type": "rss",
+    "url": "https://www.sciencenews.org/topic/artificial-intelligence/feed",
+    "category": "tech",
+    "subcategory": "ai-for-science",
+    "enabled": true
+  },
+  {
+    "id": "nature",
+    "name": "Nature",
+    "type": "rss",
+    "url": "https://www.nature.com/nature.rss",
+    "category": "research",
+    "subcategory": "journals",
+    "enabled": true,
+    "lang": "en"
+  },
+  {
+    "id": "science",
+    "name": "Science",
+    "type": "rss",
+    "url": "https://www.science.org/action/showFeed?type=etoc&feed=rss&jc=science",
+    "category": "research",
+    "subcategory": "journals",
+    "enabled": true,
+    "lang": "en"
+  },
+  {
+    "id": "nature-chem",
+    "name": "Nature Chemistry",
+    "type": "rss",
+    "url": "https://www.nature.com/nchem.rss",
+    "category": "research",
+    "subcategory": "journals",
+    "enabled": true,
+    "lang": "en"
+  },
+  {
+    "id": "jacs",
+    "name": "JACS",
+    "type": "rss",
+    "url": "https://pubs.acs.org/action/showFeed?type=etoc&feed=rss&jc=jacsat",
+    "category": "research",
+    "subcategory": "journals",
+    "enabled": true,
+    "lang": "en"
+  },
+  {
+    "id": "cell",
+    "name": "Cell",
+    "type": "rss",
+    "url": "https://www.cell.com/cell/current.rss",
+    "category": "research",
+    "subcategory": "journals",
+    "enabled": true,
+    "lang": "en"
+  },
+  {
+    "id": "pnas",
+    "name": "PNAS",
+    "type": "rss",
+    "url": "https://www.pnas.org/action/showFeed?type=etoc&feed=rss&jc=pnas",
+    "category": "research",
+    "subcategory": "journals",
+    "enabled": true,
+    "lang": "en"
+  },
+  {
+    "id": "nature-phys",
+    "name": "Nature Physics",
+    "type": "rss",
+    "url": "https://www.nature.com/nphys.rss",
+    "category": "research",
+    "subcategory": "journals",
+    "enabled": true,
+    "lang": "en"
+  },
+  {
+    "id": "nature-mat",
+    "name": "Nature Materials",
+    "type": "rss",
+    "url": "https://www.nature.com/nmat.rss",
+    "category": "research",
+    "subcategory": "journals",
+    "enabled": true,
+    "lang": "en"
   }
 ]

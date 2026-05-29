@@ -1,4 +1,5 @@
 import { fetchAttentionVc } from "./attentionvc";
+import { fetchGithubResearchTrending } from "./github-research-trending";
 import { fetchGithubTrending } from "./github-trending";
 import { fetchHackerNews } from "./hackernews";
 import { fetchHuggingfacePapers } from "./huggingface-papers";
@@ -14,6 +15,7 @@ import type { RawArticle, SourceDef } from "./types";
 export async function fetchSource(source: SourceDef): Promise<RawArticle[]> {
   if (source.id === "hackernews") return fetchHackerNews(source.id);
   if (source.id === "github-trending") return fetchGithubTrending(source.id);
+  if (source.id === "github-research-trending") return fetchGithubResearchTrending(source.id);
   if (source.id === "v2ex-hot") return fetchV2ex(source.id);
   if (source.id === "linuxdo") return fetchLinuxDo(source.id);
   if (source.id === "attentionvc-ai") return fetchAttentionVc(source.id);

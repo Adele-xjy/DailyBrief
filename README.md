@@ -13,6 +13,18 @@
 [![Stars](https://img.shields.io/github/stars/leiting-eric/DailyBrief?style=social)](https://github.com/leiting-eric/DailyBrief)
 
 > **你的私人 AI 每日简报，跑在你自己掌控的基础设施上。** 23 个数据源 · LLM 摘要 · 21 个股票/加密标的**技术指标 + AI 交易点评** · 中英双语 · 5 个 LLM 后端可选。
+
+
+---
+
+> **🔬 科研增强版** — 基于 [leiting-eric/DailyBrief](https://github.com/leiting-eric/DailyBrief) 修改。
+> 新增：**科研前沿**（Nature/Science/JACS/Cell/PNAS 等 8 顶刊，含领域标注+中文摘要）、
+> **科研 Trending**（研究工具/可视化/学术写作相关仓库）、
+> **科研 AI 动态**（AI 驱动科研发现的新闻聚合）。
+> 精简：市场行情仅保留指数+黄金，移除社区讨论。
+
+---
+
 >
 > **三种部署任选**：[**🚀 5 分钟 Fork 到 GitHub Actions**](#a-github-actions--pages零基础设施推荐) · [**💻 本地一键装**](#b-本地一键装) · [**🤖 一句话让 AI Agent 帮你装**](#c-给-ai-agent-一句话装)。
 
