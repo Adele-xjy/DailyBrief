@@ -553,6 +553,7 @@
     "category": "politics",
     "subcategory": "world",
     "enabled": true,
+    "summarize":true,
     "locales": [
       "zh",
       "en"
@@ -566,6 +567,7 @@
     "category": "politics",
     "subcategory": "world",
     "enabled": true,
+    "summarize":true,
     "locales": [
       "zh",
       "en"
@@ -579,6 +581,7 @@
     "category": "politics",
     "subcategory": "world",
     "enabled": true,
+    "summarize":true,
     "locales": [
       "zh",
       "en"
