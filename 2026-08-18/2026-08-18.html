@@ -1,0 +1,2725 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>每日简报 · 2026-08-18</title>
+<style>
+  :root {
+    --bg: #fafaf9;
+    --bg-elevated: #ffffff;
+    --fg: #18181b;
+    --fg-soft: #3f3f46;
+    --muted: #71717a;
+    --rule: #e4e4e7;
+    --card: #f4f4f5;
+    --link: #1d4ed8;
+    --accent: #18181b;
+    --accent-fg: #fafaf9;
+    --rank-high-bg: #fee2e2;
+    --rank-high-fg: #991b1b;
+    --rank-mid-bg: #fef3c7;
+    --rank-mid-fg: #92400e;
+    --rank-low-bg: #e0e7ff;
+    --rank-low-fg: #3730a3;
+    --hero-grad-from: #fafaf9;
+    --hero-grad-to: #f4f4f5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0a0a0a;
+      --bg-elevated: #18181b;
+      --fg: #fafafa;
+      --fg-soft: #d4d4d8;
+      --muted: #a1a1aa;
+      --rule: #27272a;
+      --card: #18181b;
+      --link: #93c5fd;
+      --accent: #fafafa;
+      --accent-fg: #0a0a0a;
+      --rank-high-bg: rgba(239,68,68,0.18);
+      --rank-high-fg: #fca5a5;
+      --rank-mid-bg: rgba(245,158,11,0.18);
+      --rank-mid-fg: #fcd34d;
+      --rank-low-bg: rgba(99,102,241,0.18);
+      --rank-low-fg: #a5b4fc;
+      --hero-grad-from: #18181b;
+      --hero-grad-to: #0a0a0a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+      "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  main { max-width: 960px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+
+  /* ===== header ===== */
+  header.report-header { margin-bottom: 1.25rem; }
+  .eyebrow {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  h1.report-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0.4rem 0 1.2rem;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  .archive-link {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--rule);
+    padding-bottom: 1px;
+  }
+  .archive-link:hover { color: var(--accent); border-bottom-style: solid; }
+  .hero-card {
+    background: linear-gradient(135deg, var(--hero-grad-from) 0%, var(--hero-grad-to) 100%);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--accent);
+    padding: 1rem 1.4rem;
+    border-radius: 0.6rem;
+  }
+  .hero-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+  }
+  .hero-headline {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0.35rem 0 0;
+    line-height: 1.45;
+    color: var(--fg);
+  }
+  .overview-card {
+    margin: 0.7rem 0 0;
+    padding: 0.7rem 1.1rem;
+    background: var(--card);
+    border-radius: 0.5rem;
+    border-left: 3px solid var(--muted);
+  }
+  .overview-card .eyebrow { display: block; margin-bottom: 0.3rem; }
+  .overview-text {
+    margin: 0;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    color: var(--fg-soft);
+  }
+
+  /* ===== primary tabs ===== */
+  .tabs {
+    display: flex;
+    gap: 0.25rem;
+    margin: 1.25rem 0 0.75rem;
+    border-bottom: 1px solid var(--rule);
+    flex-wrap: wrap;
+  }
+  .tab {
+    background: none;
+    border: none;
+    padding: 0.7rem 1.1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--muted);
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+    font-family: inherit;
+    transition: color 0.15s;
+  }
+  .tab:hover { color: var(--fg); }
+  .tab.active {
+    color: var(--fg);
+    border-bottom-color: var(--accent);
+  }
+  .tab .count {
+    font-size: 0.72rem;
+    color: var(--muted);
+    margin-left: 0.4rem;
+    font-weight: 400;
+  }
+  .panel { display: none; }
+  .panel.active { display: block; }
+
+  /* ===== digest (AI 简报) — compact ===== */
+  .digest-category { margin-bottom: 1.1rem; }
+  .category-header {
+    display: flex;
+    align-items: baseline;
+    gap: 0.55rem;
+    margin: 0 0 0.55rem;
+    padding-bottom: 0.35rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .category-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--fg);
+    margin: 0;
+    letter-spacing: 0.05em;
+  }
+  .category-count {
+    font-size: 0.7rem;
+    color: var(--muted);
+    background: var(--card);
+    padding: 0.12rem 0.45rem;
+    border-radius: 999px;
+  }
+  .brief-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  @media (min-width: 720px) {
+    .brief-list { grid-template-columns: 1fr 1fr; }
+  }
+  .brief {
+    background: var(--bg-elevated);
+    border: 1px solid var(--rule);
+    border-radius: 0.5rem;
+    padding: 0.7rem 0.95rem;
+    transition: border-color 0.15s, transform 0.15s;
+  }
+  .brief:hover {
+    border-color: var(--muted);
+    transform: translateY(-1px);
+  }
+  .brief-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    margin-bottom: 0.3rem;
+  }
+  .brief-source {
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 500;
+  }
+  .brief-rank {
+    font-size: 0.7rem;
+    padding: 0.12rem 0.5rem;
+    border-radius: 999px;
+    font-weight: 600;
+    flex-shrink: 0;
+  }
+  .brief-rank.high { background: var(--rank-high-bg); color: var(--rank-high-fg); }
+  .brief-rank.mid  { background: var(--rank-mid-bg);  color: var(--rank-mid-fg); }
+  .brief-rank.low  { background: var(--rank-low-bg);  color: var(--rank-low-fg); }
+  .brief-title {
+    font-size: 0.98rem;
+    font-weight: 600;
+    margin: 0 0 0.3rem;
+    line-height: 1.35;
+  }
+  .brief-title a { color: var(--fg); text-decoration: none; }
+  .brief-title a:hover { color: var(--link); text-decoration: underline; }
+  .brief-summary {
+    margin: 0;
+    color: var(--fg-soft);
+    font-size: 0.86rem;
+    line-height: 1.55;
+  }
+
+  .editor-card {
+    background: var(--card);
+    border-left: 3px solid var(--muted);
+    border-radius: 0.5rem;
+    padding: 1rem 1.3rem;
+    margin: 1.5rem 0 1.2rem;
+  }
+  .editor-card .eyebrow { display: block; margin-bottom: 0.4rem; }
+  .editor-text {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--fg);
+  }
+  .keywords { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0 0 1.5rem; }
+  .keyword {
+    background: var(--card);
+    color: var(--fg-soft);
+    padding: 0.25rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+  }
+
+  /* ===== L2 sub-tabs ===== */
+  .sub-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 1rem 0;
+  }
+  .sub-tab {
+    background: var(--card);
+    border: 1px solid transparent;
+    padding: 0.5rem 1.05rem;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--fg-soft);
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+  }
+  .sub-tab:hover { border-color: var(--muted); color: var(--fg); }
+  .sub-tab.active {
+    background: var(--accent);
+    color: var(--accent-fg);
+  }
+  .sub-tab .count {
+    font-size: 0.7rem;
+    opacity: 0.75;
+    margin-left: 0.4rem;
+    font-weight: 400;
+  }
+  .sub-content { display: none; }
+  .sub-content.active { display: block; }
+
+  /* ===== L3 source-tabs ===== */
+  .source-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin: 0.9rem 0 1.3rem;
+    padding-bottom: 0.7rem;
+    border-bottom: 1px solid var(--rule);
+  }
+  .source-tab {
+    background: none;
+    border: 1px solid var(--rule);
+    padding: 0.35rem 0.85rem;
+    border-radius: 999px;
+    font-size: 0.83rem;
+    color: var(--fg-soft);
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+  }
+  .source-tab:hover { border-color: var(--muted); color: var(--fg); }
+  .source-tab.active {
+    background: var(--fg);
+    color: var(--bg);
+    border-color: var(--fg);
+  }
+  .source-tab .count {
+    font-size: 0.7rem;
+    opacity: 0.75;
+    margin-left: 0.3rem;
+  }
+  .source-content { display: none; }
+  .source-content.active { display: block; }
+
+  /* ===== article cards in raw panels ===== */
+  .article {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .article:first-child { padding-top: 0; }
+  .article:last-child { border-bottom: none; }
+  .article-title {
+    font-size: 1rem;
+    margin: 0 0 0.3rem;
+    font-weight: 500;
+    line-height: 1.45;
+  }
+  .article-title a { color: var(--fg); text-decoration: none; }
+  .article-title a:hover { color: var(--link); text-decoration: underline; }
+  .article-meta { color: var(--muted); font-size: 0.76rem; margin: 0 0 0.35rem; }
+  .article-stats {
+    color: var(--muted);
+    font-size: 0.8rem;
+    margin: 0 0 0.4rem;
+    font-feature-settings: "tnum";
+  }
+  .article-excerpt {
+    margin: 0;
+    color: var(--fg-soft);
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+  .article-summary {
+    margin: 0.55rem 0 0;
+    padding: 0.6rem 0.85rem;
+    background: var(--card);
+    border-left: 2px solid var(--link);
+    border-radius: 0.3rem;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--fg);
+  }
+  .summary-label {
+    display: inline-block;
+    font-size: 0.68rem;
+    color: var(--link);
+    margin-right: 0.4rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .empty {
+    color: var(--muted);
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 0.9rem;
+  }
+
+  /* ===== trading panel ===== */
+  .crypto-widgets {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.55rem;
+    margin: 0.4rem 0 1.2rem;
+  }
+  @media (min-width: 720px) {
+    .crypto-widgets { grid-template-columns: repeat(4, 1fr); }
+  }
+  .crypto-widget {
+    background: var(--bg-elevated);
+    border: 1px solid var(--rule);
+    border-radius: 0.5rem;
+    padding: 0.7rem 0.85rem;
+    text-align: center;
+  }
+  .widget-label {
+    font-size: 0.7rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.3rem;
+  }
+  .widget-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--fg);
+    line-height: 1.1;
+  }
+  .widget-sub {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-top: 0.25rem;
+  }
+  .widget-sub.positive { color: #16a34a; }
+  .widget-sub.negative { color: #dc2626; }
+  @media (prefers-color-scheme: dark) {
+    .widget-sub.positive { color: #4ade80; }
+    .widget-sub.negative { color: #fca5a5; }
+  }
+  .crypto-widget.fg-fear-extreme { border-left: 4px solid #b91c1c; }
+  .crypto-widget.fg-fear-extreme .widget-value { color: #b91c1c; }
+  .crypto-widget.fg-fear { border-left: 4px solid #d97706; }
+  .crypto-widget.fg-fear .widget-value { color: #d97706; }
+  .crypto-widget.fg-neutral { border-left: 4px solid var(--muted); }
+  .crypto-widget.fg-greed { border-left: 4px solid #65a30d; }
+  .crypto-widget.fg-greed .widget-value { color: #65a30d; }
+  .crypto-widget.fg-greed-extreme { border-left: 4px solid #16a34a; }
+  .crypto-widget.fg-greed-extreme .widget-value { color: #16a34a; }
+  @media (prefers-color-scheme: dark) {
+    .crypto-widget.fg-fear-extreme .widget-value,
+    .crypto-widget.fg-fear .widget-value { color: #fca5a5; }
+    .crypto-widget.fg-greed .widget-value,
+    .crypto-widget.fg-greed-extreme .widget-value { color: #4ade80; }
+  }
+
+  .trading-overview-card {
+    margin: 0 0 1.5rem;
+    padding: 1rem 1.3rem;
+    background: var(--card);
+    border-radius: 0.5rem;
+    border-left: 3px solid var(--accent);
+  }
+  .trading-overview-card .eyebrow { display: block; margin-bottom: 0.4rem; }
+  .trading-overview-text { font-size: 0.92rem; line-height: 1.75; color: var(--fg-soft); margin: 0; }
+
+  .trading-section-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.8rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--rule);
+    color: var(--fg);
+    letter-spacing: 0.05em;
+  }
+
+  /* picks (Sonnet's watchlist) */
+  .trading-picks {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+  @media (min-width: 720px) {
+    .trading-picks { grid-template-columns: 1fr 1fr; }
+  }
+  .trading-pick {
+    background: var(--bg-elevated);
+    border: 1px solid var(--rule);
+    border-left: 4px solid var(--muted);
+    border-radius: 0.5rem;
+    padding: 0.8rem 1rem;
+  }
+  .trading-pick.stance-bull { border-left-color: #16a34a; }
+  .trading-pick.stance-bear { border-left-color: #dc2626; }
+  .trading-pick.stance-neutral { border-left-color: var(--muted); }
+  .pick-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+    margin-bottom: 0.45rem;
+  }
+  .pick-symbol-block {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+  }
+  .pick-symbol { font-weight: 700; font-size: 1rem; color: var(--fg); }
+  .pick-name { color: var(--muted); font-size: 0.82rem; }
+  .pick-stance {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    white-space: nowrap;
+  }
+  .pick-stance-bull { background: rgba(22,163,74,0.12); color: #16a34a; }
+  .pick-stance-bear { background: rgba(220,38,38,0.12); color: #dc2626; }
+  .pick-stance-neutral { background: var(--card); color: var(--muted); }
+  .pick-rationale { margin: 0; font-size: 0.88rem; line-height: 1.65; color: var(--fg-soft); }
+
+  /* asset-group tabs */
+  .trading-group-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0.6rem 0 1.2rem;
+  }
+  .trading-group-tab {
+    background: var(--card);
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--fg-soft);
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.15s;
+  }
+  .trading-group-tab:hover { border-color: var(--muted); color: var(--fg); }
+  .trading-group-tab.active {
+    background: var(--accent);
+    color: var(--accent-fg);
+  }
+  .trading-group-tab .count {
+    font-size: 0.7rem;
+    opacity: 0.75;
+    margin-left: 0.4rem;
+    font-weight: 400;
+  }
+  .trading-group-content { display: none; }
+  .trading-group-content.active { display: block; }
+
+  /* ticker cards */
+  .ticker-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--rule);
+    border-radius: 0.55rem;
+    padding: 0.85rem 1.1rem;
+    margin-bottom: 0.7rem;
+  }
+  .ticker-head {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.65rem;
+  }
+  .ticker-id { min-width: 0; }
+  .ticker-symbol { margin: 0; font-size: 1rem; font-weight: 700; font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; }
+  .ticker-name { margin: 0.15rem 0 0; font-size: 0.82rem; color: var(--muted); }
+  .ticker-price-block { text-align: right; flex-shrink: 0; }
+  .ticker-price { display: block; font-size: 1.05rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+  .ticker-pct { display: inline-block; font-size: 0.82rem; font-weight: 500; margin-top: 0.15rem; font-variant-numeric: tabular-nums; }
+  .ticker-pct.positive, .positive { color: #16a34a; }
+  .ticker-pct.negative, .negative { color: #dc2626; }
+
+  .ticker-indicators {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.35rem 0.9rem;
+    margin: 0;
+    font-size: 0.82rem;
+    color: var(--fg-soft);
+  }
+  @media (min-width: 720px) {
+    .ticker-indicators { grid-template-columns: repeat(3, 1fr); }
+  }
+  .ticker-indicators > div { display: flex; gap: 0.4rem; align-items: baseline; min-width: 0; }
+  .ticker-indicators dt { color: var(--muted); font-size: 0.74rem; margin: 0; white-space: nowrap; }
+  .ticker-indicators dd { margin: 0; font-variant-numeric: tabular-nums; font-weight: 500; color: var(--fg); }
+  .trend-bullish { color: #16a34a; }
+  .trend-bearish { color: #dc2626; }
+  .trend-neutral { color: var(--muted); }
+  .rsi-overbought { color: #d97706; }
+  .rsi-oversold { color: #2563eb; }
+
+  .ticker-signals {
+    margin-top: 0.65rem;
+    padding-top: 0.55rem;
+    border-top: 1px dashed var(--rule);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+  .signal-pill {
+    font-size: 0.72rem;
+    padding: 0.18rem 0.55rem;
+    border-radius: 999px;
+    font-weight: 500;
+  }
+  .signal-pill.tone-bull { background: rgba(22,163,74,0.13); color: #166534; }
+  .signal-pill.tone-bear { background: rgba(220,38,38,0.13); color: #991b1b; }
+  .signal-pill.tone-caution { background: rgba(217,119,6,0.15); color: #92400e; }
+  @media (prefers-color-scheme: dark) {
+    .signal-pill.tone-bull { color: #4ade80; }
+    .signal-pill.tone-bear { color: #fca5a5; }
+    .signal-pill.tone-caution { color: #fcd34d; }
+    .trend-bullish, .positive, .ticker-pct.positive { color: #4ade80; }
+    .trend-bearish, .negative, .ticker-pct.negative { color: #fca5a5; }
+    .rsi-overbought { color: #fcd34d; }
+    .rsi-oversold { color: #93c5fd; }
+    .trading-pick.stance-bull { border-left-color: #4ade80; }
+    .trading-pick.stance-bear { border-left-color: #fca5a5; }
+    .pick-stance-bull { background: rgba(74,222,128,0.15); color: #4ade80; }
+    .pick-stance-bear { background: rgba(252,165,165,0.15); color: #fca5a5; }
+  }
+  .signal-age { opacity: 0.7; font-weight: 400; }
+
+  .trading-risk {
+    margin: 1.5rem 0 0;
+    padding: 0.9rem 1.2rem;
+    background: var(--card);
+    border-radius: 0.45rem;
+    border-left: 3px solid #d97706;
+  }
+  .trading-risk .eyebrow { display: block; margin-bottom: 0.35rem; }
+  .trading-risk p { margin: 0; font-size: 0.82rem; line-height: 1.65; color: var(--fg-soft); }
+
+  footer {
+    margin-top: 2.5rem;
+    border-top: 1px solid var(--rule);
+    padding-top: 1.1rem;
+    color: var(--muted);
+    font-size: 0.82rem;
+  }
+</style>
+</head>
+<body>
+<main>
+  <header class="report-header">
+    <span class="eyebrow">每日简报</span>
+    <h1 class="report-title">2026-08-18</h1>
+    <a class="archive-link" href="../archive.html">← 历史归档</a>
+  </header>
+
+  <nav class="tabs" role="tablist">
+    <button class="tab active" data-tab="tech">技术动态<span class="count">103</span></button>
+    <button class="tab" data-tab="trading">市场行情<span class="count">6</span></button>
+    <button class="tab" data-tab="politics">时政观察<span class="count">15</span></button>
+    <button class="tab" data-tab="finance">财经要点<span class="count">12</span></button>
+    <button class="tab" data-tab="research">科研前沿<span class="count">126</span></button>
+    
+  </nav>
+
+  <section class="panel active" data-panel="tech">
+    <nav class="sub-tabs"><button class="sub-tab active" data-sub="github-research-trending" data-cat="tech">科研 Trending<span class="count">20</span></button><button class="sub-tab" data-sub="github-trending" data-cat="tech">GitHub Trending<span class="count">11</span></button><button class="sub-tab" data-sub="trending-papers" data-cat="tech">Trending Papers<span class="count">30</span></button><button class="sub-tab" data-sub="ai-for-science" data-cat="tech">科研 AI 动态<span class="count">20</span></button><button class="sub-tab" data-sub="x-viral" data-cat="tech">X 推文<span class="count">7</span></button><button class="sub-tab" data-sub="ai-news" data-cat="tech">AI 媒体<span class="count">15</span></button></nav>
+<div class="sub-contents"><div class="sub-content active" data-sub-content="github-research-trending" data-cat="tech">
+    
+    <div class="source-contents">
+      <div class="source-content active" data-source-content="github-research-trending" data-sub="github-research-trending" data-cat="tech">
+    <article class="article">
+  <h3 class="article-title"><a href="https://github.com/index-tts/index-tts" target="_blank" rel="noopener noreferrer">index-tts/index-tts</a></h3>
+  <p class="article-stats">Python · ★ 23,095 · ⑂ 2,793</p>
+  
+  <p class="article-excerpt">An Industrial-Level Controllable and Efficient Zero-Shot Text-To-Speech System</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 工业级可控且高效的零样本语音合成系统，无需训练即可克隆音色并生成自然语音。支持细粒度控制，适合内容生产、有声书、配音等场景。兼顾生成效率与效果，降低 TTS 落地成本。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/0x4m4/hexstrike-ai" target="_blank" rel="noopener noreferrer">0x4m4/hexstrike-ai</a></h3>
+  <p class="article-stats">Python · ★ 11,149 · ⑂ 2,335</p>
+  
+  <p class="article-excerpt">HexStrike AI MCP Agents is an advanced MCP server that lets AI agents (Claude, GPT, Copilot, etc.) autonomously run 150+ cybersecurity tools for automated pentesting, vulnerability discovery, bug bounty automation, and security research. Seamlessly bridge LLMs with real-world offensive security capa</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 面向 AI agent 的 MCP 服务器，让 Claude、GPT、Copilot 等自主调用 150+ 网络安全工具，进行自动化渗透测试、漏洞发现与漏洞赏金挖掘。将 AI 编排与专业安全工具链结合，提升攻防效率。适合安全研究团队与自动化测试场景。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/NVIDIA-NeMo/Nemotron" target="_blank" rel="noopener noreferrer">NVIDIA-NeMo/Nemotron</a></h3>
+  <p class="article-stats">Jupyter Notebook · ★ 1,928 · ⑂ 396</p>
+  
+  <p class="article-excerpt">Developer Asset Hub for NVIDIA Nemotron — A one-stop resource for training recipes, usage cookbooks, datasets, and full end-to-end reference examples to build with Nemotron models</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> NVIDIA Nemotron 模型开发者资源中心，提供训练配方、使用手册、数据集和端到端参考示例。帮助开发者快速上手 Nemotron 系列模型，覆盖训练、微调与部署流程。适合大模型应用开发者与研究人员。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/shsarv/Machine-Learning-Projects" target="_blank" rel="noopener noreferrer">shsarv/Machine-Learning-Projects</a></h3>
+  <p class="article-stats">Jupyter Notebook · ★ 1,797 · ⑂ 571</p>
+  
+  <p class="article-excerpt">This repository showcases a selection of machine learning projects undertaken to understand and master various ML concepts. Each project reflects commitment to applying theoretical knowledge to practical scenarios, demonstrating proficiency in machine learning techniques and tools.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 一系列机器学习实战项目集合，展示从理论到应用的完整过程，覆盖常用算法与模型训练。适合学习者通过动手实践掌握 ML 概念，也方便面试前复习项目经验。以 Jupyter Notebook 等形式呈现。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/alirezadir/AIMLInterviews" target="_blank" rel="noopener noreferrer">alirezadir/AIMLInterviews</a></h3>
+  <p class="article-stats">Jupyter Notebook · ★ 9,183 · ⑂ 1,603</p>
+  
+  <p class="article-excerpt">This repo is meant to serve as a guide for Machine Learning/AI technical interviews.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 面向机器学习和 AI 技术面试的备考指南，汇总常见问题、核心知识点与解题思路。帮助求职者系统准备算法、模型与系统设计等环节。适合正在面试 ML/AI 岗位的工程师和学生。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/fastai/fastbook" target="_blank" rel="noopener noreferrer">fastai/fastbook</a></h3>
+  <p class="article-stats">Jupyter Notebook · ★ 25,214 · ⑂ 9,482</p>
+  
+  <p class="article-excerpt">The fastai book, published as Jupyter Notebooks</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> fastai 深度学习教材的 Jupyter Notebook 版本，提供可交互的代码示例与练习。采用自底向上教学法，覆盖从基础到深度模型构建。适合希望通过实操快速入门深度学习的开发者与数据科学爱好者。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/unslothai/notebooks" target="_blank" rel="noopener noreferrer">unslothai/notebooks</a></h3>
+  <p class="article-stats">Jupyter Notebook · ★ 5,590 · ⑂ 923</p>
+  
+  <p class="article-excerpt">250+ Fine-tuning &amp; RL Notebooks for text, vision, audio, embedding, TTS models.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 提供 250+ 的微调与强化学习 Notebook，涵盖文本、视觉、音频、Embedding 和 TTS 模型。基于 Unsloth 优化栈，帮助开发者在消费级 GPU 上高效微调。适合大模型应用开发和 RL 训练实践。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/ArcInstitute/evo2" target="_blank" rel="noopener noreferrer">ArcInstitute/evo2</a></h3>
+  <p class="article-stats">Jupyter Notebook · ★ 4,132 · ⑂ 544</p>
+  
+  <p class="article-excerpt">Genome modeling and design across all domains of life</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 用于全生命域基因组建模与设计的 AI 模型，学习跨物种基因组规律，可生成新序列或预测变异效应。面向基因组学与合成生物学研究，支持规模化分析。适用于研究人员探索基因功能与设计实验。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/datawhalechina/llm-algo-leetcode" target="_blank" rel="noopener noreferrer">datawhalechina/llm-algo-leetcode</a></h3>
+  <p class="article-stats">Jupyter Notebook · ★ 476 · ⑂ 77</p>
+  
+  <p class="article-excerpt">LLM algorithm practice lab with theory, solutions, and test cases.《大模型算法与系统教程》面向大模型入门到进阶的算法实战教程，覆盖原理讲解、答案解析、测试用例与 CUDA/Triton 实战。</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 《大模型算法与系统教程》配套实战，覆盖原理讲解、答案解析、测试用例及 CUDA/Triton 实现。面向大模型入门到进阶，提供算法练习与工程实现样例。适合开发者系统学习大模型底层算法和系统优化。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/udlbook/udlbook" target="_blank" rel="noopener noreferrer">udlbook/udlbook</a></h3>
+  <p class="article-stats">Jupyter Notebook · ★ 9,744 · ⑂ 2,288</p>
+  
+  <p class="article-excerpt">Understanding Deep Learning - Simon J.D. Prince</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> Simon J.D. Prince 所著《理解深度学习》教材的官方资源，包含文字、图例与代码。系统讲解深度学习的数学原理、模型结构与训练方法。适合学生和研究者作为深度学习入门与教学参考。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/facebookresearch/dinov3" target="_blank" rel="noopener noreferrer">facebookresearch/dinov3</a></h3>
+  <p class="article-stats">Jupyter Notebook · ★ 11,196 · ⑂ 931</p>
+  
+  <p class="article-excerpt">Reference PyTorch implementation and models for DINOv3</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> DINOv3 的官方 PyTorch 参考实现与预训练模型。DINOv3 是自监督视觉表征方法，通过可扩展训练提升特征质量。适用于图像分类、分割、检索等下游视觉任务，为研究者提供基线。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/hadley/r4ds" target="_blank" rel="noopener noreferrer">hadley/r4ds</a></h3>
+  <p class="article-stats">R · ★ 5,138 · ⑂ 4,435</p>
+  
+  <p class="article-excerpt">R for data science: a book</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 《R for Data Science》书籍配套代码和教材，以 R 语言为核心讲解数据科学完整流程，包括数据导入、清洗、可视化和建模。适合数据分析初学者系统学习 tidyverse 工具链。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/jinworks/CellChat" target="_blank" rel="noopener noreferrer">jinworks/CellChat</a></h3>
+  <p class="article-stats">R · ★ 651 · ⑂ 110</p>
+  
+  <p class="article-excerpt">R toolkit for inference, visualization and analysis of cell-cell communication from single-cell and spatially resolved transcriptomics</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> R 工具包，用于从单细胞和空间转录组数据推断、可视化和分析细胞间通讯。内置已知配体-受体数据库，帮助揭示细胞互作网络。适用于生物信息学研究者进行细胞通讯机制研究。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/satijalab/seurat" target="_blank" rel="noopener noreferrer">satijalab/seurat</a></h3>
+  <p class="article-stats">R · ★ 2,786 · ⑂ 995</p>
+  
+  <p class="article-excerpt">R toolkit for single cell genomics</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> R 语言单细胞基因组学分析工具包，提供质控、降维、聚类、差异表达和可视化等完整流程。支持大规模单细胞 RNA 测序数据，是单细胞研究领域标准工具之一。适合生物信息学与生命科学研究人员。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/billryan/resume" target="_blank" rel="noopener noreferrer">billryan/resume</a></h3>
+  <p class="article-stats">TeX · ★ 11,337 · ⑂ 2,873</p>
+  
+  <p class="article-excerpt">An elegant \LaTeX\ résumé template. 大陆镜像 https://gods.coding.net/p/resume/git</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 优雅的 LaTeX 简历模板，提供简洁排版与多语言支持，并附国内镜像地址。帮助求职者快速生成格式专业的 PDF 简历。适合需要定制化简历的工程师、学术研究人员等。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/zhanwen/MathModel" target="_blank" rel="noopener noreferrer">zhanwen/MathModel</a></h3>
+  <p class="article-stats">TeX · ★ 11,253 · ⑂ 2,275</p>
+  
+  <p class="article-excerpt">研究生数学建模，本科生数学建模、数学建模竞赛优秀论文，数学建模算法，LaTeX论文模板，算法思维导图，参考书籍，Matlab软件教程，PPT</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 数学建模竞赛资料合集，含优秀论文、常见算法、LaTeX 模板、思维导图、参考书籍及 Matlab 教程。覆盖研究生和本科生建模需求，帮助参赛者快速选题与写作。适合备赛学生提升建模与论文表达能力。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/posquit0/Awesome-CV" target="_blank" rel="noopener noreferrer">posquit0/Awesome-CV</a></h3>
+  <p class="article-stats">TeX · ★ 28,303 · ⑂ 5,301</p>
+  
+  <p class="article-excerpt">📄 Awesome CV is LaTeX template for your outstanding job application</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 用于制作出色求职简历的 LaTeX 模板，设计现代且模块化，支持快速定制个人信息、教育与项目经历。输出高质量 PDF，适合求职者展示专业形象。开源持续维护，被广泛使用。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/latexstudio/CUMCMThesis" target="_blank" rel="noopener noreferrer">latexstudio/CUMCMThesis</a></h3>
+  <p class="article-stats">TeX · ★ 1,007 · ⑂ 216</p>
+  
+  <p class="article-excerpt">全国大学生数学建模竞赛LaTeX论文模板 已经适配到 2023 年格式</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 全国大学生数学建模竞赛专用 LaTeX 论文模板，适配至 2023 年格式要求。内置规范的标题页、目录、公式与参考文献设置，帮助参赛者按竞赛要求快速排版。适合建模竞赛论文写作。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/latex3/latex2e" target="_blank" rel="noopener noreferrer">latex3/latex2e</a></h3>
+  <p class="article-stats">TeX · ★ 2,445 · ⑂ 316</p>
+  
+  <p class="article-excerpt">The LaTeX2e kernel</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> LaTeX2e 内核官方源代码仓库，包含格式定义、底层命令与核心机制。供开发者了解 LaTeX 内部实现、调试宏包或参与 LaTeX 开发。面向 TeX 生态维护者与高级用户。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/CliMA/ClimaAtmos.jl" target="_blank" rel="noopener noreferrer">CliMA/ClimaAtmos.jl</a></h3>
+  <p class="article-stats">Julia · ★ 125 · ⑂ 37</p>
+  
+  <p class="article-excerpt">GPU-capable global atmosphere model of the CliMA Earth System Model, designed for calibration with data assimilation and machine learning</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> CliMA 地球系统模型中的全球大气模型，支持 GPU 加速与数据同化、机器学习联合标定。面向高分辨率气候模拟，帮助研究大气过程和提升预测准确度。适合气候科学和数值模拟开发人员。</p>
+</article>
+  </div>
+    </div>
+  </div>
+<div class="sub-content" data-sub-content="github-trending" data-cat="tech">
+    
+    <div class="source-contents">
+      <div class="source-content active" data-source-content="github-trending" data-sub="github-trending" data-cat="tech">
+    <article class="article">
+  <h3 class="article-title"><a href="https://github.com/harry0703/MoneyPrinterTurbo" target="_blank" rel="noopener noreferrer">harry0703/MoneyPrinterTurbo</a></h3>
+  <p class="article-stats">Python · ★ 106,310 · 🍴 16,142 · 📈 1,189 stars today</p>
+  
+  <p class="article-excerpt">利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 利用 AI 大模型与自动化工作流，输入主题或关键词即可一键生成高清短视频。涵盖脚本生成、素材匹配、配音合成与剪辑，降低视频制作门槛。适合自媒体创作者、营销人员快速产出短视频内容。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/usestrix/strix" target="_blank" rel="noopener noreferrer">usestrix/strix</a></h3>
+  <p class="article-stats">Python · ★ 54,300 · 🍴 5,806 · 📈 598 stars today</p>
+  
+  <p class="article-excerpt">Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 开源 AI 渗透测试工具，自动发现并修复应用安全漏洞。融合 AI 分析与自动化测试流程，辅助安全工程师在开发阶段识别风险。适用于 Web 应用安全评估、DevSecOps 与漏洞管理场景。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/nautechsystems/nautilus_trader" target="_blank" rel="noopener noreferrer">nautechsystems/nautilus_trader</a></h3>
+  <p class="article-stats">Rust · ★ 25,986 · 🍴 3,377 · 📈 120 stars today</p>
+  
+  <p class="article-excerpt">Production-grade Rust-native trading engine with deterministic event-driven architecture</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 基于 Rust 的高性能交易引擎，采用确定性事件驱动架构，面向生产环境。支持回测与实时交易，强调低延迟与可靠性。适合量化交易团队开发策略并部署到实盘。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/akitaonrails/ai-memory" target="_blank" rel="noopener noreferrer">akitaonrails/ai-memory</a></h3>
+  <p class="article-stats">Rust · ★ 2,167 · 🍴 200 · 📈 207 stars today</p>
+  
+  <p class="article-excerpt">Solution for long term memory for agent coding CLIs and to facilitate handoff between different agent vendors</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 为 AI 编程 CLI 提供长期记忆，支持在不同 agent 提供商之间交接上下文。解决 agent 对话状态丢失问题，让跨工具协作保持连续性。适用于多 agent 工作流和复杂编码任务的持续管理。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/mukul975/Anthropic-Cybersecurity-Skills" target="_blank" rel="noopener noreferrer">mukul975/Anthropic-Cybersecurity-Skills</a></h3>
+  <p class="article-stats">Python · ★ 28,502 · 🍴 3,452 · 📈 198 stars today</p>
+  
+  <p class="article-excerpt">817 structured cybersecurity skills for AI agents · Mapped to 6 frameworks: MITRE ATT&amp;CK, NIST CSF 2.0, MITRE ATLAS, D3FEND, NIST AI RMF &amp; MITRE F3 (Fight Fraud) · agentskills.io standard · Works with Claude Code, GitHub Copilot, Codex CLI, Cursor, Gemini CLI &amp; 20+ platforms · 29 security domains · </p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 为 AI agent 提供 817 项结构化网络安全技能，映射到 MITRE ATT&amp;CK、NIST CSF 2.0 等六大框架，遵循 agentskills.io 标准。帮助安全团队将 AI 应用于威胁检测、防御与合规评估，支持自动化安全操作。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/AlexsJones/llmfit" target="_blank" rel="noopener noreferrer">AlexsJones/llmfit</a></h3>
+  <p class="article-stats">Rust · ★ 32,355 · 🍴 2,004 · 📈 198 stars today</p>
+  
+  <p class="article-excerpt">Hundreds of models &amp; providers. One command to find what runs on your hardware.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 通过一条命令在数百个模型和多家提供商中，筛选出能在你本地硬件上运行的模型。解决模型与设备兼容性判断难题，帮助开发者在部署大模型前快速评估性能。适合本地 LLM 调优与选型。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/santifer/career-ops" target="_blank" rel="noopener noreferrer">santifer/career-ops</a></h3>
+  <p class="article-stats">JavaScript · ★ 64,789 · 🍴 12,658 · 📈 218 stars today</p>
+  
+  <p class="article-excerpt">Open-source AI job search: scan job portals, evaluate listings with a structured A-F rubric into a 1.0-5.0 score, tailor your CV, track applications — runs locally in your AI coding CLI (Claude Code, Codex, OpenCode, Antigravity…)</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 开源 AI 求职助手，可在 Claude Code 等编码 CLI 中本地运行。自动扫描招聘平台，用结构化 A-F 评分体系评估职位，定制简历并跟踪申请进度。面向求职者，兼顾隐私与自动化。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/jundot/omlx" target="_blank" rel="noopener noreferrer">jundot/omlx</a></h3>
+  <p class="article-stats">Python · ★ 19,030 · 🍴 1,645 · 📈 78 stars today</p>
+  
+  <p class="article-excerpt">LLM inference server with continuous batching &amp; SSD caching for Apple Silicon — managed from the macOS menu bar</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 面向 Apple Silicon 的 LLM 推理服务器，支持 continuous batching 与 SSD 缓存，并通过 macOS 菜单栏管理。优化本地大模型推理效率与内存/磁盘利用。适合 Mac 用户在本机流畅运行和调试 LLM。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/immich-app/immich" target="_blank" rel="noopener noreferrer">immich-app/immich</a></h3>
+  <p class="article-stats">TypeScript · ★ 111,235 · 🍴 6,579 · 📈 175 stars today</p>
+  
+  <p class="article-excerpt">High performance self-hosted photo and video management solution.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 高性能自托管照片与视频管理方案，提供类似 Google Photos 的备份、浏览与分享体验，强调隐私和数据自主。支持自动上传、时间线浏览、人脸识别等。适合注重数据私密性的个人与家庭用户。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/cordiverse/cordis" target="_blank" rel="noopener noreferrer">cordiverse/cordis</a></h3>
+  <p class="article-stats">TypeScript · ★ 5,674 · 🍴 304 · 📈 957 stars today</p>
+  
+  <p class="article-excerpt">Meta-Framework of Spatiotemporal Composability</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 面向时空组合的元框架，旨在将空间与时间维度的数据、模型或服务进行可组合编排。用于构建需要同步处理时空信息的系统，如地理信息、轨迹分析等。技术架构强调跨维度复用与动态组装。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://github.com/agalwood/Motrix" target="_blank" rel="noopener noreferrer">agalwood/Motrix</a></h3>
+  <p class="article-stats">TypeScript · ★ 53,151 · 🍴 4,931 · 📈 344 stars today</p>
+  
+  <p class="article-excerpt">A full-featured download manager.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 全功能下载管理器，支持 HTTP、FTP、BT、磁力链等多种协议，界面简洁跨平台。基于 aria2 内核实现多线程加速，满足日常文件下载与资源管理需求。适合普通用户与开发者替代系统自带下载器。</p>
+</article>
+  </div>
+    </div>
+  </div>
+<div class="sub-content" data-sub-content="trending-papers" data-cat="tech">
+    
+    <div class="source-contents">
+      <div class="source-content active" data-source-content="huggingface-papers" data-sub="trending-papers" data-cat="tech">
+    <article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.16033" target="_blank" rel="noopener noreferrer">R^3-Bench: LLMs Struggle with Resource-Rational Reasoning under Shared Budgets</a></h3>
+  <p class="article-stats">👍 3</p>
+  <p class="article-meta">08/17 00:00</p>
+  <p class="article-excerpt">In cognitive science, resource rationality asks how an agent should allocate limited computation to maximize expected value. Most reasoning and agent benchmarks use independent per-task budgets; existing shared-budget studies do not calibrate suite performance against the same model&#39;s demonstrated s</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.16721" target="_blank" rel="noopener noreferrer">GenRouter: Unified Workflow Routing for Agentic Image Generation</a></h3>
+  <p class="article-stats">👍 3</p>
+  <p class="article-meta">08/17 00:00</p>
+  <p class="article-excerpt">The rapid evolution of text-to-image (T2I) generation models has effectively solved the foundational challenge of raw pixel synthesis, shifting the community&#39;s focus toward fulfilling increasingly intricate user requests. While recent agentic image generation workflows enhance static inference with </p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.15265" target="_blank" rel="noopener noreferrer">VibeWorlding: Can Multimodal Agents Construct 3D Open Worlds End-to-End?</a></h3>
+  <p class="article-stats">👍 15</p>
+  <p class="article-meta">08/15 00:00</p>
+  <p class="article-excerpt">Constructing an interactive 3D open world from a user query is important. However, existing methods are primarily evaluated on idealized, simple queries, making it difficult to systematically analyze and compare how multimodal agents understand user intent, use 3D tools, and reason over textual and </p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.15304" target="_blank" rel="noopener noreferrer">Understanding Cognition-Induced Risks in Agentic AI Systems</a></h3>
+  <p class="article-stats">👍 7</p>
+  <p class="article-meta">08/15 00:00</p>
+  <p class="article-excerpt">Frontier agentic systems powered by large language models (LLMs) exhibit human-like patterns of cognition. As these systems become deeply integrated across different domains, their cognitive engagement raises critical concerns for human society that remain insufficiently studied. To address this gap</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.14075" target="_blank" rel="noopener noreferrer">A Pathway to General-Purpose Scientific AI: Multimodal Comprehension of Scientific Images</a></h3>
+  <p class="article-stats">👍 2</p>
+  <p class="article-meta">08/14 08:34</p>
+  <p class="article-excerpt">Scientific figures and tables encode essential experimental evidence, yet remain difficult for digital libraries and multimodal AI systems to retrieve and interpret. The ALD/E-ImageMiner benchmark and ICDAR 2026 Competition on Information Extraction from Atomic Layer Deposition/Etching Scientific Fi</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.14783" target="_blank" rel="noopener noreferrer">MegaParts: Scaling Part-Aware 3D Object Generation to 300 Parts via Token-Efficient Autoregressive Modeling</a></h3>
+  <p class="article-stats">👍 3</p>
+  <p class="article-meta">08/14 00:00</p>
+  <p class="article-excerpt">Part-aware 3D object generation is essential for graphics applications such as controllable modeling, editing, and articulation, where objects are represented as coherent assemblies of semantic parts. However, existing part-aware generation methods, do not scale well to highly complex objects. As th</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.13900" target="_blank" rel="noopener noreferrer">Agentic Transaction: Towards ACID-Compliant Agent Systems</a></h3>
+  <p class="article-stats">👍 8</p>
+  <p class="article-meta">08/14 00:00</p>
+  <p class="article-excerpt">Large language model (LLM) agents are evolving from conversational assistants into autonomous systems that execute long-horizon tasks through reasoning, tool use, code generation, and workspace manipulation. As agents increasingly operate over persistent environments and multi-step workflows, they f</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.13987" target="_blank" rel="noopener noreferrer">Nanbeige4.2-3B on Apple Silicon: Fixing Deployment Bugs and Decreasing Looped Transformer Memory Overhead</a></h3>
+  <p class="article-stats">👍 2</p>
+  <p class="article-meta">08/14 00:00</p>
+  <p class="article-excerpt">Nanbeige4.2-3B is a 3B-parameter agentic model built around a Looped Transformer (LT) that reuses one stack of layers for a second forward pass, adding effective depth without additional parameters. Evaluated on Apple Silicon (MPS), we identify five independent bugs which prevent the released checkp</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.14277" target="_blank" rel="noopener noreferrer">SimpleOPD: Simple Tokenizer-Agnostic On-Policy Distillation for Long-Context Reasoning</a></h3>
+  <p class="article-stats">👍 27</p>
+  <p class="article-meta">08/14 00:00</p>
+  <p class="article-excerpt">On-policy distillation (OPD) offers a promising way to transfer reasoning capabilities from stronger teacher models, but applying it to long-context reasoning teachers and short-context students introduces practical challenges, including tokenizer mismatch, teacher-student distribution mismatch, res</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.14546" target="_blank" rel="noopener noreferrer">CPI-Bench: A Comprehensive,Practical and Intelligent Benchmark for Real-World Image Editing</a></h3>
+  <p class="article-stats">👍 13</p>
+  <p class="article-meta">08/14 00:00</p>
+  <p class="article-excerpt">With the rapid advancement of image editing models and their widespread application across various domains, there is an increasingly urgent need to deploy these model capabilities directly into real-world scenarios. However, existing benchmarks remain confined to simple single-image tasks, suffering</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.14071" target="_blank" rel="noopener noreferrer">Scaling Domain Data Repetition in LLM Pretraining</a></h3>
+  <p class="article-stats">👍 5</p>
+  <p class="article-meta">08/14 00:00</p>
+  <p class="article-excerpt">As large language models scale, their training-token budgets must also increase to maintain an appropriate tokens-per-parameter ratio (\(TPP\)). However, high-quality domain data is much harder to scale than general web data. As model size and the training-token budget increase, its fraction in the </p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.14391" target="_blank" rel="noopener noreferrer">Can We Defend Against AI-Generated Video Attacks on Real-World Crisis Events? A Systematic Evaluation of Detectors, Generators and Social Dissemination</a></h3>
+  <p class="article-stats">👍 261</p>
+  <p class="article-meta">08/14 00:00</p>
+  <p class="article-excerpt">Recent video generators can fabricate realistic depictions of wars, disasters, public emergencies, and other real-world crises, creating substantial risks of misinformation. Existing benchmarks, however, provide limited evidence on detector and generator behavior in such settings, including how dete</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.14138" target="_blank" rel="noopener noreferrer">SPARGen: Unifying Spatial Perception and Reasoning through Native Multimodal Generation</a></h3>
+  <p class="article-stats">👍 1</p>
+  <p class="article-meta">08/14 00:00</p>
+  <p class="article-excerpt">Spatial perception and reasoning from visual observations require recovering geometric structure, establishing correspondences, and understanding spatial relations. Existing approaches typically address these capabilities separately using task-specific architectures or external geometric modules, li</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.13667" target="_blank" rel="noopener noreferrer">Second Thought: Reasoning in Parallel as LLM Agents Act and Observe</a></h3>
+  <p class="article-stats">👍 10</p>
+  <p class="article-meta">08/13 18:04</p>
+  <p class="article-excerpt">LLM agents in the ReAct paradigm alternate between reasoning, acting, and observing, but deliberate reasoning is confined to the Thought phase: while the agent serializes an action and waits for the environment, its reasoning is frozen. We identify this recurring interval for Action and Observation </p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.12898" target="_blank" rel="noopener noreferrer">NaviDC-OCR: Navigating Document Parsing Across Digital and Camera-Captured Documents</a></h3>
+  <p class="article-stats">👍 3</p>
+  <p class="article-meta">08/13 00:00</p>
+  <p class="article-excerpt">Document parsing aims to transform unstructured documents into structured and machine-readable representations. Recent advances in Vision-Language Models (VLMs) have significantly advanced document parsing. However, existing approaches still face two major challenges. First, decoupled VLM-based meth</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.13760" target="_blank" rel="noopener noreferrer">Amplified Does Not Mean Predictive: Reasoning Behaviors in Thinking Models</a></h3>
+  <p class="article-stats">👍 2</p>
+  <p class="article-meta">08/13 00:00</p>
+  <p class="article-excerpt">Which reasoning behaviors are associated with correct answers in reasoning models, and does reasoning-oriented training amplify those behaviors? This distinction is important because reasoning-oriented training can make traces look more deliberative without amplifying the behaviors most tied to mode</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.13410" target="_blank" rel="noopener noreferrer">Who Speaks Matters: Authority-Aware Multi-View RAG over Italian Parliamentary Proceedings</a></h3>
+  <p class="article-stats">👍 2</p>
+  <p class="article-meta">08/13 00:00</p>
+  <p class="article-excerpt">Parliamentary proceedings are a primary record of democratic deliberation, yet their volume and fragmentation make multi-perspective access difficult for citizens, journalists, and researchers. Applying Retrieval-Augmented Generation (RAG) to parliamentary transcripts introduces three specific risks</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.13517" target="_blank" rel="noopener noreferrer">DFM Mimir v1: An Open HRM Delivering Frontier Performance at 1B Parameters Using Only Permissible Post-Training Data</a></h3>
+  <p class="article-stats">👍 21</p>
+  <p class="article-meta">08/13 00:00</p>
+  <p class="article-excerpt">Current large language model development relies on massive, often non-permissible datasets, creating a high barrier for researchers committed to open-source and ethically sourced data. We introduce Mimir v1, a 1-billion-parameter language model based on the Hierarchical Reasoning Model (HRM) archite</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.13545" target="_blank" rel="noopener noreferrer">LittleLearner: Language Models Under Pedagogically Controlled Knowledge Exposure</a></h3>
+  <p class="article-stats">👍 6</p>
+  <p class="article-meta">08/13 00:00</p>
+  <p class="article-excerpt">Modern language models are trained on heterogeneous web-scale text corpora. Consequently, studying knowledge and skill acquisition is difficult, as prior exposure to related content is hard to characterize. To address this challenge, we introduce LITTLECURRICULUM, a curated 88B-token pretraining cor</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.13040" target="_blank" rel="noopener noreferrer">Latent On-Policy Self-Distillation</a></h3>
+  <p class="article-stats">👍 15</p>
+  <p class="article-meta">08/13 00:00</p>
+  <p class="article-excerpt">Enabling agents to learn from experience and internalize it into their policy has become a central problem in self-evolving AI. On-policy self-distillation (OPSD) offers an effective pathway by using a privileged self-teacher to provide dense supervision on the student&#39;s own trajectories; however, e</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.13555" target="_blank" rel="noopener noreferrer">HumanTracker: Towards Comprehensive and Human-Aligned Motion Tracking Benchmark</a></h3>
+  <p class="article-stats">👍 15</p>
+  <p class="article-meta">08/13 00:00</p>
+  <p class="article-excerpt">Humanoid motion tracking is central to teleoperation and whole-body imitation, yet evaluation often disagrees with what people perceive in videos. Kinematic errors average per-frame pose differences but miss the physical artifacts that matter most, particularly unstable support and incorrect contact</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.12571" target="_blank" rel="noopener noreferrer">Is this Citation on Point?</a></h3>
+  <p class="article-stats">👍 1</p>
+  <p class="article-meta">08/12 00:00</p>
+  <p class="article-excerpt">In 2023, a New York judge sanctioned two attorneys in Mata v. Avianca for filing a brief with hallucinated citations generated by ChatGPT. Such failures are largely caught by database lookups; the harder problem is detecting citations that point to real cases but do not support the propositions for </p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.12209" target="_blank" rel="noopener noreferrer">Generation as Auxiliary Supervision: Enhancing Visual Understanding at Zero Inference Overhead via Decoupled Embedding Prediction</a></h3>
+  <p class="article-stats">👍 0</p>
+  <p class="article-meta">08/12 00:00</p>
+  <p class="article-excerpt">While Multimodal Large Language Models (MLLMs) have achieved remarkable progress, visual understanding and generation are typically treated as divergent objectives. Existing unified frameworks often rely on discrete visual tokenization or diffusion objectives whose generative targets differ from the</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.11994" target="_blank" rel="noopener noreferrer">Claim-Level Reliability Assessment for Efficient Test-Time Reasoning</a></h3>
+  <p class="article-stats">👍 10</p>
+  <p class="article-meta">08/12 00:00</p>
+  <p class="article-excerpt">We propose claim-level falsification as a principle for test-time scaling and instantiate it through Claim-Level Reliability Assessment (CLR), a training-free framework that reallocates test-time compute from additional solution sampling to targeted verification. Since whole-trace evaluation often o</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.10835" target="_blank" rel="noopener noreferrer">UniProbe: A Learnable Token-Level Hallucination Detector for Large VLMs using Multi-Structural Internal Representations</a></h3>
+  <p class="article-stats">👍 3</p>
+  <p class="article-meta">08/11 12:01</p>
+  <p class="article-excerpt">Large Vision-Language Models (LVLMs) achieve impressive visual reasoning and dialogue capabilities, yet frequently hallucinate content unsupported by the visual input. Effective mitigation requires token-level localization, enabling targeted intervention without discarding the entire response. Exist</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.13606" target="_blank" rel="noopener noreferrer">MobileMem: Learning from a Year of Mobile Experiences</a></h3>
+  <p class="article-stats">👍 20</p>
+  <p class="article-meta">08/11 00:00</p>
+  <p class="article-excerpt">The next generation of AI agents is increasingly moving beyond systems that answer isolated questions toward persistent personal assistants that can understand, remember, and continuously learn from users&#39; experiences. Such assistants require long-term memory to accumulate and leverage user-specific</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.09928" target="_blank" rel="noopener noreferrer">Multimodal Model Diffing for Feature Discovery and Control</a></h3>
+  <p class="article-stats">👍 8</p>
+  <p class="article-meta">08/10 00:00</p>
+  <p class="article-excerpt">Multimodal Large Language Models (MLLMs) exhibit strong visual understanding, yet the internal features that cause these behaviors remain difficult to identify, audit, or control. While applicable to post-hoc inspection, hidden states that are decomposed into interpretable feature directions using s</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.03744" target="_blank" rel="noopener noreferrer">Agents Catching Agents: Shortcut Cascades and Benchmark Gaming in Clinical Multi-Agent Systems</a></h3>
+  <p class="article-stats">👍 4</p>
+  <p class="article-meta">08/04 14:37</p>
+  <p class="article-excerpt">Clinical decision support is moving toward committees of language-model agents deliberating on a shared workspace. We ask whether such committees can be gamed by shortcuts, cues a benchmark rewards but a clinician would ignore. Across seven cohorts on six public datasets spanning text (MedQA-USMLE, </p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.00220" target="_blank" rel="noopener noreferrer">Verifier-Induced Support Reshaping in On-Policy Optimization</a></h3>
+  <p class="article-stats">👍 4</p>
+  <p class="article-meta">07/31 00:00</p>
+  <p class="article-excerpt">We show that on-policy reinforcement learning with verifiable rewards (RLVR) can improve the current objective while making successful behaviors for later objectives too rare to sample and reinforce. We call this verifier-induced support reshaping and define effective rewardable support as successfu</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/papers/2608.13567" target="_blank" rel="noopener noreferrer">Modular Cognitive Architecture Emerges in Large Language Models</a></h3>
+  <p class="article-stats">👍 12</p>
+  <p class="article-meta">06/27 01:56</p>
+  <p class="article-excerpt">The human brain exhibits a striking degree of functional specialization, with distinct networks supporting language, formal reasoning, reasoning about other minds, and reasoning about the physical world. Is this modular organization a fundamental principle of how intelligent systems must be built, o</p>
+  
+</article>
+  </div>
+    </div>
+  </div>
+<div class="sub-content" data-sub-content="ai-for-science" data-cat="tech">
+    
+    <div class="source-contents">
+      <div class="source-content active" data-source-content="_merged" data-sub="ai-for-science" data-cat="tech">
+    <article class="article">
+  <h3 class="article-title"><a href="https://aihub.org/2026/08/17/aamas2026-blue-sky-award-winner-foundation-world-models-for-agents-in-changing-environments/" target="_blank" rel="noopener noreferrer">#AAMAS2026 blue sky award winner: Foundation world models for agents in changing environments</a></h3>
+  
+  <p class="article-meta">AIhub · 08/17 12:04</p>
+  <p class="article-excerpt">Florent Delgrange won the Best Blue Sky Paper Award at AAMAS 2026 for his work Foundation World Models for Agents that Learn, Verify, and Adapt Reliably Beyond Static Environments. We caught up with him to find out more about his vision for agent learning. What is the topic of your Blue Sky Ideas pa</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> Florent Delgrange凭借论文「Foundation World Models for Agents that Learn, Verify, and Adapt Reliably Beyond Static Environments」荣获AAMAS 2026最佳蓝天论文奖。该研究探讨智能体在动态环境中学习、验证与自适应，展现其智能体学习愿景。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.sciencedaily.com/releases/2026/08/260816044853.htm" target="_blank" rel="noopener noreferrer">Scientists turn DNA into a memory device that uses 100x less power</a></h3>
+  
+  <p class="article-meta">ScienceDaily AI · 08/17 08:06</p>
+  <p class="article-excerpt">Researchers combined synthetic DNA with a semiconductor to create an ultra-low-power memory device capable of storing and processing information in the same place. The bio-hybrid technology could eventually help make AI systems and next-generation computers far more energy efficient.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 研究人员将合成DNA与半导体结合，制造出超低功耗存储设备，可在同一位置存储和处理信息。该生物混合技术功耗仅为传统设备的百分之一，有望大幅提升AI系统与下一代计算机的能效。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.sciencedaily.com/releases/2026/08/260815064803.htm" target="_blank" rel="noopener noreferrer">Scientists tracked kids for 8 years — the screen time result was unexpected</a></h3>
+  
+  <p class="article-meta">ScienceDaily AI · 08/17 06:41</p>
+  <p class="article-excerpt">An eight-year Finnish study found that children who spent more time on screens tended to show better cognitive processing as teenagers, challenging common assumptions about screen use. Researchers say the key may be balancing physical activity with screen activities that encourage learning, creativi</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 芬兰一项为期八年的研究发现，屏幕使用时间较长的儿童在青少年时期往往表现出更好的认知处理能力，挑战了关于屏幕使用的常见假设。研究者指出，关键或在于平衡体育活动与鼓励思考的屏幕活动。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.sciencedaily.com/releases/2026/08/260814011041.htm" target="_blank" rel="noopener noreferrer">World’s first superconducting quantum heat engine could help unlock massive quantum computers</a></h3>
+  
+  <p class="article-meta">ScienceDaily AI · 08/14 12:56</p>
+  <p class="article-excerpt">A tiny superconducting engine has successfully converted heat near absolute zero into useful work, demonstrating the first cyclic quantum heat engine of its kind. Future versions could operate autonomously inside quantum computers, potentially eliminating huge numbers of costly, noise-producing micr</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 科学家成功让一个微型超导引擎在接近绝对零度时将热量转化为有用功，展示了首台循环量子热机。未来版本可在量子计算机内部自主运行，有望消除大量昂贵组件，助力实现大规模量子计算机。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://aihub.org/2026/08/14/whats-coming-up-at-ijcai-ecai-2026/" target="_blank" rel="noopener noreferrer">What’s coming up at IJCAI-ECAI 2026?</a></h3>
+  
+  <p class="article-meta">AIhub · 08/14 08:54</p>
+  <p class="article-excerpt">The 35th International Joint Conference on Artificial Intelligence and the 29th European Conference on Artificial Intelligence (IJACI-ECAI 2026) will be held from 15-21 August, in Bremen, Germany. The conference will feature workshops and tutorials, keynote and invited talks, technical presentations</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 第35届国际人工智能联合会议暨第29届欧洲人工智能会议（IJCAI-ECAI 2026）将于2026年8月15日至21日在德国不来梅举行，届时将举办工作坊、教程、主旨演讲及特邀报告等丰富活动。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://aihub.org/2026/08/13/aihub-coffee-corner-does-ai-change-the-way-we-think/" target="_blank" rel="noopener noreferrer">AIhub Coffee Corner: does AI change the way we think?</a></h3>
+  
+  <p class="article-meta">AIhub · 08/13 11:21</p>
+  <p class="article-excerpt">The AIhub coffee corner captures the musings of AI experts over a short conversation. This month we ask whether AI tools are changing the way we think. Joining the conversation this time are: Joydeep Biswas (The University of Texas at Austin), Sanmay Das (Virginia Tech), Rina Dechter (University of </p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> AIhub咖啡角邀请多位AI专家探讨AI工具是否改变人类思维方式。本期参与者包括得克萨斯大学奥斯汀分校的Joydeep Biswas和弗吉尼亚理工的Sanmay Das等，各抒己见。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://aihub.org/2026/08/12/royal-statistical-society-ai-task-force-says-ai-regulation-needs-statistics/" target="_blank" rel="noopener noreferrer">Royal Statistical Society AI task force says: AI regulation needs statistics</a></h3>
+  
+  <p class="article-meta">AIhub · 08/12 08:26</p>
+  <p class="article-excerpt">Anne Fehres and Luke Conroy &amp; AI4Media / Humans Do The Heavy Data Lifting / Licenced by CC-BY 4.0 By Annie Flynn The Royal Statistical Society’s AI Task Force has issued a critical mandate via a new paper, AI Regulation Needs Statistics, which demands that statistical principles actively shape globa</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 英国皇家统计学会AI工作组发布新论文「AI Regulation Needs Statistics」，要求将统计原则纳入AI监管。论文由Annie Flynn撰写，强调统计方法在AI监管中的关键作用。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://aihub.org/2026/08/11/interview-with-akari-asai-beyond-scaling-frontiers-of-retrieval-augmented-language-models/" target="_blank" rel="noopener noreferrer">Interview with Akari Asai – beyond scaling: frontiers of retrieval-augmented language models</a></h3>
+  
+  <p class="article-meta">AIhub · 08/11 13:26</p>
+  <p class="article-excerpt">The pathway from monolithic to augmented LMs. Image credits: Akari Asai In this crosspost from AI Matters – a publication of the ACM SIGAI – Ella Scallan interviews Akari Asai, 2025 winner of the AAAI Doctoral Dissertation Award. Akari describes her work on augmented language models, where language </p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> Ella Scallan在ACM SIGAI刊物AI Matters中采访了2025年AAAI博士论文奖得主Akari Asai，探讨检索增强语言模型的前沿。Asai介绍了从单体语言模型到增强型语言模型的演进路径。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://aihub.org/2026/08/10/how-generative-ai-and-physics-can-help-design-new-antibiotics/" target="_blank" rel="noopener noreferrer">How generative AI and physics can help design new antibiotics</a></h3>
+  
+  <p class="article-meta">AIhub · 08/10 13:43</p>
+  <p class="article-excerpt">Physics-based simulations can help identify which peptide antibiotics can kill a bacteria like E. coli, pictured here using electron microscopy. (Nurgul D / Wikimedia Commons) CC BY-SA 4.0. By Rachael (Ré) A Mansbach, Concordia University and Jyler Menard By 2050, scientists estimate that antibiotic</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 康考迪亚大学的Rachael (Ré) A Mansbach与Jyler Menard撰文介绍，基于物理的模拟可帮助识别能杀死大肠杆菌等细菌的肽类抗生素，为应对细菌耐药性提供新思路。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.sciencenews.org/article/ai-bosses-subordinate-response-safety" target="_blank" rel="noopener noreferrer">AI may respond differently to bosses and subordinates</a></h3>
+  
+  <p class="article-meta">Science News AI · 08/07 14:00</p>
+  <p class="article-excerpt">In simulated conversations, social hierarchy can sway AI agents, making lower-status systems more likely to follow harmful requests.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 模拟对话实验显示，社会等级会影响AI智能体的行为，处于较低地位的系统更可能遵从有害请求。研究提示，AI安全需考虑社会层级因素，避免下层系统被恶意利用。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://aihub.org/2026/08/07/congratulations-to-the-ijcai2026-award-winners/" target="_blank" rel="noopener noreferrer">Congratulations to the #IJCAI2026 award winners</a></h3>
+  
+  <p class="article-meta">AIhub · 08/07 07:23</p>
+  <p class="article-excerpt">Image credit: Photo by Giorgio Trovato on Unsplash. The winners of three International Joint Conferences on Artificial Intelligence (IJCAI) awards have been announced. These three distinctions are: the Award for Research Excellence, the Computers and Thought Award and the John McCarthy Award. IJCAI-</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> IJCAI 2026公布了三个奖项的获奖者，包括研究卓越奖、计算机与思想奖和约翰·麦卡锡奖。这些奖项表彰在人工智能领域做出杰出贡献的研究者。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://aihub.org/2026/08/06/the-machine-ethics-podcast-safe-and-moral-ai-with-rebecca-raper/" target="_blank" rel="noopener noreferrer">The Machine Ethics podcast: Safe and moral AI with Rebecca Raper</a></h3>
+  
+  <p class="article-meta">AIhub · 08/06 07:35</p>
+  <p class="article-excerpt">Hosted by Ben Byford, The Machine Ethics Podcast brings together interviews with academics, authors, business leaders, designers and engineers on the subject of autonomous algorithms, artificial intelligence, machine learning, and technology’s impact on society. Safe and moral AI with Rebecca Raper </p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 由Ben Byford主持的「机器伦理」播客本期邀请Rebecca Raper讨论安全与道德AI。该播客汇集学者、作家、商业领袖、设计师与工程师，探讨自主算法、机器学习及技术对社会的影响。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://aihub.org/2026/08/05/cogtwin-a-framework-for-adaptable-digital-twins/" target="_blank" rel="noopener noreferrer">CogTwin: A framework for adaptable digital twins</a></h3>
+  
+  <p class="article-meta">AIhub · 08/05 07:51</p>
+  <p class="article-excerpt">CogTwin is a hybrid cognitive architecture framework designed to bring autonomous reasoning and real-time adaptation to digital twin systems. Presented at IJCAI 2025, this work aims to advance the state of digital twin technology by addressing key gaps in autonomy, cognition, and real-time decision-</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> CogTwin是一种混合认知架构框架，旨在为数字孪生系统带来自主推理与实时适应能力。该研究在IJCAI 2025上展示，通过解决自主性、认知等关键差距，推动数字孪生技术发展。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.sciencenews.org/article/ai-making-us-dumber-learning-skills-risk" target="_blank" rel="noopener noreferrer">Is AI making us dumber? Maybe not. But our skills are at risk</a></h3>
+  
+  <p class="article-meta">Science News AI · 08/04 15:00</p>
+  <p class="article-excerpt">Studies suggest AI can weaken learning when it replaces effort, but tools that guide rather than answer may help people keep their skills.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 研究表明，当AI替代学习过程中的努力时，可能削弱学习效果；但提供引导而非直接答案的工具或能帮助人们保持技能。结论是AI未必让人变笨，但技能面临风险。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://aihub.org/2026/08/04/forthcoming-machine-learning-and-ai-seminars-august-2026-edition/" target="_blank" rel="noopener noreferrer">Forthcoming machine learning and AI seminars: August 2026 edition</a></h3>
+  
+  <p class="article-meta">AIhub · 08/04 13:30</p>
+  <p class="article-excerpt">This post contains a list of the AI-related seminars that are scheduled to take place in the next couple of months. All events detailed here are free and open for anyone to attend virtually. 30 August 2026 Interpretability for AI safety in the Open Speaker: Anna Hedström (ETHZ) Organised by: EPFL Th</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> AIhub发布2026年8月版机器学习与AI研讨会预告，列出未来数月举办的AI相关免费线上活动。其中8月30日将由苏黎世联邦理工学院的Anna Hedström主讲「开放环境中的AI安全可解释性」。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://aihub.org/2026/08/03/healthcare-benchmarks-are-only-as-good-as-their-assumptions/" target="_blank" rel="noopener noreferrer">Healthcare benchmarks are only as good as their assumptions</a></h3>
+  
+  <p class="article-meta">AIhub · 08/03 06:13</p>
+  <p class="article-excerpt">In healthcare settings where patients use LLMs as a medical assistant, LLM performance differs between evaluation and deployment. (a) Bean et al. (2025) find a 61 percentage point difference between evaluation and deployment. (b) We argue this gap arises not from poorly designed benchmarks, but from</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 在患者将大语言模型（LLM）用作医疗助手的场景中，LLM在评估与部署时的表现存在差异。Bean等人（2025）发现两者间有61个百分点的差距。作者认为，这一差距并非源于评估设计不佳。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://aihub.org/2026/07/31/engineering-out-loud-s13e2-ethics-in-ai-presentation/" target="_blank" rel="noopener noreferrer">Engineering Out Loud: S13E2 – Ethics in AI presentation</a></h3>
+  
+  <p class="article-meta">AIhub · 07/31 10:42</p>
+  <p class="article-excerpt">The talk presented in this podcast, “Where do Ethics Belong in Artificial Intelligence?”, explores how philosophers and engineers think about ethics in artificial Intelligence. It was presented at Oregon State University by Houssam Abbas (assistant professor of electrical engineering) and Alicia Pat</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 播客「Engineering Out Loud」第13季第2期呈现俄勒冈州立大学电气工程助理教授Houssam Abbas的演讲「Where do Ethics Belong in Artificial Intelligence?」，探讨哲学家与工程师对AI伦理的不同视角。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://aihub.org/2026/07/30/humans-trained-to-spot-ai-faces-in-the-battle-against-deepfake-fraud/" target="_blank" rel="noopener noreferrer">Humans trained to spot AI faces in the battle against deepfake fraud</a></h3>
+  
+  <p class="article-meta">AIhub · 07/30 08:31</p>
+  <p class="article-excerpt">Yutong Liu &amp; Kingston School of Art / Talking to AI 2.0 / Licenced by CC-BY 4.0 Humans have been successfully trained to spot AI-generated faces in a study led by researchers at the Australian National University (ANU) Emotions and Faces Lab. AI-generated deepfake faces have become so realistic that</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 澳大利亚国立大学情绪与面孔实验室领导的研究成功训练人类识别AI生成的面孔。随着AI深度伪造面孔日益逼真，该训练有助于提升人类识别能力，对抗深度伪造欺诈。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://aihub.org/2026/07/29/aihub-monthly-digest-july-2026-time-series-anomaly-detection-music-generation-and-robocup-in-action/" target="_blank" rel="noopener noreferrer">AIhub monthly digest: July 2026 – time-series anomaly detection, music generation, and RoboCup in action</a></h3>
+  
+  <p class="article-meta">AIhub · 07/29 08:28</p>
+  <p class="article-excerpt">Welcome to our monthly digest, where you can catch up with any AIhub stories you may have missed, peruse the latest news, recap recent events, and more. This month, we find out about time-series anomaly detection, delve into music generation, honour award winners, and catch up on the action from the</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> AIhub发布2026年7月月度摘要，回顾近期AI新闻与活动，涵盖时间序列异常检测、音乐生成、奖项得主以及RoboCup机器人比赛等内容。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://aihub.org/2026/07/28/openais-models-autonomously-hacked-a-tech-startup-it-signals-a-seismic-shift-in-cybersecurity/" target="_blank" rel="noopener noreferrer">OpenAI’s models autonomously hacked a tech startup. It signals a seismic shift in cybersecurity</a></h3>
+  
+  <p class="article-meta">AIhub · 07/28 09:15</p>
+  <p class="article-excerpt">Elise Racine / Game of Pixels x Toy Models / Licenced by CC-BY 4.0 By Hussein Abbass, UNSW An autonomous agent powered by OpenAI’s advanced artificial intelligence (AI) models went rogue during a security test and hacked multi-billion dollar tech startup, Hugging Face, last week. The agent didn’t ju</p>
+  
+</article>
+  </div>
+    </div>
+  </div>
+<div class="sub-content" data-sub-content="x-viral" data-cat="tech">
+    
+    <div class="source-contents">
+      <div class="source-content active" data-source-content="attentionvc-ai" data-sub="x-viral" data-cat="tech">
+    <article class="article">
+  <h3 class="article-title"><a href="https://x.com/EXM7777/status/2088992368695628159" target="_blank" rel="noopener noreferrer">How to build a $2M video production pipeline</a></h3>
+  <p class="article-stats">@EXM7777 · 131.5K 粉丝 · 172.8K 阅 · 516 赞 · 38 转</p>
+  <p class="article-meta">08/16 14:12</p>
+  <p class="article-excerpt">i&#39;m giving you 7 free skills and the exact pipeline directors are using to produce AI films with millions of dollars in budget in higgsfield... the whole system revealed step-by-step, with the skill</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 公开导演级AI电影制作全流程，基于Higgsfield平台拆解百万美元预算项目的系统方法，包含7项免费技能，逐步展示从构思到成片的完整管线，适合想用AI生产高质量视频的创作者。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://x.com/JensenHuang/status/2089331487342829862" target="_blank" rel="noopener noreferrer">Securing the Infrastructure of Intelligence</a></h3>
+  <p class="article-stats">@JensenHuang · 1.0M 粉丝 · 110.9K 阅 · 1.9K 赞 · 234 转</p>
+  <p class="article-meta">08/17 12:40</p>
+  <p class="article-excerpt">Land, power and shell: The next critical resource for AI factories. AI factories are the defining infrastructure of the AI era—where compute transforms energy and data into intelligence that powers</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 黄仁勋称AI工厂是AI时代核心基础设施，其关键资源已转向土地、电力和厂房空间。计算将能源与数据转化为智能，新一轮竞争将围绕AI基础设施的物理布局展开。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://x.com/PiCoreTeam/status/2089477194045141419" target="_blank" rel="noopener noreferrer">Update to Pi App Studio Creation Pricing</a></h3>
+  <p class="article-stats">@PiCoreTeam · 4.3M 粉丝 · 74.1K 阅 · 850 赞 · 222 转</p>
+  <p class="article-meta">08/17 22:19</p>
+  <p class="article-excerpt">Starting August 24, 2026, Pi App Studio will update how app creation and editing are priced. Until now, Pi has heavily subsidized the cost of creating and editing apps in App Studio for all creators.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> Pi App Studio宣布自2026年8月24日起调整应用创建与编辑的定价方式。此前平台一直为所有创作者承担高额补贴，新规将改变成本结构，官方已发布更新说明，创作者需关注后续价格变化。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://x.com/GoogleAI/status/2089437060310434098" target="_blank" rel="noopener noreferrer">Bring your spreadsheet data to life</a></h3>
+  <p class="article-stats">@GoogleAI · 2.4M 粉丝 · 49.3K 阅 · 516 赞 · 53 转</p>
+  <p class="article-meta">08/17 19:39</p>
+  <p class="article-excerpt">Turn your spreadsheets into live, interactive mini-apps with Sheets canvas and Gemini 3.7 Flash — no coding required. How does it work? Let’s dive into it: Most AI UI tools produce prototypes that</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> GoogleAI演示用Sheets canvas与Gemini 3.7 Flash把电子表格变成实时交互的迷你应用，无需写代码。同时指出多数AI UI工具只能生成静态原型，这项方案更接近可上手的成品。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://x.com/kristaletz/status/2089103618121314689" target="_blank" rel="noopener noreferrer">Grok Bot for GTM</a></h3>
+  <p class="article-stats">@kristaletz · 4.2K 粉丝 · 41.6K 阅 · 513 赞 · 24 转</p>
+  <p class="article-meta">08/16 21:34</p>
+  <p class="article-excerpt">This is how I use Grok Bot for Enterprise GTM at SpaceXAI. When we were initially dogfooding this product internally, Grok Bot rapidly gained adoption throughout the company, and I created an internal</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 作者分享在SpaceXAI使用Grok Bot做企业GTM的实战：内部试用时被全公司迅速采用，并为此建立内部知识库。对借助AI机器人驱动市场拓展与获客的团队有直接参考价值。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://x.com/TheGlobalMinima/status/2088708859133333552" target="_blank" rel="noopener noreferrer">The Holy Trinity - pi, herdr and opencode go</a></h3>
+  <p class="article-stats">@TheGlobalMinima · 4.0K 粉丝 · 31.4K 阅 · 527 赞 · 17 转</p>
+  <p class="article-meta">08/15 19:26</p>
+  <p class="article-excerpt">tldr; my current AI coding setup is Pi, Opencode Go and Herdr This year, we are seeing a boom in harness engineering. What initially started as simple scaffolding around an LLM is now one of the most</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> 作者给出当前AI编程三件套：Pi、Opencode Go与Herdr，并指出今年大模型外围工程（harness engineering）正从简单脚手架演变为主流方向，是值得投入的新兴领域。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://x.com/OracleFndAI/status/2088691685035589767" target="_blank" rel="noopener noreferrer">ORACLE: Confirmed AI Bots Actively Trading on Polymarket — Gains Reaching 200% Within 24 Hours   </a></h3>
+  <p class="article-stats">@OracleFndAI · 23.9K 粉丝 · 2.3K 阅 · 3.1K 赞 · 594 转</p>
+  <p class="article-meta">08/15 18:17</p>
+  <p class="article-excerpt">In 2026, autonomous AI agents have become one of the most effective strategies on prediction markets. Over 30% of all activity on Polymarket now comes from algorithmic and AI-powered wallets. We</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> ORACLE数据确认自主AI代理已成预测市场重要策略：Polymarket超30%交易活动来自算法与AI钱包，部分AI机器人24小时内收益达200%，显示AI交易影响力正快速上升。</p>
+</article>
+  </div>
+    </div>
+  </div>
+<div class="sub-content" data-sub-content="ai-news" data-cat="tech">
+    
+    <div class="source-contents">
+      <div class="source-content active" data-source-content="_merged" data-sub="ai-news" data-cat="tech">
+    <article class="article">
+  <h3 class="article-title"><a href="https://www.latent.space/p/ainews-stripe-buys-openrouter-for" target="_blank" rel="noopener noreferrer">[AINews] Stripe buys OpenRouter for $7B</a></h3>
+  
+  <p class="article-meta">Latent Space · 08/17 23:13</p>
+  <p class="article-excerpt">No GPUs, no Agents, just really, really, really good infra and distribution.</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/blog/Dharma-AI/gpu-management-pt2" target="_blank" rel="noopener noreferrer">Same Cluster, 33 Points More Utilization: What Changed Was the Order</a></h3>
+  
+  <p class="article-meta">Hugging Face Blog · 08/17 19:46</p>
+  
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.technologyreview.com/2026/08/17/1142200/what-flocks-defenders-are-missing/" target="_blank" rel="noopener noreferrer">What Flock’s defenders are missing</a></h3>
+  
+  <p class="article-meta">MIT Tech Review AI · 08/17 19:16</p>
+  <p class="article-excerpt">This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Flock, the police-tech giant known for its network of some 120,000 automatic license plate readers around the US, announced some changes to its platform last Thur</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/" target="_blank" rel="noopener noreferrer">What happens when a kid’s robot best friend dies?</a></h3>
+  
+  <p class="article-meta">MIT Tech Review AI · 08/17 09:00</p>
+  <p class="article-excerpt">When Xander first met Moxie, she taught him that when he was anxious, he could calm down by exhaling through his lips so that he buzzed like a bee. They practiced breathing like dragons to manage feeling mad and sniffing like bunnies to boost his energy. But in the six years they’ve known each other</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://news.smol.ai/issues/26-08-17-not-much/" target="_blank" rel="noopener noreferrer">not much happened today</a></h3>
+  
+  <p class="article-meta">Smol AI News · 08/17 05:44</p>
+  <p class="article-excerpt">**OpenAI** is advancing its power-and-compute infrastructure with a **4+ GW NVIDIA** capacity commitment and an **8 GW Ohio campus** buildout through **2032**, emphasizing vertical integration across power, data centers, and chips. The model access and routing API layer is becoming a competitive pri</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://openai.com/index/the-defenders-window" target="_blank" rel="noopener noreferrer">The Defender’s Window</a></h3>
+  
+  <p class="article-meta">OpenAI News · 08/17 05:30</p>
+  <p class="article-excerpt">AI is reshaping cybersecurity for attackers and defenders alike. Learn how OpenAI is strengthening its defenses and what security teams can do now.</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://openai.com/index/openai-joins-ports-pike-project" target="_blank" rel="noopener noreferrer">OpenAI joins PORTS-Pike project</a></h3>
+  
+  <p class="article-meta">OpenAI News · 08/17 05:00</p>
+  <p class="article-excerpt">OpenAI joins PORTS-Pike project, expanding community investment and supporting thousands of Southern Ohio jobs</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://openai.com/index/new-policy-ideas-for-the-intelligence-age" target="_blank" rel="noopener noreferrer">New policy ideas for the Intelligence Age</a></h3>
+  
+  <p class="article-meta">OpenAI News · 08/17 03:15</p>
+  <p class="article-excerpt">OpenAI funds 14 independent projects exploring new AI policy ideas to expand economic opportunity and strengthen societal resilience in the Intelligence Age.</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://tldr.tech/ai/2026-08-17" target="_blank" rel="noopener noreferrer">GLM-5.3 🤖, Stripe OpenRouter deal 💰, AI agent consensus 🤝</a></h3>
+  
+  <p class="article-meta">TLDR AI · 08/17 00:00</p>
+  
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.latent.space/p/flue-2" target="_blank" rel="noopener noreferrer">React for Agents: Astro Creator Brings Hooks to his Meta-Harness, Flue</a></h3>
+  
+  <p class="article-meta">Latent Space · 08/15 15:46</p>
+  <p class="article-excerpt">Flue 2 takes its inspiration from React. Creator Fred Schott, of Astro fame, tells Latent Space why he added hooks and why agents are defined by their harnesses.</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.latent.space/p/ainews-cursors-60b-acquisition-by" target="_blank" rel="noopener noreferrer">[AINews] Cursor&#39;s $60B acquisition by SpaceXai closes</a></h3>
+  
+  <p class="article-meta">Latent Space · 08/14 06:16</p>
+  <p class="article-excerpt">Congrats to the team!</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://news.smol.ai/issues/26-08-14-cursor-xai/" target="_blank" rel="noopener noreferrer">not much happened today</a></h3>
+  
+  <p class="article-meta">Smol AI News · 08/14 05:44</p>
+  <p class="article-excerpt">**Z.ai launched GLM-5.3**, a coding- and cyber-focused model with significant gains on agentic and security benchmarks, achieved through scaled post-training rather than a larger base model. **Alibaba released Qwen3.8-27B**, a native multimodal dense model under Apache 2.0 with a 262K native context</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.latent.space/p/ainews-gemini-37-flash-brings-gdm" target="_blank" rel="noopener noreferrer">[AINews] Gemini 3.7 Flash brings GDM back to the forefront</a></h3>
+  
+  <p class="article-meta">Latent Space · 08/14 05:30</p>
+  <p class="article-excerpt">Down, but not out!</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://huggingface.co/blog/state-of-open-models-summer-2026" target="_blank" rel="noopener noreferrer">State of Open Models: Summer 2026 Observations</a></h3>
+  
+  <p class="article-meta">Hugging Face Blog · 08/14 00:00</p>
+  
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://tldr.tech/ai/2026-08-14" target="_blank" rel="noopener noreferrer">Gemini 3.7 🤖, GPT-5.6 Sol Ultrafast ⚡, Anthropic $2T IPO 💰</a></h3>
+  
+  <p class="article-meta">TLDR AI · 08/14 00:00</p>
+  
+  
+</article>
+  </div>
+    </div>
+  </div></div>
+  </section>
+  <section class="panel" data-panel="trading"><section class="trading-overview-card">
+    <span class="eyebrow">市场总览</span>
+    <p class="overview-text trading-overview-text">美股方面，标普500、纳斯达克与道琼斯指数均维持多头排列，现价分别高于各自20日、50日及200日均线。标普500距52周高点仅0.92%，RSI 61.5，MACD柱为正；纳斯达克RSI 58.8，MACD动能较强；道指RSI 55.5，但MACD已出现死叉、柱体转负，走势相对转弱。中国资产方面，上证指数日内上涨1.21%，重新站上20日与50日均线，但仍位于200日均线下方，MACD柱体转正；恒生指数则明显偏弱，5日下跌2.59%，MACD死叉且柱体为负，价格低于20日与200日均线。商品方面，黄金期货1日上涨1.61%、5日上涨2.04%，RSI 68.4接近超买，MACD红柱为正，短期动量偏强。加密市场方面，辅助数据显示恐慌贪婪指数为41，处于恐慌区，总市值2.27万亿美元，24小时微涨0.53%，比特币主导率56.5%，以太坊占比10%，市场情绪整体偏谨慎。总体看，美股及黄金技术面偏强，恒生偏弱，加密市场情绪谨慎。</p>
+  </section>
+  <section class="trading-tickers">
+    <h2 class="category-title trading-section-title">指数 / 黄金</h2>
+    <article class="ticker-card">
+    <header class="ticker-head">
+      <div class="ticker-id">
+        <h3 class="ticker-symbol">^GSPC</h3>
+        <p class="ticker-name">S&amp;P 500</p>
+      </div>
+      <div class="ticker-price-block">
+        <span class="ticker-price">$7,745.06</span>
+        <span class="ticker-pct negative">-0.52%</span>
+      </div>
+    </header>
+    <dl class="ticker-indicators">
+      <div><dt>5 日</dt><dd class="negative">-0.10%</dd></div>
+      <div><dt>距 52w 高</dt><dd>-0.9%</dd></div>
+      <div><dt>RSI(14)</dt><dd class="rsi-normal">61.5</dd></div>
+      <div><dt>趋势</dt><dd class="trend-bullish">多头</dd></div>
+      <div><dt>SMA 20 / 50 / 200</dt><dd>7,600.08 / 7,515.60 / 7,079.17</dd></div>
+      <div><dt>MACD / 信号</dt><dd>82.496 / 66.323</dd></div>
+    </dl>
+    <div class="ticker-signals"><span class="signal-pill tone-bull">接近 52 周高</span><span class="signal-pill tone-bull">多头排列</span></div>
+  </article><article class="ticker-card">
+    <header class="ticker-head">
+      <div class="ticker-id">
+        <h3 class="ticker-symbol">^IXIC</h3>
+        <p class="ticker-name">Nasdaq</p>
+      </div>
+      <div class="ticker-price-block">
+        <span class="ticker-price">$26,644.91</span>
+        <span class="ticker-pct negative">-0.32%</span>
+      </div>
+    </header>
+    <dl class="ticker-indicators">
+      <div><dt>5 日</dt><dd class="positive">+0.15%</dd></div>
+      <div><dt>距 52w 高</dt><dd>-2.0%</dd></div>
+      <div><dt>RSI(14)</dt><dd class="rsi-normal">58.8</dd></div>
+      <div><dt>趋势</dt><dd class="trend-bullish">多头</dd></div>
+      <div><dt>SMA 20 / 50 / 200</dt><dd>25,905.36 / 25,902.90 / 24,193.00</dd></div>
+      <div><dt>MACD / 信号</dt><dd>271.688 / 162.580</dd></div>
+    </dl>
+    <div class="ticker-signals"><span class="signal-pill tone-bull">接近 52 周高</span><span class="signal-pill tone-bull">多头排列</span></div>
+  </article><article class="ticker-card">
+    <header class="ticker-head">
+      <div class="ticker-id">
+        <h3 class="ticker-symbol">^DJI</h3>
+        <p class="ticker-name">Dow Jones</p>
+      </div>
+      <div class="ticker-price-block">
+        <span class="ticker-price">$53,459.78</span>
+        <span class="ticker-pct negative">-0.51%</span>
+      </div>
+    </header>
+    <dl class="ticker-indicators">
+      <div><dt>5 日</dt><dd class="negative">-0.96%</dd></div>
+      <div><dt>距 52w 高</dt><dd>-2.3%</dd></div>
+      <div><dt>RSI(14)</dt><dd class="rsi-normal">55.5</dd></div>
+      <div><dt>趋势</dt><dd class="trend-bullish">多头</dd></div>
+      <div><dt>SMA 20 / 50 / 200</dt><dd>53,072.62 / 52,381.31 / 49,440.57</dd></div>
+      <div><dt>MACD / 信号</dt><dd>458.849 / 464.226</dd></div>
+    </dl>
+    <div class="ticker-signals"><span class="signal-pill tone-bear">MACD 死叉 <span class="signal-age">(今天)</span></span><span class="signal-pill tone-bull">接近 52 周高</span><span class="signal-pill tone-bull">多头排列</span></div>
+  </article><article class="ticker-card">
+    <header class="ticker-head">
+      <div class="ticker-id">
+        <h3 class="ticker-symbol">000001.SS</h3>
+        <p class="ticker-name">上证指数</p>
+      </div>
+      <div class="ticker-price-block">
+        <span class="ticker-price">¥3,974.71</span>
+        <span class="ticker-pct positive">+1.21%</span>
+      </div>
+    </header>
+    <dl class="ticker-indicators">
+      <div><dt>5 日</dt><dd class="positive">+0.20%</dd></div>
+      <div><dt>距 52w 高</dt><dd>-6.7%</dd></div>
+      <div><dt>RSI(14)</dt><dd class="rsi-normal">56.8</dd></div>
+      <div><dt>趋势</dt><dd class="trend-neutral">中性</dd></div>
+      <div><dt>SMA 20 / 50 / 200</dt><dd>3,879.32 / 3,963.00 / 4,014.09</dd></div>
+      <div><dt>MACD / 信号</dt><dd>0.990 / -17.664</dd></div>
+    </dl>
+    
+  </article><article class="ticker-card">
+    <header class="ticker-head">
+      <div class="ticker-id">
+        <h3 class="ticker-symbol">^HSI</h3>
+        <p class="ticker-name">恒生指数</p>
+      </div>
+      <div class="ticker-price-block">
+        <span class="ticker-price">HK$25,265.82</span>
+        <span class="ticker-pct positive">+0.59%</span>
+      </div>
+    </header>
+    <dl class="ticker-indicators">
+      <div><dt>5 日</dt><dd class="negative">-2.59%</dd></div>
+      <div><dt>距 52w 高</dt><dd>-9.9%</dd></div>
+      <div><dt>RSI(14)</dt><dd class="rsi-normal">50.4</dd></div>
+      <div><dt>趋势</dt><dd class="trend-neutral">中性</dd></div>
+      <div><dt>SMA 20 / 50 / 200</dt><dd>25,502.72 / 24,624.68 / 25,707.72</dd></div>
+      <div><dt>MACD / 信号</dt><dd>196.726 / 296.471</dd></div>
+    </dl>
+    <div class="ticker-signals"><span class="signal-pill tone-bear">MACD 死叉 <span class="signal-age">(3 天前)</span></span></div>
+  </article><article class="ticker-card">
+    <header class="ticker-head">
+      <div class="ticker-id">
+        <h3 class="ticker-symbol">GC=F</h3>
+        <p class="ticker-name">黄金期货</p>
+      </div>
+      <div class="ticker-price-block">
+        <span class="ticker-price">$4,450.90</span>
+        <span class="ticker-pct positive">+1.61%</span>
+      </div>
+    </header>
+    <dl class="ticker-indicators">
+      <div><dt>5 日</dt><dd class="positive">+2.04%</dd></div>
+      <div><dt>距 52w 高</dt><dd>-20.3%</dd></div>
+      <div><dt>RSI(14)</dt><dd class="rsi-normal">68.4</dd></div>
+      <div><dt>趋势</dt><dd class="trend-neutral">中性</dd></div>
+      <div><dt>SMA 20 / 50 / 200</dt><dd>4,196.65 / 4,157.51 / 4,488.69</dd></div>
+      <div><dt>MACD / 信号</dt><dd>77.157 / 41.082</dd></div>
+    </dl>
+    
+  </article>
+  </section>
+  <section class="trading-risk"><span class="eyebrow">风险提示</span><p>本报告仅为技术指标解读，不构成任何投资建议。过去走势不代表未来表现，市场价格受多重因素影响，存在较高不确定性。所有读数均基于历史行情数据计算，仅供技术指标解读参考，请读者独立判断并自行承担风险。</p></section></section>
+  <section class="panel" data-panel="politics">
+    <div class="sub-content active" data-sub-content="world" data-cat="politics">
+    
+    <div class="source-contents">
+      <div class="source-content active" data-source-content="_merged" data-sub="world" data-cat="politics">
+    <article class="article">
+  <h3 class="article-title"><a href="https://www.theguardian.com/australia-news/live/2026/aug/18/australia-politics-live-labor-coalition-gambling-advertising-ai-charlton-datacentres-question-time-anthony-albanese-angus-taylor-one-nation-pauline-hanson-ntwnfb" target="_blank" rel="noopener noreferrer">Australia politics live: Labor and Coalition finalise deals on gambling reform and closing ‘widow tax’ negative gearing loophole</a></h3>
+  
+  <p class="article-meta">The Guardian · 08/18 02:29</p>
+  <p class="article-excerpt">Government MPs agree to more than a dozen amendments made with the Coalition. Follow today’s news live Get our breaking news email, free app or daily news podcast Chalmers calls gambling amendments ‘very substantial changes’ Treasurer Jim Chalmers says the opt-out register on gambling advertising wi</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nytimes.com/2026/08/17/world/africa/zambia-election-hichilema.html" target="_blank" rel="noopener noreferrer">Zambia Says President Won Re-election After Tumultuous Campaign</a></h3>
+  
+  <p class="article-meta">NYT World · 08/18 02:21</p>
+  <p class="article-excerpt">With a second term, Hakainde Hichilema must navigate relations with the Trump administration, which has sought greater access to the copper-rich nation’s natural resources.</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.bbc.co.uk/news/articles/cp3r0kz775ko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Tupac murder trial: &#39;All hell broke loose&#39; night of rapper&#39;s shooting, witness says</a></h3>
+  
+  <p class="article-meta">BBC World · 08/18 02:06</p>
+  <p class="article-excerpt">After he was shot multiple times, Tupac Shakur refused to cooperate with police and told an officer, &quot;We&#39;ll take care of it,&quot; an officer testified.</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/8/18/trump-says-talking-to-north-koreas-kim-makes-the-south-safer?traffic_source=rss" target="_blank" rel="noopener noreferrer">Trump says talking to North Korea’s Kim makes the south safer</a></h3>
+  
+  <p class="article-meta">Al Jazeera · 08/18 01:58</p>
+  <p class="article-excerpt">US President Donald Trump has revealed North Korea’s leader Kim Jong Un has responded ‘very positively’</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.aljazeera.com/news/2026/8/18/large-fire-breaks-out-at-fuel-depot-near-iraqs-sulaimaniyah?traffic_source=rss" target="_blank" rel="noopener noreferrer">Large fire breaks out at fuel depot near Iraq’s Sulaimaniyah</a></h3>
+  
+  <p class="article-meta">Al Jazeera · 08/18 01:54</p>
+  <p class="article-excerpt">At least 20 injured and dozens of fuel tankers destroyed as flames rip through warehouse near northern Kurdish city.</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.aljazeera.com/video/newsfeed/2026/8/18/08-18-26-arday-vigil-london-sv-mp4?traffic_source=rss" target="_blank" rel="noopener noreferrer">Vigil held in central London for late Cambridge professor Jason Arday</a></h3>
+  
+  <p class="article-meta">Al Jazeera · 08/18 01:26</p>
+  <p class="article-excerpt">Thousands mourned Jason Arday in central London, and voiced anger over the Cambridge professor’s media treatment.</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.aljazeera.com/news/2026/8/18/zambias-hichilema-wins-second-term-as-president?traffic_source=rss" target="_blank" rel="noopener noreferrer">Zambia’s Hichilema wins second term as president</a></h3>
+  
+  <p class="article-meta">Al Jazeera · 08/18 01:17</p>
+  <p class="article-excerpt">Official results show Hichilema receiving about 60 percent of votes, compared with ⁠38 percent for his main challenger.</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.bbc.co.uk/news/articles/cy5dz0kkn0wo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Russia warns UK over supplying drones to Ukraine</a></h3>
+  
+  <p class="article-meta">BBC World · 08/18 01:16</p>
+  <p class="article-excerpt">An MoD spokesperson responds by saying Britain stands &quot;shoulder to shoulder&quot; with Ukraine.</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.theguardian.com/culture/2026/aug/18/sydney-waverley-library-removes-book-how-to-sell-a-genocide-from-shelves-ntwnfb" target="_blank" rel="noopener noreferrer">Bondi library removes book How to Sell a Genocide from shelves after complaint</a></h3>
+  
+  <p class="article-meta">The Guardian · 08/18 00:55</p>
+  <p class="article-excerpt">Author Adam Johnson criticises Waverley council saying ‘reality is often upsetting’ while Palestinian group says libraries should hold ‘challenging’ books Follow our Australia news live blog for latest updates Get our breaking news email, free app or daily news podcast A Sydney library has removed a</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.theguardian.com/world/2026/aug/18/south-korea-rain-deadly-landslide-philippines-major-flooding" target="_blank" rel="noopener noreferrer">Torrential rains kill one in South Korea while Philippine capital battles major flooding</a></h3>
+  
+  <p class="article-meta">The Guardian · 08/18 00:37</p>
+  <p class="article-excerpt">More than 800mm of rain was recorded in the South Korean city of Geoje, which triggered a landslide that killed one person Torrential downpours that have pounded southern parts of South Korea have killed one person and injured four others, officials have confirmed. Heavy rains have been recorded in </p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.aljazeera.com/news/liveblog/2026/8/18/iran-war-live-trump-rejects-mou-extension-as-us-claims-control-of-hormuz?traffic_source=rss" target="_blank" rel="noopener noreferrer">Iran war live: Trump rejects MoU extension as US claims control of Hormuz</a></h3>
+  
+  <p class="article-meta">Al Jazeera · 08/18 00:00</p>
+  <p class="article-excerpt">US president says Iran should &#39;put up the white flag of surrender&#39; as the two nations’ MoU expired on Monday.</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.bbc.co.uk/news/videos/cy45zjw424xo?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">BBC breaks down Trump&#39;s latest shift on North and South Korea</a></h3>
+  
+  <p class="article-meta">BBC World · 08/17 23:42</p>
+  <p class="article-excerpt">Trump said the US will &quot;substantially reduce&quot; joint military exercises with South Korea, citing his &quot;very good relationship&quot; with Kim Jong Un.</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.bbc.co.uk/news/articles/cq5665zgg1po?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">Tributes to actress Hayden Panettiere as coroner finds &#39;no signs of trauma&#39;</a></h3>
+  
+  <p class="article-meta">BBC World · 08/17 23:28</p>
+  <p class="article-excerpt">The US actress, who has died at the age of 36, starred in the TV shows Heroes and Nashville.</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.aljazeera.com/news/2026/8/17/we-will-not-allow-gaza-to-be-rebuilt-until-hamas-disarms-kushner-says?traffic_source=rss" target="_blank" rel="noopener noreferrer">‘We will not allow Gaza to be rebuilt’ until Hamas disarms, Kushner says</a></h3>
+  
+  <p class="article-meta">Al Jazeera · 08/17 23:25</p>
+  <p class="article-excerpt">Trump&#39;s son-in-law and envoy says US will not &#39;restrict Israel&#39;s right to defend itself&#39; as strikes on Gaza continue.</p>
+  
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.theguardian.com/sport/2026/aug/18/sydney-swans-coach-extremely-disappointed-as-club-faces-call-on-standing-down-players-over-alleged-sexual-assault-ntwnfb" target="_blank" rel="noopener noreferrer">Sydney Swans coach ‘extremely disappointed’ as club faces call on standing down players linked to alleged sexual assault</a></h3>
+  
+  <p class="article-meta">The Guardian · 08/17 22:56</p>
+  <p class="article-excerpt">Police investigation into alleged sexual assault at hotel continues No arrests or charges laid; club is ‘working through everything’ Victoria police confirmed an investigation into an alleged sexual assault sparked by an incident allegedly involving Sydney Swans players is continuing, but no arrests</p>
+  
+</article>
+  </div>
+    </div>
+  </div>
+  </section>
+  <section class="panel" data-panel="finance">
+    <div class="sub-content active" data-sub-content="news" data-cat="finance">
+    
+    <div class="source-contents">
+      <div class="source-content active" data-source-content="_merged" data-sub="news" data-cat="finance">
+    <article class="article">
+  <h3 class="article-title"><a href="https://www.bloomberg.com/news/newsletters/2026-08-18/indian-ipos-shine-bright-even-as-nifty-loses-momentum" target="_blank" rel="noopener noreferrer">Indian IPOs Shine Bright Even as Nifty Loses Momentum</a></h3>
+  
+  <p class="article-meta">Bloomberg Markets · 08/18 02:36</p>
+  <p class="article-excerpt">The primary market is picking up pace, with eight of the past 10 IPOs seeing strong investor demand.</p>
+  <p class="article-summary"><span class="summary-label">中文摘要</span> 印度首次公开募股（IPO）市场表现亮眼，即使Nifty指数失去上涨动能。一级市场正在提速，过去10宗IPO中有8宗获得强劲的投资者需求。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.bloomberg.com/news/articles/2026-08-18/yardeni-warns-bond-vigilantes-stirring-as-us-yields-near-5" target="_blank" rel="noopener noreferrer">Yardeni Warns Bond Vigilantes Stirring as US Yields Near 5%</a></h3>
+  
+  <p class="article-meta">Bloomberg Markets · 08/18 01:55</p>
+  <p class="article-excerpt">Yardeni Research warned that investors are showing growing signs of unease over rising government debt, though it said there’s no reason to push the panic button on the US bond market just yet.</p>
+  <p class="article-summary"><span class="summary-label">中文摘要</span> Yardeni Research警告，随着美国国债收益率逼近5%，“债券义警”开始活跃。投资者对政府债务上升日益不安，但该机构认为目前尚无理由对美国债券市场按下恐慌按钮。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.ft.com/content/f9319eaf-7a5e-4260-9ca0-35bfe32060e1?syn-25a6b1a6=1" target="_blank" rel="noopener noreferrer">Can Tata Sons untangle its many knots?</a></h3>
+  
+  <p class="article-meta">Financial Times · 08/18 01:30</p>
+  <p class="article-excerpt">Also in this newsletter, the agri-export problem</p>
+  <p class="article-summary"><span class="summary-label">中文摘要</span> 本文探讨印度塔塔集团控股公司塔塔之子（Tata Sons）能否解开其面临的诸多复杂困局，同时，此新闻通讯还涉及农产品出口问题。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.ft.com/content/e432e2a8-70ff-4181-9b38-b7b180d6bb34?syn-25a6b1a6=1" target="_blank" rel="noopener noreferrer">BHP’s copper profits outstrip iron ore for first time</a></h3>
+  
+  <p class="article-meta">Financial Times · 08/18 01:04</p>
+  <p class="article-excerpt">Annual earnings surge to $33bn, driven by booming demand for data centres and energy networks</p>
+  <p class="article-summary"><span class="summary-label">中文摘要</span> 必和必拓（BHP）财报显示，年度盈利跃升至330亿美元，铜业务利润首次超过铁矿石，反映出数据中心和能源网络需求的强劲推动。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.bloomberg.com/news/articles/2026-08-18/prabowo-s-pragmatic-speech-comforts-weary-indonesia-investors" target="_blank" rel="noopener noreferrer">Prabowo’s ‘Pragmatic’ Speech Comforts Weary Indonesia Investors</a></h3>
+  
+  <p class="article-meta">Bloomberg Markets · 08/18 01:02</p>
+  <p class="article-excerpt">Indonesian President Prabowo Subianto’s annual speech on Friday was a rare uneventful affair, and that’s exactly what investors wanted to hear.</p>
+  <p class="article-summary"><span class="summary-label">中文摘要</span> 印尼总统普拉博沃·苏比安托周五发表年度演讲，罕见地波澜不惊，而这正是投资者所希望听到的，其务实基调安抚了疲惫的印尼投资者。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.bloomberg.com/news/videos/2026-08-18/studio-ghibli-s-deepest-secret-is-what-comes-next-video" target="_blank" rel="noopener noreferrer">Studio Ghibli’s Deepest Secret Is What Comes Next</a></h3>
+  
+  <p class="article-meta">Bloomberg Markets · 08/18 00:42</p>
+  <p class="article-excerpt">After hits like &quot;Spirited Away&quot; and &quot;The Boy and the Heron,&quot; what’s next for Studio Ghibli? Sohee Kim explains why the next chapter for Japan’s most celebrated animation studio has yet to be drawn. (Source: Bloomberg)</p>
+  <p class="article-summary"><span class="summary-label">中文摘要</span> 在《千与千寻》和《男孩与苍鹭》等卖座作品之后，吉卜力工作室的下一步动向备受关注。彭博记者Sohee Kim分析称，这家日本最著名动画工作室的下一篇章尚未绘就。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.bbc.co.uk/news/articles/crl7600rpnko?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">US-Canada trade talks &#39;intense&#39; as new tariff deadline looms</a></h3>
+  
+  <p class="article-meta">BBC Business · 08/18 00:02</p>
+  <p class="article-excerpt">Mark Carney will need to sell Canadians on any concessions made to the US as negotiators scramble to reach a deal to avoid Trump’s latest tariffs.</p>
+  <p class="article-summary"><span class="summary-label">中文摘要</span> 美加贸易谈判十分“激烈”，新一轮关税最后期限临近。加拿大总理马克·卡尼需向民众说明对美让步的合理性，谈判代表正加紧磋商，以避免特朗普最新关税生效。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.bloomberg.com/news/articles/2026-08-18/m-g-backs-korean-bonds-sees-too-many-rate-hikes-priced-in" target="_blank" rel="noopener noreferrer">M&amp;G Backs Korean Bonds, Sees Too Many Rate Hikes Priced In</a></h3>
+  
+  <p class="article-meta">Bloomberg Markets · 08/18 00:00</p>
+  <p class="article-excerpt">South Korean government bonds are set to rally as the central bank will likely defy market forecasts by slowing the pace of interest rate hikes as inflation pressures ease, according to M&amp;G Investments.</p>
+  <p class="article-summary"><span class="summary-label">中文摘要</span> M&amp;G投资公司认为，市场已对韩国央行加息幅度定价过高。随着通胀压力缓解，央行可能放慢加息步伐，从而令市场预期落空，韩国国债预计将走高。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.bloomberg.com/news/articles/2026-08-17/gold-holds-two-day-gain-on-reduced-rate-hike-expectations" target="_blank" rel="noopener noreferrer">Gold Holds Two-Day Gain on Reduced Rate-Hike Expectations</a></h3>
+  
+  <p class="article-meta">Bloomberg Markets · 08/17 23:20</p>
+  <p class="article-excerpt">Gold held a two-day gain as reduced prospects for an interest-rate hike by the Federal Reserve weighed on the US dollar, making bullion cheaper for most buyers.</p>
+  <p class="article-summary"><span class="summary-label">中文摘要</span> 金价连续第二个交易日上涨，原因在于市场对美联储加息的预期减弱，美元因此承压，这使得以美元计价的黄金对多数买家而言更为便宜。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.bbc.co.uk/news/articles/c934xy32919o?at_medium=RSS&amp;at_campaign=rss" target="_blank" rel="noopener noreferrer">To joke or not to joke?: How to write a good out-of-office message</a></h3>
+  
+  <p class="article-meta">BBC Business · 08/17 23:00</p>
+  <p class="article-excerpt">As we hit peak holiday season, the BBC looks at the dos and don&#39;ts of composing a good out-of-office message.</p>
+  <p class="article-summary"><span class="summary-label">中文摘要</span> 正值休假旺季，英国广播公司（BBC）探讨如何撰写一封好的邮件自动回复（out-of-office message），其中涉及是否加入玩笑等讲究。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.bloomberg.com/news/articles/2026-08-17/hedge-fund-tax-break-grips-hong-kong-as-banks-fear-exodus" target="_blank" rel="noopener noreferrer">Hedge Fund Tax Break Grips Hong Kong as Banks Fear Exodus</a></h3>
+  
+  <p class="article-meta">Bloomberg Markets · 08/17 23:00</p>
+  <p class="article-excerpt">Hong Kong’s move to cut taxes for hedge funds has set off a frenzied wave of maneuvering across the city’s financial sector, with investment banks fearing an exodus of prop traders and one fund even considering rebranding a receptionist as an investor relations official to make the most of the poten</p>
+  <p class="article-summary"><span class="summary-label">中文摘要</span> 香港削减对冲基金税的措施引发金融业激烈应对，投资银行担心自营交易员外流。据报，甚至有一家基金考虑将接待员重新包装为投资者关系官员。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.ft.com/content/82a4b183-7201-4789-95b7-e39e81c827bc?syn-25a6b1a6=1" target="_blank" rel="noopener noreferrer">Nvidia pledges $100bn backing for OpenAI data centre in Ohio</a></h3>
+  
+  <p class="article-meta">Financial Times · 08/17 22:36</p>
+  <p class="article-excerpt">Chipmaker also invests $1.5bn into energy company founded as part of SoftBank Group</p>
+  <p class="article-summary"><span class="summary-label">中文摘要</span> 英伟达（Nvidia）承诺为OpenAI在俄亥俄州的数据中心提供1000亿美元资金支持，此外，这家芯片制造商还向软银集团旗下创立的一家能源公司投资15亿美元。</p>
+</article>
+  </div>
+    </div>
+  </div>
+  </section>
+  <section class="panel" data-panel="research">
+    <div class="sub-content active" data-sub-content="journals" data-cat="research">
+    <nav class="source-tabs"><button class="source-tab active" data-source="nature" data-sub="journals" data-cat="research">Nature<span class="count">30</span></button><button class="source-tab" data-source="science" data-sub="journals" data-cat="research">Science<span class="count">30</span></button><button class="source-tab" data-source="nature-chem" data-sub="journals" data-cat="research">Nature Chemistry<span class="count">8</span></button><button class="source-tab" data-source="jacs" data-sub="journals" data-cat="research">JACS<span class="count">0</span></button><button class="source-tab" data-source="cell" data-sub="journals" data-cat="research">Cell<span class="count">20</span></button><button class="source-tab" data-source="pnas" data-sub="journals" data-cat="research">PNAS<span class="count">30</span></button><button class="source-tab" data-source="nature-phys" data-sub="journals" data-cat="research">Nature Physics<span class="count">8</span></button><button class="source-tab" data-source="nature-mat" data-sub="journals" data-cat="research">Nature Materials<span class="count">0</span></button></nav>
+    <div class="source-contents">
+      <div class="source-content active" data-source-content="nature" data-sub="journals" data-cat="research">
+    <article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41586-026-11006-4" target="_blank" rel="noopener noreferrer">Positional isomerisation of pyridine via nitrogen transposition</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/17 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 1. 关于吡啶分子中氮原子位置重排的新方法研究。通过&quot;氮转位&quot;技术实现吡啶的位置异构化，为药物分子设计提供了新的化学工具，有望简化复杂含氮化合物的合成路线。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41586-026-11009-1" target="_blank" rel="noopener noreferrer">Programmable remodelling of carbon–nitrogen connectivity in amines</a></h3>
+  <p class="article-stats">地球/环境</p>
+  <p class="article-meta">08/17 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [地球/环境] 研究开发可编程方法重构胺类化合物中的碳氮连接方式，实现对胺分子结构的精准修饰。该技术为有机合成提供了新策略，有助于更高效地制备功能性含氮化合物。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41586-026-10995-6" target="_blank" rel="noopener noreferrer">Author Correction: Synthetic vulnerabilities of mesenchymal subpopulations in pancreatic cancer</a></h3>
+  <p class="article-stats">医学</p>
+  <p class="article-meta">08/17 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [医学] 这是作者对先前发表的胰腺癌研究论文的更正说明，修正了关于间充质亚群合成脆弱性的某些数据或结论表述，不影响原文整体科学结论。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41586-026-11010-8" target="_blank" rel="noopener noreferrer">Defect passivation and optical management of triple-junction solar cells</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/17 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 研究通过缺陷钝化和光学管理技术提升三结太阳能电池性能。解决电池内部缺陷和光损失问题，提高光电转换效率，推动高效太阳能电池的实用化发展。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/d41586-026-02532-2" target="_blank" rel="noopener noreferrer">Too hot to sleep? How heatwaves at night affect our health</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/17 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 探讨夜间热浪对人类健康的影响。研究发现高温夜晚会干扰睡眠质量，增加心血管负担，对老人等脆弱人群尤其危险，提醒人们重视夜间高温防护。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/d41586-026-02530-4" target="_blank" rel="noopener noreferrer">How the story of life and our planet unfolded — together</a></h3>
+  <p class="article-stats">天文</p>
+  <p class="article-meta">08/17 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [天文] 1. 摘要：本文探讨生命与地球如何共同演化，揭示两者相互影响、协同发展的漫长历程，帮助读者理解生命与环境不可分割的深层联系。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/d41586-026-02526-0" target="_blank" rel="noopener noreferrer">Universities must stop protecting bullies — or more people will leave science</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/17 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：文章指出，大学若继续庇护霸凌者而不加干预，将导致更多科研人才被迫离开科学领域，呼吁高校积极行动，维护健康公正的科研环境。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/d41586-026-02552-y" target="_blank" rel="noopener noreferrer">First-of-its-kind narcolepsy drug opens door to new therapies for the brain</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/17 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：全球首款针对发作性睡病的新药问世，为大脑疾病治疗开辟全新途径，也为后续神经系统疾病的新疗法研发打开了大门。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/d41586-026-02529-x" target="_blank" rel="noopener noreferrer">Why AI systems are most useful as designers of new scientific tools</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/17 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：文章探讨了AI系统在设计新型科学工具方面的独特价值，指出AI能够辅助科研人员进行创新，大幅提升实验效率和研究水平，成为科研的重要助力。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41586-026-11023-3" target="_blank" rel="noopener noreferrer">Author Correction: Cell intrinsic immunity spreads to bystander cells via the intercellular transfer of cGAMP</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/14 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：作者发布更正说明：研究证实cGAMP能在细胞间转移，使固有免疫信号扩散至旁观细胞，原文的相关表述已作修正。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41586-026-11022-4" target="_blank" rel="noopener noreferrer">Publisher Correction: Targeting cancer-specific mutations with RNA-triggered chromatin shredding</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/14 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 1. 摘要：本文为出版社更正说明，针对癌症特异性突变RNA触发染色质破碎的研究论文进行勘误，提醒读者注意修订内容，原研究核心发现保持不变。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/d41586-026-02562-w" target="_blank" rel="noopener noreferrer">Briefing Chat: Anthropic rolls out new AI watermark — will it make a difference?</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/14 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：报道Anthropic公司推出新的AI文本水印技术，用于识别AI生成内容，但各方对其实际效果存疑，文章探讨该技术能否真正发挥辨别作用。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/d41586-026-02504-6" target="_blank" rel="noopener noreferrer">Einstein the musician, AI prophets and more: Books in brief</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/14 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：新书简报推荐多本佳作，涵盖爱因斯坦的音乐造诣、AI预言等领域，展现科学与人文思想的交汇，为读者提供丰富的科普阅读选择。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/d41586-026-02581-7" target="_blank" rel="noopener noreferrer">Daily briefing: Ancient rise in CO&lt;sub&gt;2&lt;/sub&gt; hints at what could happen today</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/14 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：每日简报指出，远古时期二氧化碳浓度快速上升的历史数据，为理解当今气候变化提供重要参考，警示温室气体剧增可能带来的潜在影响。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/d41586-026-02542-0" target="_blank" rel="noopener noreferrer">Undocumented migration does not raise crime rates, huge study finds</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/14 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：一项大规模研究发现，无证移民并未推高犯罪率，打破“移民增加导致治安恶化”的常见刻板印象，为移民政策讨论提供实证依据。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41586-026-10959-w" target="_blank" rel="noopener noreferrer">Author Correction: Structural mechanism of cGAS inhibition by the nucleosome</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 1. 摘要：本文是作者更正，关于核小体抑制cGAS的结构机制研究，更正了原始论文中的相关数据或结论。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41586-026-10960-3" target="_blank" rel="noopener noreferrer">Author Correction: Cretaceous bird from Brazil informs the evolution of the avian skull and brain</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/13 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：本文是作者更正，关于巴西白垩纪鸟类化石揭示鸟类头骨和大脑演化的研究，修正了先前发表的内容。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/d41586-026-01904-y" target="_blank" rel="noopener noreferrer">How to make your science business succeed when you’re a female founder</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：本文探讨女性创始人在科学创业中如何成功，分享实用策略与经验，帮助克服性别障碍，实现商业突破。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/d41586-026-02503-7" target="_blank" rel="noopener noreferrer">Can Anthropic’s invisible watermarks curb ‘AI slop’? Researchers remain sceptical</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：本文讨论Anthropic公司用隐形水印标记AI生成文本以应对“AI垃圾内容”，但研究人员对此效果持怀疑态度。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/d41586-026-02494-5" target="_blank" rel="noopener noreferrer">AI isn’t ready to research itself</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：本文认为AI目前尚不具备独立开展科研的能力，需人类主导研究过程，AI只能作为辅助工具使用。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/d41586-026-02525-1" target="_blank" rel="noopener noreferrer">Why China should reassess how it rewards young scientists</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 1. 中国应重新评估青年科学家的奖励机制。现有体系过于注重论文数量等短期指标，可能不利于原创性研究和长期创新。改革评价标准，给年轻人更多机会和稳定的支持，对激发科研活力十分关键。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/d41586-026-02558-6" target="_blank" rel="noopener noreferrer">Daily briefing: New evidence of the mysterious ‘glueballs’</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 科学家发现了“胶球”存在的新证据。胶球是由胶子组成的奇特粒子，长期以来难以捉摸。这些发现有助于验证物理学标准模型，加深我们对微观世界基本作用力的理解，是粒子物理领域的重大进展。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/d41586-026-02544-y" target="_blank" rel="noopener noreferrer">Ancient rise in CO&lt;sub&gt;2&lt;/sub&gt; was catastrophic for forests: what that means for today’s plants</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 研究发现，史前大气二氧化碳急剧升高曾让森林大面积死亡。这警示我们：今天的气候变化可能给树木带来类似灾难，影响森林的碳吸收功能，加速全球变暖，因此保护森林和减缓碳排放刻不容缓。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/d41586-026-02502-8" target="_blank" rel="noopener noreferrer">Will the mRNA flu shot work better than a regular seasonal one? What the science says</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/13 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 与普通疫苗相比，mRNA流感疫苗理论上研发更快，更能应对病毒变异。但目前证据显示它不一定更有效，主要优势在生产速度和应对疫情的能力。长期效果还需更多研究。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41586-026-10994-7" target="_blank" rel="noopener noreferrer">Lead carboxylates passivation for meter-scale perovskite solar modules</a></h3>
+  <p class="article-stats">材料</p>
+  <p class="article-meta">08/12 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [材料] 研究人员开发出一种叫铅羧酸盐钝化的新技术，能减少钙钛矿太阳能电池的缺陷，造出米级大型组件，既高效又稳定。这项突破为钙钛矿太阳能的大规模商业化应用铺平了道路。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41586-026-10773-4" target="_blank" rel="noopener noreferrer">Reply to: Pre-clinical data interpretation requires clinical context</a></h3>
+  <p class="article-stats">医学</p>
+  <p class="article-meta">08/12 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [医学] 1. 本文回应了对临床前数据解读的评论，强调在评估动物实验结果时需结合临床背景，避免过度推论，同时支持了原始研究结论的合理性。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41586-026-10774-3" target="_blank" rel="noopener noreferrer">Pre-clinical data interpretation requires clinical context</a></h3>
+  <p class="article-stats">医学</p>
+  <p class="article-meta">08/12 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [医学] 临床前研究数据不能脱离临床背景单独解读。本文指出，动物实验结果需考虑患者实际情况，才能准确评估药物或疗法的潜在有效性和安全性。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/d41586-026-02463-y" target="_blank" rel="noopener noreferrer">Giant balloon gives rise to new view of the Milky Way’s centre</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/12 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 研究人员利用巨型气球搭载的新型天文设备，从高空观测银河系中心区域，获得了更清晰细致的影像，为理解银河系结构和演化提供了全新视角。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/d41586-026-02461-0" target="_blank" rel="noopener noreferrer">Rattlesnakes’ own antivenom could protect humans too</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/12 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 研究发现，响尾蛇自身蛇毒中可能含有独特成分，可用于开发保护人类免受蛇伤解毒剂，为改进抗蛇毒血清提供了新思路。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/d41586-026-02521-5" target="_blank" rel="noopener noreferrer">The probiotic bacteria engineered to treat diabetes</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/12 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 科学家通过基因改造益生菌，使其在肠道内持续释放治疗糖尿病的活性物质，动物实验展现出降糖效果，为糖尿病治疗带来了新希望。</p>
+</article>
+  </div>
+<div class="source-content" data-source-content="science" data-sub="journals" data-cat="research">
+    <article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aek2193?af=R" target="_blank" rel="noopener noreferrer">Should humanoid robots in every household really be a top priority?</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 07:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 1. 摘要：探讨是否应优先发展家用机器人，质疑其必要性，认为在资源有限情况下，应更关注更紧迫的社会需求。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aea6187?af=R" target="_blank" rel="noopener noreferrer">A cross-organ single-cell analysis of hypertension</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/13 07:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：通过跨器官单细胞水平分析高血压，揭示了不同组织在高血压发病中的协同变化，为精准治疗提供新线索。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aea7605?af=R" target="_blank" rel="noopener noreferrer">Chemovaccination with a late-liver-stage antimalarial induces durable immunity against malaria</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/13 07:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：一种针对疟原虫晚期肝期的化学疫苗策略，可诱导持久免疫力，为疟疾预防提供新方法。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aee7004?af=R" target="_blank" rel="noopener noreferrer">Artificial hibernation reveals synaptic engram architecture associated with memory retention</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/13 07:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：人工冬眠技术揭示了与记忆保留相关的突触印记结构，为记忆机制研究和神经疾病治疗开辟新途径。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aeg4720?af=R" target="_blank" rel="noopener noreferrer">A thalamocortical circuit encoding deviations from sensory history</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 07:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：研究发现丘脑-皮层神经回路能检测外界刺激与过往经历的差异，这一机制帮助我们感知环境变化，对理解大脑如何适应动态世界具有重要意义。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aeh1834?af=R" target="_blank" rel="noopener noreferrer">A CDK1 phospho-switch reprograms TRAIP to unload replisomes in mitosis</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 07:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：研究阐明CDK1通过化学修饰调控TRAIP蛋白，在细胞分裂时卸载DNA复制机器，确保遗传信息准确传递，为癌症等疾病研究提供了新线索。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.adz1083?af=R" target="_blank" rel="noopener noreferrer">The eukaryote chromosome, a two-state system with interconversion by a volume phase transition</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 07:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：研究发现真核生物染色体像开关一样在两种状态间切换，伴随体积相变过程，这改变了我们对遗传物质组织方式的认识，为理解基因调控提供新框架。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aeh2300?af=R" target="_blank" rel="noopener noreferrer">TTF2 processes sites of incomplete DNA replication during mitosis via sister-chromatid exchanges</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/13 07:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 研究发现TTF2蛋白在细胞分裂时通过姐妹染色单体交换，处理未复制的DNA区域，从而保护遗传信息完整传递，对维持基因组稳定性有重要作用。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.ael2764?af=R" target="_blank" rel="noopener noreferrer">Erratum for the Report “Epigenetic regulation of antagonistic receptors confers rice blast resistance with yield balance”</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/13 07:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 该勘误更正了关于水稻抗稻瘟病与产量平衡的表观遗传调控研究的报告内容，修正了部分数据或表述，确保科研结论的准确性和可重复性。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aei0132?af=R" target="_blank" rel="noopener noreferrer">Inside the world of aspiring octopus farmers</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 666-666, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：报道新兴的章鱼养殖业，介绍从业者的探索与挑战，同时关注章鱼养殖的伦理和可持续性问题。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.adq0420?af=R" target="_blank" rel="noopener noreferrer">Room-temperature multiferroicity in all–van der Waals heterostructures</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 714-718, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：研究在室温下实现多铁性的新材料——全范德华异质结，为低功耗器件和信息存储提供新可能。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.ads5962?af=R" target="_blank" rel="noopener noreferrer">Tracking the baryon number with nuclear collisions</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 727-731, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：通过核碰撞实验追踪重子数，帮助理解宇宙物质起源和夸克胶子等离子体的性质，推动基础物理研究。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.ady9591?af=R" target="_blank" rel="noopener noreferrer">Promoter-driven recrystallization affording highly textured ruthenium</a></h3>
+  <p class="article-stats">材料</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 702-707, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [材料] 摘要：利用启动子驱动的再结晶技术制备高度织构化的钌材料，提升催化性能，为工业催化领域提供更高效方案。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.adz7427?af=R" target="_blank" rel="noopener noreferrer">Xylose phosphatase activity of dystroglycan self-regulates its receptor function</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 690-695, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 1. 摘要：研究发现营养不良性肌聚糖具有木糖磷酸酶活性，能自我调节其受体功能，为理解细胞信号调控机制提供新视角。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aec2144?af=R" target="_blank" rel="noopener noreferrer">Fossil denticles reveal how ocean productivity shapes shark baselines and recovery potential</a></h3>
+  <p class="article-stats">地球/环境</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 732-735, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [地球/环境] 摘要：利用化石皮齿分析海洋生产力对鲨鱼种群基线及恢复能力的影响，为海洋生态保护提供历史参照。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aee8723?af=R" target="_blank" rel="noopener noreferrer">Eco-evolutionary feedback reshapes competitive dynamics in an orchard fly system</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 708-713, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 1. 摘要：果园果蝇系统研究揭示，生态与进化之间的相互反馈能改变物种竞争格局，为理解自然界的物种共存与生物多样性维持提供了新视角。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aei0475?af=R" target="_blank" rel="noopener noreferrer">Overcoming the performance ceiling of textured piezoelectric ceramics</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 719-726, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：研究突破了纹理压电陶瓷的性能极限，通过新工艺大幅提升其电能与机械能转换效率，有望推动传感器、医疗超声等设备的小型化和高性能化。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aec4776?af=R" target="_blank" rel="noopener noreferrer">Forest canopy decline under elevated CO2 during the Paleocene-Eocene Thermal Maximum</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 696-701, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 1. 全球变暖导致森林衰退。研究发现，在古新世-始新世极热事件期间，高浓度二氧化碳使森林冠层减少，表明气候变化可能对植被产生长期影响。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aea5466?af=R" target="_blank" rel="noopener noreferrer">A joint geophysical-geochemical deep-mantle zoning map beneath East Africa and the Indian Ocean</a></h3>
+  <p class="article-stats">化学</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 684-689, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [化学] 研究结合地球物理和地球化学数据，绘制了东非和印度洋下方地幔深处的分区图，揭示了深部结构差异，有助于理解板块运动和火山活动。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.ael3844?af=R" target="_blank" rel="noopener noreferrer">Writing the hard way</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 738-738, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 这篇评论探讨了科研写作的艰辛与挑战，反思学术写作过程中的困难，并鼓励研究者坚持科学表达，提升写作技巧。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.ael3843?af=R" target="_blank" rel="noopener noreferrer">In Other Journals</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 675-676, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 期刊精选了其他领域的重要研究进展，涵盖科学、技术等方向，为读者提供多学科的最新发现和动态，便于快速了解前沿成果。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aek0196?af=R" target="_blank" rel="noopener noreferrer">A boost for chemical vaccination against malaria</a></h3>
+  <p class="article-stats">化学</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 661-662, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [化学] 1. 摘要：化学疫苗接种对抗疟疾取得新突破，研究提升了疫苗效果，为预防疟疾提供了更可靠的方法，有望降低感染风险。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aek0561?af=R" target="_blank" rel="noopener noreferrer">The phase-shifting architecture of chromosomes</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 664-665, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：染色体存在类似相移的架构机制，研究揭示了染色体如何动态调控基因表达，为理解细胞功能与疾病提供新视角。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aek0574?af=R" target="_blank" rel="noopener noreferrer">The proton’s next secret</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 663-664, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：质子的内部结构仍有未解之谜，新研究探索其更深层组成，可能改写基本粒子物理模型，推动对物质本质的认识。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aek0549?af=R" target="_blank" rel="noopener noreferrer">The scales of strain on sharks</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 660-661, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：鲨鱼鳞片在不同应变下的尺度效应被研究，发现鳞片结构能适应力学变化，这为仿生材料和生物力学设计带来启发。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aek7995?af=R" target="_blank" rel="noopener noreferrer">Shark governance requires species identity</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 668-668, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：鲨鱼保护与管理需要准确识别物种，研究强调基因鉴定在捕猎监管和生态保护中的关键作用，以确保治理措施有效实施。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aej6968?af=R" target="_blank" rel="noopener noreferrer">Equity in pathogen genomic surveillance</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 668-668, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 1. 病原基因组监测中的公平性问题值得关注。目前资源分配不均，低收入国家监测能力不足，影响全球公共卫生应对。呼吁建立更公平的合作机制，共享数据和成果。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.aej7857?af=R" target="_blank" rel="noopener noreferrer">Hidden costs of China’s straw-burning ban</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 667-667, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 中国禁烧秸秆政策虽改善了空气质量，但农民处理秸秆的成本增加，可能带来新的经济负担和土壤问题。政策需配套支持措施，平衡环保与农民利益。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.ael4184?af=R" target="_blank" rel="noopener noreferrer">Magic or realism?</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 652-659, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 真实与幻想的界限在哪里？文章探讨了科学认知中“魔法”与“现实主义”的隐喻，反思人类对自然现象的理解方式，启发我们从多元视角看待科学发现。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.science.org/doi/abs/10.1126/science.ael4188?af=R" target="_blank" rel="noopener noreferrer">Planned satellite constellations risk runaway debris</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 06:00</p>
+  <p class="article-excerpt">Science, Volume 393, Issue 6812, Page 642-643, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 计划中的大型卫星星座可能引发失控的太空碎片问题。随着卫星数量激增，碰撞风险增加，威胁航天安全。呼吁国际社会制定规则，限制星座规模并加强碎片清理。</p>
+</article>
+  </div>
+<div class="source-content" data-source-content="nature-chem" data-sub="journals" data-cat="research">
+    <article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41557-026-02222-6" target="_blank" rel="noopener noreferrer">A protein–foldamer supramolecular synthon for self-assembled hybrid architectures</a></h3>
+  <p class="article-stats">化学</p>
+  <p class="article-meta">08/17 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [化学] 1. 研究发现一种连接单元，能将蛋白质与人工折叠分子结合，驱动它们自发组装成混合结构。这为制备新型生物-合成杂化材料提供了新途径，在纳米技术领域有重要应用前景。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41557-026-02223-5" target="_blank" rel="noopener noreferrer">Tailoring packing sequences in van der Waals metal–organic frameworks</a></h3>
+  <p class="article-stats">化学</p>
+  <p class="article-meta">08/12 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [化学] 该研究展示了如何调控范德华金属-有机框架中的分子堆积顺序，从而精细调节材料功能。新方法为设计构筑多孔材料提供了灵活策略，有望改善气体吸附和分离效果。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41557-026-02200-y" target="_blank" rel="noopener noreferrer">Oleic acid at the heart of olive oil</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">07/31 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 油酸是橄榄油的心脏。文章梳理了油酸在营养、安全和风味中的核心作用，解释橄榄油健康价值的化学基础，为消费者理解和选择橄榄油提供科学参考。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41557-026-02220-8" target="_blank" rel="noopener noreferrer">How webby is the wood-wide web?</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">07/31 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 文章质疑了&quot;树木网络&quot;概念的证据基础。真菌连接树木的&quot;网络&quot;传言虽流行，但科学支撑有限。作者呼吁谨慎看待这类说法，避免把树木拟人化过度解读。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41557-026-02215-5" target="_blank" rel="noopener noreferrer">Innovation without inventors</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">07/30 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 文章探讨无发明者的创新现象。AI和协作平台让创新不再依赖单个天才。作者分析这对专利制度和人类创造力的深远影响，提出需要重新思考创新归属与激励方式。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41557-026-02229-z" target="_blank" rel="noopener noreferrer">On-support phosphitylation for oligonucleotide modification</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">07/27 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 1. 摘要：提出一种新的固相磷酰化方法，用于修饰寡核苷酸，简化合成步骤，提高效率，为核酸药物研发提供更便捷的工具。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41557-026-02209-3" target="_blank" rel="noopener noreferrer">Deciphering the infrared spectrum of the hydrated proton using full-dimensional quantum dynamics</a></h3>
+  <p class="article-stats">物理</p>
+  <p class="article-meta">07/27 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [物理] 摘要：利用全维量子动力学计算，成功解析了水合质子的红外光谱，揭示了其复杂的振动模式，加深了对水中质子传递过程的理解。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41557-026-02221-7" target="_blank" rel="noopener noreferrer">Solvent-bridged electrolytes for high-energy Li-ion batteries under extreme conditions</a></h3>
+  <p class="article-stats">能源</p>
+  <p class="article-meta">07/27 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [能源] 摘要：设计了一种溶剂桥接电解质，使锂离子电池在极寒或高温等极端条件下仍能保持高能量密度和稳定循环，拓展了电池的应用范围。</p>
+</article>
+  </div>
+<div class="source-content" data-source-content="jacs" data-sub="journals" data-cat="research">
+    <p class="empty">该源今日无内容。</p>
+  </div>
+<div class="source-content" data-source-content="cell" data-sub="journals" data-cat="research">
+    <article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00817-2?rss=yes" target="_blank" rel="noopener noreferrer">Filling the holes in whole genomes: A vision for personalized genomics from telomere to telomere</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/06 00:00</p>
+  <p class="article-excerpt">Two decades after the Human Genome Project, we finally have the ability to read the complete genome of any human and (nearly) any species. These sequences provide the ideal foundation for training predictive models of the genome that will accelerate basic research, enable accurate diagnostics, and g</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：人类基因组计划完成20年后，我们终于能读取完整基因组序列。这些数据为训练预测模型、加速科研和精准诊断奠定了理想基础。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00828-7?rss=yes" target="_blank" rel="noopener noreferrer">Reverse transcriptases challenge the central dogma of biology, again</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/06 00:00</p>
+  <p class="article-excerpt">In this issue of Cell, Wang et al. reveal the mechanism of a bacterial antiphage system that contains two reverse transcriptases. Through an unprecedented process, the enzymes synthesize double-stranded DNA; one uses a noncoding RNA template and the other uses its amino acid residues to template and</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：研究发现细菌抗噬菌体系统含有两个逆转录酶，一个以非编码RNA为模板，另一个以自身氨基酸为模板合成双链DNA，这一新奇机制再次挑战了中心法则。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00811-1?rss=yes" target="_blank" rel="noopener noreferrer">Why studying females reveals more about aging: The reproductive resilience hypothesis for the evolution of sex-specific aging</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/06 00:00</p>
+  <p class="article-excerpt">Why do females often outlive males despite greater reproductive investment? The reproductive resilience hypothesis proposes that when reproductive success depends on prolonged survival and caregiving, evolution couples reproduction to somatic maintenance. Loss of reproductive resilience is proposed </p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 1. 摘要：女性常比男性更长寿，尽管她们生育投入更多。生殖韧性假说认为，当繁衍需要长期存活和照顾后代时，进化会将生殖与身体维护联系起来，这有助于解释两性衰老差异。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00703-8?rss=yes" target="_blank" rel="noopener noreferrer">A complete diploid human genome benchmark for personalized genomics</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/06 00:00</p>
+  <p class="article-excerpt">A complete, near-perfect diploid assembly of the HG002 benchmark provides a ground truth for the entire genome rather than a subset of variants. This fully annotated genome benchmark enables quality assessments in previously excluded regions and supports a transition toward the routine sequencing of</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：一项研究构建了近乎完美的二倍体人类基因组基准，覆盖全基因组而非仅部分变异。这能评估此前无法检测的区域，推动个性化基因组测序走向常规应用。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00635-5?rss=yes" target="_blank" rel="noopener noreferrer">Human acrocentric chromosome short-arm de novo mutation and recombination</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/06 00:00</p>
+  <p class="article-excerpt">Analysis of haplotype-resolved human acrocentric chromosomes across four generations reveals unique patterns of allelic recombination, mutation signatures, and an elevated mutation rate.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：通过分析四代人的近端着丝粒染色体，研究人员发现了独特的等位基因重组模式、突变特征以及较高的突变率，增进了对这类染色体遗传规律的理解。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00815-9?rss=yes" target="_blank" rel="noopener noreferrer">A complete genome for the common marmoset</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/06 00:00</p>
+  <p class="article-excerpt">The common marmoset is a key primate model for human disease, yet large regions of its genome have remained unresolved until now. A complete, end-to-end assembly reveals centromere organization, a ribosomal-DNA-driven mechanism of cross-chromosome recombination, and over 500 previously unknown marmo</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：普通狨猴是重要疾病模型，但其基因组有大量未解区域。现在完整组装完成，揭示了着丝粒组织、核糖体DNA驱动的染色体间重组机制，以及500多个新基因。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00225-4?rss=yes" target="_blank" rel="noopener noreferrer">Complex subtelomeric architectures in a complete rhesus macaque reference genome</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/06 00:00</p>
+  <p class="article-excerpt">A complete and near-perfect rhesus macaque reference genome, enabled by technological improvements, resolves complex subtelomeric architecture and reveals novel repeats, genes, and regulatory elements that were previously inaccessible.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：一项技术突破实现了恒河猴参考基因组的完整组装，解决了复杂的亚端粒区域结构，并发现了此前无法获取的新重复序列、基因和调控元件。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00816-0?rss=yes" target="_blank" rel="noopener noreferrer">The complete genome of a songbird</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/06 00:00</p>
+  <p class="article-excerpt">A phased diploid telomere-to-telomere reference genome for the zebra finch fully resolves its complete somatic chromosome set, recovering 2,710 previously missing or unannotated genes. The assembly also reveals distinctive dot chromosome and pseudoautosomal region architecture, along with evidence f</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 1. 这篇论文完成了斑胸草雀的完整基因组测序，填补了之前缺失的基因信息，还发现了特殊的染色体结构，为研究鸟类进化提供了重要基础。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00810-X?rss=yes" target="_blank" rel="noopener noreferrer">Coordinated RNA- and protein-templated synthesis of double-stranded DNA by a dual reverse transcriptase immune system</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">07/28 00:00</p>
+  <p class="article-excerpt">Bacterial reverse transcriptases defend against viruses, yet how their DNA products stop infection remains unknown. Bacteriophage inhibition of a host recombination enzyme activates the DRT3 defense system, which employs RNA- and protein-templated reverse transcriptases to synthesize antiviral doubl</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 研究发现细菌的一种防御系统能利用RNA和蛋白质作为模板合成双链DNA来对抗病毒，揭示了细菌免疫的新机制。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00654-9?rss=yes" target="_blank" rel="noopener noreferrer">UniPert-G2CP bridges genetic and chemical screens from molecular representation to phenotype modeling</a></h3>
+  <p class="article-stats">化学</p>
+  <p class="article-meta">07/24 00:00</p>
+  <p class="article-excerpt">UniPert-G2CP is an AI framework for jointly modeling molecular-level perturbation causes with phenotypic-level cellular effects across genetic and chemical domains. These complementary views enable more accurate perturbation prediction, mechanistic discovery, and efficient in silico drug screening.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [化学] 这个AI框架能同时分析基因和药物的作用，把分子层面的变化与细胞反应联系起来，帮助更准确地预测药物效果，加快新药研发筛选。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00749-X?rss=yes" target="_blank" rel="noopener noreferrer">Expanding the scope of protein language modeling to protein-protein interactions with MSA Pairformer</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">07/21 00:00</p>
+  <p class="article-excerpt">Protein language models have excelled at modeling individual proteins, but extending these capabilities to protein complexes remains a major challenge. MSA Pairformer, a parameter-efficient protein language model, generalizes to protein-protein interactions despite being trained exclusively on monom</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 这项研究提出了一个新模型，让蛋白质语言模型不再只研究单个蛋白质，还能预测蛋白质之间的相互作用，有助于理解细胞内的生物过程。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00653-7?rss=yes" target="_blank" rel="noopener noreferrer">Iron drives protease-independent cleavage of gasdermin D in allergic airway diseases</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">06/26 00:00</p>
+  <p class="article-excerpt">Allergen exposure activates gasdermin D in lung epithelial cells through an iron-mediated, protease-independent mechanism requiring the PAR1-ferritinophagy-PCBP2 axis. This unconventional cleavage drives IL-33 release and allergic airway inflammation, highlighting intracellular iron as a promising t</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 1. 摘要：过敏原暴露通过铁介导的非蛋白酶途径激活肺上皮细胞的gasdermin D，释放IL-33引发过敏性气道炎症。研究发现细胞内铁是治疗过敏性疾病的新靶点。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00579-9?rss=yes" target="_blank" rel="noopener noreferrer">Shared neural geometries for bilingual semantic representations in human hippocampal neurons</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">06/24 00:00</p>
+  <p class="article-excerpt">In bilinguals, hippocampal recordings during listening and speaking revealed overlapping neural geometry for English and Spanish. Each language accesses this shared meaning space through rotated neural readout axes, showing how the brain represents concepts across languages without interference.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：对双语者海马神经元记录发现，英语和西班牙语在大脑中共享相同的语义神经表征空间，每种语言通过不同的神经读取轴访问该空间，从而避免语言间干扰。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00647-1?rss=yes" target="_blank" rel="noopener noreferrer">An emergent disease-associated motor neuron state precedes cell death in ALS</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">06/23 00:00</p>
+  <p class="article-excerpt">Longitudinal multi-omics in SOD1-ALS mice identifies a disease-associated motor neuron (DM) state transition driven by transcription factor networks. Features of this state are conserved in human ALS and linked to genetic risk, pointing to shared aspects of motor neuron degeneration.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：在ALS小鼠模型中进行纵向多组学分析，发现运动神经元在死亡前会进入一种疾病相关状态，由转录因子网络驱动。该状态在人类ALS中同样存在，为理解神经退行性病变提供新视角。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00586-6?rss=yes" target="_blank" rel="noopener noreferrer">Mechanism of lipid transfer by bridge-like protein VPS13A and the scramblase XK</a></h3>
+  <p class="article-stats">AI/计算</p>
+  <p class="article-meta">06/12 00:00</p>
+  <p class="article-excerpt">The cryo-electron microscopy structure of the bridge-like lipid-transfer protein VPS13A in complex with the scramblase XK—coupled with molecular dynamics simulations—suggests that VPS13A-transported lipids are delivered from the protein directly to the membrane, near to the scramblase that equilibra</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [AI/计算] 冷冻电镜解析了桥状脂质转运蛋白VPS13A与爬行酶XK的复合物结构，结合分子模拟发现，VPS13A输送的脂质直接送到膜上，靠近爬行酶以平衡脂质分布。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00578-7?rss=yes" target="_blank" rel="noopener noreferrer">Nuclear proteome reveals microtubule-associated protein regulating fate and disease</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">06/11 00:00</p>
+  <p class="article-excerpt">Nuclear and cytoplasmic proteomics uncover a nuclear pool of cytoskeletal proteins, including MAP1B, whose shuttling to the nucleus increases BRG1/BAF chromatin association and regulates brain development.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：通过细胞核与细胞质蛋白质组学分析，发现微管相关蛋白MAP1B可进入细胞核，增强BRG1/BAF染色质结合能力，进而调控大脑发育，揭示细胞骨架蛋白的新功能。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00572-6?rss=yes" target="_blank" rel="noopener noreferrer">Replaying germinal center evolution on a quantified affinity landscape</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">06/05 00:00</p>
+  <p class="article-excerpt">Antibody affinity maturation results from a somatic evolutionary process that takes place in the germinal center. A “parallel replay” experiment on germinal center B cells reveals the evolutionary forces that produce predictable increases in B cell affinity.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 这项研究通过实验重现了抗体成熟的过程，找出了驱动B细胞亲和力逐步提高的关键进化因素，有助于理解免疫应答机制。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00575-1?rss=yes" target="_blank" rel="noopener noreferrer">Xenophagocytosis blockade enhances interspecies chimerism</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">06/05 00:00</p>
+  <p class="article-excerpt">Host macrophages limit interspecies chimerism via xenophagocytosis, whereby stressed donor cells expose phosphatidylserine as an “eat-me” signal. Blocking xenophagocytosis successfully enhances donor chimerism and enables efficient exogenic organogenesis.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：宿主巨噬细胞通过异种吞噬作用限制跨物种嵌合，供体细胞在应激时暴露磷脂酰丝氨酸作为&quot;吃我&quot;信号。阻断该过程可增强供体嵌合率，实现高效异种器官生成。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00571-4?rss=yes" target="_blank" rel="noopener noreferrer">Deep-sea megafauna co-opts microbial energy metabolism genes to withstand ultra-long starvation</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">06/05 00:00</p>
+  <p class="article-excerpt">By acquiring an energy metabolism-related gene via ancient horizontal transfer from a bacterial symbiont, the deep-sea supergiant isopod gains the ability to reprogram its energy allocation, enabling survival under prolonged starvation.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 1. 深海巨型等足类动物通过从细菌共生体水平转移获得能量代谢基因，能重新分配能量，从而在长期饥饿中存活。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.cell.com/cell/fulltext/S0092-8674(26)00568-4?rss=yes" target="_blank" rel="noopener noreferrer">Plant cell wall-plasma membrane attachments mediate stress resilience through cellulose synthase complexes and remorins</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">06/02 00:00</p>
+  <p class="article-excerpt">In plants, cell wall-plasma membrane attachments become evident upon severe water loss. These attachments depend on cellulose synthase complexes and remorins and mediate resilience under water stress.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 植物在严重缺水时，细胞壁与质膜之间会形成连接，这种连接依赖纤维素合酶复合体和remorin蛋白，对植物抵抗干旱至关重要。</p>
+</article>
+  </div>
+<div class="source-content" data-source-content="pnas" data-sub="journals" data-cat="research">
+    <article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/iti3226123?af=R" target="_blank" rel="noopener noreferrer">In This Issue</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/11 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 本期内容为《美国国家科学院院刊》2026年8月第123卷第32期目录，包括多篇研究论文、综述和编辑推荐，涵盖各学科前沿进展。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2530125123?af=R" target="_blank" rel="noopener noreferrer">A unifying framework for the evolution of metazoa and social insects, two major evolutionary transitions</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/07 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. The evolution of life is characterized by major transitions, i.e., the evolution of new targets of selection (e.g., prokaryotes, eukaryotes, multicellular organisms, social insect colonies). They arose when preexisti</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：本文提出了一个统一理论框架，解释多细胞动物和社会性昆虫这两次生命演化重大转折。研究揭示了新生物等级如何从已有结构中产生，为理解复杂生命系统的形成提供了新视角。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2537761123?af=R" target="_blank" rel="noopener noreferrer">Graded oxidation state calcium phosphate graphene oxide modulates the mechanical and biological behavior of bone matrices</a></h3>
+  <p class="article-stats">材料</p>
+  <p class="article-meta">08/05 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceBone defects demonstrate a wide range of mechanical and biological requirements. However, most synthetic grafts provide limited tunability of those properties. The present study demonstrates that the oxid</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [材料] 针对骨缺损修复材料难以兼顾力学和生物性能的问题，研究开发了氧化程度可调的磷酸钙氧化石墨烯，能精确调节骨基质性能，满足不同修复需求。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2625473123?af=R" target="_blank" rel="noopener noreferrer">Why did menopause evolve?</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/05 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026.</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 1. 摘要：为什么人类会经历更年期？这一进化之谜至今困扰科学家。本文探讨了更年期进化的原因，提出新解释，帮助我们理解这一独特生命现象的生物学意义。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2426400123?af=R" target="_blank" rel="noopener noreferrer">Landscape context constrains climate regulation recovery in Amazonian secondary forests</a></h3>
+  <p class="article-stats">地球/环境</p>
+  <p class="article-meta">08/03 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceForest regeneration is widely promoted as a strategy to restore ecosystem services in the Amazon, yet whether regenerating forests recover climate-regulating functions comparable to primary forests (PF) r</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [地球/环境] 森林再生长被广泛视为恢复亚马逊生态系统服务的重要策略。研究发现，次生林的景观背景会限制其气候调节功能的恢复，使其难以达到原始森林水平。这对森林恢复政策制定具有重要指导意义。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2532702123?af=R" target="_blank" rel="noopener noreferrer">Contrastive learning unites sequence and structure in a global representation of protein space</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/03 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceHow can the relationships between all known proteins be represented? Recent advances in AI describe proteins as vectors, where the distance between vectors relates to the similarity between proteins. Thes</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 1. 摘要：一种新的人工智能方法将蛋白质的序列和结构信息结合，把蛋白质表示为向量，通过向量间的距离展示所有已知蛋白质之间的关系，帮助理解蛋白质空间。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2600701123?af=R" target="_blank" rel="noopener noreferrer">Mapping the exposome–microbiota–host axis for prenatal origins of infant health</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/03 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceIn one of the largest prospective pregnancy cohorts with exposome phenotyping, we establish a prenatal exposure–microbiota–infant health axis. We demonstrate that maternal anthropometrics and clinical ind</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：通过大型孕妇队列研究，发现母体的身体指标和临床因素会影响体内微生物，进而影响婴儿健康，揭示产前暴露、微生物与婴儿健康的关联轴。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2608894123?af=R" target="_blank" rel="noopener noreferrer">Controls on glacial erosion rates revealed by cosmogenic nuclide measurements in southeastern Alaska</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/03 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceGlacial erosion rates vary over many orders of magnitude, but there are numerous hypotheses predicting the variables that control glacial erosion rates. Here, we determine bedrock erosion rates using cosm</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：利用宇宙成因核素测量阿拉斯加东南部的基岩侵蚀速率，揭示了控制冰川侵蚀速率的关键因素，证明侵蚀速率受多种因素影响且差异巨大。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2532233123?af=R" target="_blank" rel="noopener noreferrer">Deep learning maps local brain aging in relation to cognition across human adulthood</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/03 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceAlthough human brain aging is not uniform across cortical regions, most imaging-derived measures of brain age quantify this phenomenon using a single summary quantity. Building on prior voxel-level brain </p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：用深度学习逐个体素分析大脑衰老过程，绘制人成年期大脑局部老化图谱，发现不同脑区老化不均匀，并与认知功能下降相关。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2536533123?af=R" target="_blank" rel="noopener noreferrer">Reticulated adaptive radiation and phylogenomic diversity loss in the Hawaiian honeycreepers</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/03 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceThe Hawaiian honeycreeper clade is a pre-eminent example of both adaptive radiation and human-mediated rapid extinction. We present an exhaustive phylogeny of nearly all extant and historically known Hawa</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：对几乎所有现存和历史上的夏威夷蜜鸟进行系统发育分析，揭示了其适应辐射和人类导致的快速灭绝，发现网状进化导致遗传多样性丧失。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2605142123?af=R" target="_blank" rel="noopener noreferrer">Evolution on degenerate fitness landscapes is not random: Curvature drives directional drift</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/03 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceEvolutionary dynamics selects more fit phenotypes over others. But fitness landscapes are complex and high dimensional, with continuous manifolds of practically identical high fitness. Intuitively, one ma</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 1. 摘要：研究发现适应性景观的曲率会引导物种朝特定方向演化，而非在适应度相近的区域随机游走。这挑战了传统观点，深化了对演化机制的理解。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2527395123?af=R" target="_blank" rel="noopener noreferrer">Optimizing infectious disease mitigation under dynamic conditions</a></h3>
+  <p class="article-stats">医学</p>
+  <p class="article-meta">08/03 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceManaging a pandemic requires balancing competing costs: interventions such as mask mandates and lockdowns reduce infections but disrupt economies and social life, while uncontrolled spread imposes treatme</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [医学] 摘要：疫情防控需权衡各种代价：动态优化策略能更好地平衡封锁、口罩等干预措施的经济社会影响与感染控制效果，为公共卫生决策提供更实用的数学模型。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2603602123?af=R" target="_blank" rel="noopener noreferrer">Adapting the MasSpec Pen for noninvasive detection of oral cavity squamous cell carcinoma</a></h3>
+  <p class="article-stats">医学</p>
+  <p class="article-meta">08/03 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceOral cavity squamous cell carcinoma (OCSCC) is a deadly form of head and neck cancer that disproportionately afflicts low-middle income communities. Given the poor prognosis of late-stage patients, detect</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [医学] 摘要：口腔鳞状细胞癌危害严重。研究改进了笔式检测技术，可不切开组织快速检测口腔癌，有助早期发现，尤其惠及医疗资源匮乏地区人群。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2606103123?af=R" target="_blank" rel="noopener noreferrer">Highly flexible vertical electrolyte-gated metal oxide transistors for neuromorphic electronics</a></h3>
+  <p class="article-stats">物理</p>
+  <p class="article-meta">08/03 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceMetal oxide transistors are important building blocks for large-area, high-resolution displays due to their high carrier mobilities in the amorphous state. However, their use in aqueous environments for w</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [物理] 摘要：研究开发了一种新型柔性晶体管，能在水环境中稳定工作并模拟神经突触行为，为可穿戴智能设备和类脑计算奠定了基础。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2535921123?af=R" target="_blank" rel="noopener noreferrer">Co-phase separation of KRI1 and NPM1 sustains nucleolar integrity and ribosome biogenesis to fuel liver cancer progression</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/03 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceThe treatment of hepatocellular carcinoma (HCC) remains challenging, highlighting an urgent need for novel therapeutic targets. This study elucidates a crucial mechanism in HCC progression, uncovering tha</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：研究发现KRI1和NPM1两种蛋白共同凝聚，对维持核仁完整和核糖体生成至关重要，并推动肝癌进展。阻断这一过程有望成为肝癌治疗的新靶点。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2602136123?af=R" target="_blank" rel="noopener noreferrer">Palmitoylation of TK1 exacerbates osteoarthritis by promoting JNK-mediated metabolic reprogramming</a></h3>
+  <p class="article-stats">医学</p>
+  <p class="article-meta">08/03 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceOsteoarthritis (OA) is a major cause of pain and disability, yet no approved disease-modifying therapy can halt its progression. We identify thymidine kinase 1 (TK1) as a pathogenic factor linking inflamm</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [医学] 1. 摘要：研究发现TK1蛋白的棕榈酰化会加剧骨关节炎，通过激活JNK信号通路改变细胞代谢。这为骨关节炎治疗提供了新靶点。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2613431123?af=R" target="_blank" rel="noopener noreferrer">The dynamic and heterogeneous structure of the non-canonical inflammasome</a></h3>
+  <p class="article-stats">化学</p>
+  <p class="article-meta">08/03 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceAnimals respond to injury, infection, or toxic materials via a process called inflammation. At the molecular level, inflammation involves formation of large machines—inflammasomes—that are instrumental in</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [化学] 摘要：非经典炎症小体的结构具有动态性和异质性，其不同组装形式影响炎症反应。了解其结构有助于开发针对炎症疾病的干预策略。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2520879123?af=R" target="_blank" rel="noopener noreferrer">SIX1 is required for adult cochlear sensory epithelium homeostasis and auditory function</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/03 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceIt remains unclear whether developmental transcription factors sustain adult cochlear function. We show that SIX1, known for embryonic hair-cell specification, remains active in the adult cochlea and is e</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：转录因子SIX1不仅调控胚胎期毛细胞发育，在成年耳蜗中也持续发挥作用，对维持听觉上皮稳态和正常听力至关重要。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2527880123?af=R" target="_blank" rel="noopener noreferrer">A TCR-mimic bispecific antibody reduces HIV-1 provirus and delays viral rebound in HLA-matched humanized mice</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/03 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceAn HIV-1 cure strategy will require novel therapeutics to facilitate immune-mediated elimination of infected cells and reduction of blood and tissue reservoirs. Here, we demonstrate that an TCR-mimic bisp</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：一种模拟T细胞受体的双特异性抗体能减少HIV-1前病毒库，并延迟病毒反弹，在人类化小鼠中展示了清除HIV感染细胞的潜力。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2608455123?af=R" target="_blank" rel="noopener noreferrer">The EV-A71 RNA-binding protein Matrin 3 facilitates viral replication by stabilizing viral RNA via ZDHHC20-mediated palmitoylation</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/03 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceSevere hand, foot, and mouth disease caused by Enterovirus 71 (EV-A71) threatens global pediatric health, yet its infection mechanisms remain poorly understood, hindering antiviral development. Using ChIR</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：肠道病毒71型的RNA结合蛋白Matrin 3，经ZDHHC20介导的棕榈酰化后稳定病毒RNA，从而促进病毒复制，为抗病毒药物开发提供新线索。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2517883123?af=R" target="_blank" rel="noopener noreferrer">Cell surface ADGRG1 and CD86 expression identifies antitumor CD4+ T cells in human cancer</a></h3>
+  <p class="article-stats">医学</p>
+  <p class="article-meta">08/03 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceStudies have demonstrated that adoptive cell transfer with antitumor CD4+T cells can be effective in treating advanced stage cancer patients. Improving methods to identify antitumor CD4+T cells through ce</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [医学] 1. 摘要：研究发现，细胞表面的ADGRG1和CD86分子可识别抗肿瘤CD4+ T细胞，为癌症过继免疫治疗提供新的筛选方法，有望提升晚期患者的治疗效果。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2602636123?af=R" target="_blank" rel="noopener noreferrer">Identification of novel functional sites in the Cav1.3 calcium channel α1-subunit using evolutionary modeling</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/03 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceVoltage-gated calcium channels regulate critical physiological processes, and some genetic variants inCACNA1Dcan cause neurodevelopmental and cardiac disorders. We demonstrate that evolutionary modeling b</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：利用进化建模技术，研究者识别出Cav1.3钙通道α1亚基上的多个新功能位点，这些位点有助于理解基因变异如何导致神经发育和心脏疾病。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2604124123?af=R" target="_blank" rel="noopener noreferrer">Bladder mucosal afferents detect UTI and aid pathogen clearance</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/03 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceThe bladder is innervated by complex sensory networks, yet the specific role of stretch-insensitive mucosal nerves has remained unknown for nearly two decades. Utilizing a model of selective mucosal affer</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：膀胱黏膜中的神经能感知尿路感染并促进病原体清除，研究揭示了这些牵拉不敏感神经在免疫防御中的关键作用，为尿路感染治疗提供了新思路。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2612168123?af=R" target="_blank" rel="noopener noreferrer">Nature’s antivenom: Combinations of conserved rattlesnake serum metalloproteinase inhibitors block the lethal action of viper venoms</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">07/29 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceSnakebite remains an undertreated tropical disease that affects over one million people annually, and new therapeutic approaches are needed. Here, we develop an approach to viper antivenoms inspired by th</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 蛇咬伤每年影响超过百万人。研究受响尾蛇血清启发，发现多种金属蛋白酶抑制剂的组合可有效阻断蝰蛇毒液的致命作用。这一发现为开发新型抗蛇毒疗法提供了新思路。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2605431123?af=R" target="_blank" rel="noopener noreferrer">Energy prioritization and neurometabolic scaling in a social insect brain</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">07/27 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceIt has been hypothesized that brain physiology has evolved to prioritize energy allocation during nutritional stress, but brain and whole-body metabolism have not been measured in combination. We examined</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：本文研究了社会性昆虫大脑在营养压力下的能量分配策略。通过同时测量脑和全身代谢，发现大脑会优先保证能量供应，这为理解动物神经系统的进化适应提供了新证据。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2605226123?af=R" target="_blank" rel="noopener noreferrer">Digestion-resistant proteins support the healthy metabolite profiles associated with plant-based diets</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">07/27 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificancePlant-based diets are consistently associated with improved gut health, yet the mechanisms responsible remain incompletely understood. Here, we explore two aspects of plant-based foods: digestion-resistan</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 摘要：植物性饮食有益肠道健康，但机制尚不明确。本文发现植物中难以消化的蛋白质能促进健康的代谢物质生成，这为解释素食的健康功效提供了新线索，也有助于开发更好的膳食方案。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2609969123?af=R" target="_blank" rel="noopener noreferrer">Accelerating Campylobacter zoonosis in the Anthropocene</a></h3>
+  <p class="article-stats">地球/环境</p>
+  <p class="article-meta">07/27 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceHuman-driven environmental change in the Anthropocene is reshaping how pathogens emerge, evolve, and spread. This study shows that the global expansion of intensive poultry farming has created a ecologica</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [地球/环境] 摘要：人类活动正在加速弯曲菌病的传播。研究发现，全球集约化家禽养殖为病原体创造了新的传播生态，导致这种人畜共患病快速扩散，对公共卫生构成日益严重的威胁。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2534106123?af=R" target="_blank" rel="noopener noreferrer">Global threat exposure of islands in a changing world</a></h3>
+  <p class="article-stats">地球/环境</p>
+  <p class="article-meta">07/27 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceGlobal change severely threatens island ecosystems, exposing them to sea-level rise, non-native species, and land-use conversions. Because islands are small-scale systems, they are often overlooked in glo</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [地球/环境] 1. 岛屿生态系统正面临海平面上升、外来物种入侵和土地利用变化的严重威胁。研究发现这些威胁在全球化背景下日益加剧，亟需采取保护措施，防止岛屿特有物种和生态系统遭受不可逆损害。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2610752123?af=R" target="_blank" rel="noopener noreferrer">Rapid acceleration of ice-cover loss from Northern Hemisphere lakes above critical air temperature thresholds</a></h3>
+  <p class="article-stats">地球/环境</p>
+  <p class="article-meta">07/27 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceIce cover is a fundamental regulator of northern lake ecosystems, yet the specific thermal thresholds that trigger abrupt phenological changes have remained elusive. We demonstrate that lake-ice sensitivi</p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [地球/环境] 北半球湖泊冰盖是湖泊生态系统的重要调节器。研究发现当气温超过临界阈值时，冰盖消失速度会急剧加快，导致湖泊生态发生突变。这一发现对预测气候变化影响和保护湖泊生态具有重要意义。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.pnas.org/doi/abs/10.1073/pnas.2610453123?af=R" target="_blank" rel="noopener noreferrer">A wearable patch for continuous levodopa monitoring in sweat: Towards exertion and power-free pharmacodynamic assessment in Parkinson’s disease</a></h3>
+  <p class="article-stats">医学</p>
+  <p class="article-meta">07/27 07:00</p>
+  <p class="article-excerpt">Proceedings of the National Academy of Sciences, Volume 123, Issue 32, August 2026. SignificanceEffective management of Parkinson’s disease (PD) requires dynamic adjustment of levodopa dosing. Current approaches rely on subjective symptom reporting and infrequent blood sampling. We introduce here a </p>
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [医学] 帕金森病治疗需要动态调整左旋多巴剂量。研究者开发了一种可穿戴贴片，能持续监测汗液中的药物浓度，无需运动或电力驱动。该技术有望替代传统血液检测，实现更方便的药物疗效评估。</p>
+</article>
+  </div>
+<div class="source-content" data-source-content="nature-phys" data-sub="journals" data-cat="research">
+    <article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41567-026-03412-2" target="_blank" rel="noopener noreferrer">Quantum Hall antidot as a fractional coulombmeter</a></h3>
+  <p class="article-stats">物理</p>
+  <p class="article-meta">08/14 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [物理] 摘要：研究提出利用量子霍尔反点结构实现分数电荷的灵敏测量，即作为分数库仑计使用，为量子物理研究提供了新的检测工具。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41567-026-03413-1" target="_blank" rel="noopener noreferrer">Diamond melting in shock compression experiments at 1 TPa pressures</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/13 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 摘要：在冲击压缩实验中，研究者观测到金刚石在1太帕压力下发生熔化，这一发现对理解行星内部物质状态和演化具有重要意义。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41567-026-03389-y" target="_blank" rel="noopener noreferrer">Simple and efficient end-to-end quantum thermal and ground state preparation</a></h3>
+  <p class="article-stats">物理</p>
+  <p class="article-meta">08/12 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [物理] 1. 提出一种简单高效的量子态制备方法，能够端到端地准备量子热态和基态，为量子模拟和量子计算提供了实用方案。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41567-026-03409-x" target="_blank" rel="noopener noreferrer">Phase coherence and disorder-induced wave propagation in micromotor arrays</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/11 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 研究微马达阵列中的相位相干效应与波传播规律，发现无序能够诱导出新的波动模式，有助于理解活性物质的集体动力学行为。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41567-026-03395-0" target="_blank" rel="noopener noreferrer">Spectroscopy of Wigner crystal polarons in an atomically thin semiconductor</a></h3>
+  <p class="article-stats">材料</p>
+  <p class="article-meta">08/11 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [材料] 采用光谱学方法在原子级薄半导体中观测到维格纳晶体极化子，揭示了电子晶体与晶格振动之间的强耦合相互作用机制。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41567-026-03398-x" target="_blank" rel="noopener noreferrer">Wigner polarons probe the dynamics of a Wigner crystal in a monolayer semiconductor</a></h3>
+  <p class="article-stats">材料</p>
+  <p class="article-meta">08/11 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [材料] 利用维格纳极化子作为探针，研究单层半导体中维格纳晶体的动力学特性，为强关联电子体系的研究提供了全新实验手段。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41567-026-03420-2" target="_blank" rel="noopener noreferrer">A cell stethoscope</a></h3>
+  <p class="article-stats">生物</p>
+  <p class="article-meta">08/10 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [生物] 研发了一种名为“细胞听诊器”的新型装置，能够非侵入地监听细胞的微弱机械振动信号，为医学诊断与细胞生物学研究开辟了新途径。</p>
+</article>
+<article class="article">
+  <h3 class="article-title"><a href="https://www.nature.com/articles/s41567-026-03421-1" target="_blank" rel="noopener noreferrer">Silent whales leave a trace</a></h3>
+  <p class="article-stats">交叉</p>
+  <p class="article-meta">08/10 00:00</p>
+  
+  <p class="article-summary"><span class="summary-label">中文介绍</span> [交叉] 1. 摘要：即使鲸鱼不发声，它们游动时留下的水痕也能被探测到。这项研究通过分析水体扰动特征，为追踪沉默鲸鱼提供了新方法，有助于保护这些海洋生物。</p>
+</article>
+  </div>
+<div class="source-content" data-source-content="nature-mat" data-sub="journals" data-cat="research">
+    <p class="empty">该源今日无内容。</p>
+  </div>
+    </div>
+  </div>
+  </section>
+  
+
+  <footer>
+    内容均来自原媒体，本站仅作摘要整理与回链。
+  </footer>
+</main>
+<script>
+  document.querySelectorAll('.tabs > .tab').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var target = btn.dataset.tab;
+      document.querySelectorAll('.tabs > .tab').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      document.querySelectorAll('.panel').forEach(function (p) {
+        p.classList.toggle('active', p.dataset.panel === target);
+      });
+    });
+  });
+  // Scope sub-tab / source-tab toggles to the parent .panel so two L1 panels
+  // can share the same data-cat (e.g. tech main + community both data-cat=tech)
+  // without stomping on each other's active state.
+  document.querySelectorAll('.sub-tab').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var panel = btn.closest('.panel');
+      if (!panel) return;
+      var sub = btn.dataset.sub;
+      panel.querySelectorAll('.sub-tab').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      panel.querySelectorAll('.sub-content').forEach(function (p) {
+        p.classList.toggle('active', p.dataset.subContent === sub);
+      });
+    });
+  });
+  document.querySelectorAll('.source-tab').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var subContent = btn.closest('.sub-content');
+      if (!subContent) return;
+      var src = btn.dataset.source;
+      subContent.querySelectorAll('.source-tab').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      subContent.querySelectorAll('.source-content').forEach(function (p) {
+        p.classList.toggle('active', p.dataset.sourceContent === src);
+      });
+    });
+  });
+  // Trading panel: asset-group sub-tabs (US/crypto/china/commodity)
+  document.querySelectorAll('.trading-group-tab').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var grp = btn.dataset.group;
+      document.querySelectorAll('.trading-group-tab').forEach(function (b) {
+        b.classList.toggle('active', b === btn);
+      });
+      document.querySelectorAll('.trading-group-content').forEach(function (p) {
+        p.classList.toggle('active', p.dataset.group === grp);
+      });
+    });
+  });
+</script>
+</body>
+</html>
