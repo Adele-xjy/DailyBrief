@@ -553,7 +553,6 @@
     "category": "politics",
     "subcategory": "world",
     "enabled": true,
-    "summarize":true,
     "locales": [
       "zh",
       "en"
@@ -567,7 +566,6 @@
     "category": "politics",
     "subcategory": "world",
     "enabled": true,
-    "summarize":true,
     "locales": [
       "zh",
       "en"
@@ -580,7 +578,6 @@
     "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml",
     "category": "politics",
     "subcategory": "world",
-    "enabled": true,
     "summarize":true,
     "locales": [
       "zh",
