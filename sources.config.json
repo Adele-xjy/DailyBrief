@@ -81,7 +81,7 @@
     "category": "tech",
     "subcategory": "ai-news",
     "lang": "zh",
-    "enabled": false,
+    "enabled": true,
     "locales": [
       "zh"
     ]
@@ -166,7 +166,7 @@
     "url": "https://news.smol.ai/rss.xml",
     "category": "tech",
     "subcategory": "ai-news",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh",
       "en"
@@ -179,7 +179,7 @@
     "url": "https://www.latent.space/feed",
     "category": "tech",
     "subcategory": "ai-news",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh",
       "en"
@@ -205,7 +205,7 @@
     "url": "https://reply-vc-90459984647.us-central1.run.app/v1/articles/leaderboard?window=3d&category=ai&lang=en&limit=30",
     "category": "tech",
     "subcategory": "x-viral",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh",
       "en"
@@ -218,7 +218,7 @@
     "url": "https://www.solidot.org/index.rss",
     "category": "tech",
     "subcategory": "overseas-news",
-    "enabled": false,
+    "enabled": true,
     "locales": [
       "zh",
       "en"
@@ -231,7 +231,7 @@
     "url": "https://feeds.arstechnica.com/arstechnica/index",
     "category": "tech",
     "subcategory": "overseas-news",
-    "enabled": false,
+    "enabled": true,
     "locales": [
       "zh",
       "en"
@@ -320,7 +320,7 @@
     "url": "https://techcrunch.com/feed/",
     "category": "tech",
     "subcategory": "overseas",
-    "enabled": false,
+    "enabled": true,
     "locales": [
       "zh",
       "en"
@@ -333,7 +333,7 @@
     "url": "https://www.theverge.com/rss/index.xml",
     "category": "tech",
     "subcategory": "overseas",
-    "enabled": false,
+    "enabled": true,
     "locales": [
       "zh",
       "en"
@@ -346,7 +346,7 @@
     "url": "https://feeds.bbci.co.uk/news/technology/rss.xml",
     "category": "tech",
     "subcategory": "overseas",
-    "enabled": false,
+    "enabled": true,
     "locales": [
       "zh",
       "en"
@@ -359,7 +359,7 @@
     "url": "https://feeds.bloomberg.com/markets/news.rss",
     "category": "finance",
     "subcategory": "news",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh",
       "en"
@@ -372,7 +372,7 @@
     "url": "https://feeds.a.dj.com/rss/RSSMarketsMain.xml",
     "category": "finance",
     "subcategory": "news",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh",
       "en"
@@ -411,7 +411,7 @@
     "url": "https://www.ftchinese.com/rss/news",
     "category": "finance",
     "subcategory": "news",
-    "enabled": false,
+    "enabled": true,
     "locales": [
       "zh"
     ]
@@ -528,7 +528,7 @@
     "url": "http://www.people.com.cn/rss/finance.xml",
     "category": "finance",
     "subcategory": "news",
-    "enabled": false,
+    "enabled": true,
     "locales": [
       "zh"
     ]
@@ -540,7 +540,7 @@
     "url": "https://rsshub.app/wallstreetcn/news/global",
     "category": "finance",
     "subcategory": "news",
-    "enabled": false,
+    "enabled": true,
     "locales": [
       "zh"
     ]
@@ -641,7 +641,7 @@
     "type": "rss",
     "url": "http://www.people.com.cn/rss/politics.xml",
     "category": "politics",
-    "enabled": false,
+    "enabled": true,
     "locales": [
       "zh"
     ]
@@ -652,7 +652,7 @@
     "type": "rss",
     "url": "http://www.people.com.cn/rss/world.xml",
     "category": "politics",
-    "enabled": false,
+    "enabled": true,
     "locales": [
       "zh"
     ]
@@ -663,7 +663,7 @@
     "type": "rss",
     "url": "http://www.xinhuanet.com/politics/news_politics.xml",
     "category": "politics",
-    "enabled": false,
+    "enabled": true,
     "locales": [
       "zh"
     ]
@@ -686,7 +686,7 @@
     "url": "https://github.com/trending",
     "category": "tech",
     "subcategory": "github-research-trending",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh",
       "en"
@@ -699,7 +699,7 @@
     "url": "https://www.sciencedaily.com/rss/computers_math/artificial_intelligence.xml",
     "category": "tech",
     "subcategory": "ai-for-science",
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "marktechpost",
@@ -708,7 +708,7 @@
     "url": "https://www.marktechpost.com/feed/",
     "category": "tech",
     "subcategory": "ai-for-science",
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "aihub",
@@ -717,7 +717,7 @@
     "url": "https://aihub.org/feed/",
     "category": "tech",
     "subcategory": "ai-for-science",
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "sciencenews-ai",
@@ -726,7 +726,7 @@
     "url": "https://www.sciencenews.org/topic/artificial-intelligence/feed",
     "category": "tech",
     "subcategory": "ai-for-science",
-    "enabled": true
+    "enabled": false
   },
   {
     "id": "nature",
@@ -755,7 +755,7 @@
     "url": "https://www.nature.com/nchem.rss",
     "category": "research",
     "subcategory": "journals",
-    "enabled": true,
+    "enabled": false,
     "lang": "en"
   },
   {
@@ -765,7 +765,7 @@
     "url": "https://pubs.acs.org/action/showFeed?type=etoc&feed=rss&jc=jacsat",
     "category": "research",
     "subcategory": "journals",
-    "enabled": true,
+    "enabled": false,
     "lang": "en"
   },
   {
@@ -795,7 +795,7 @@
     "url": "https://www.nature.com/nphys.rss",
     "category": "research",
     "subcategory": "journals",
-    "enabled": true,
+    "enabled": false,
     "lang": "en"
   },
   {
@@ -805,7 +805,7 @@
     "url": "https://www.nature.com/nmat.rss",
     "category": "research",
     "subcategory": "journals",
-    "enabled": true,
+    "enabled": false,
     "lang": "en"
   }
 ]
