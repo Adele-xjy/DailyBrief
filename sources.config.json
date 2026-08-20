@@ -6,7 +6,7 @@
     "url": "https://github.com/trending",
     "category": "tech",
     "subcategory": "github-trending",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh",
       "en"
@@ -119,7 +119,7 @@
     "url": "https://huggingface.co/blog/feed.xml",
     "category": "tech",
     "subcategory": "ai-news",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh",
       "en"
@@ -132,7 +132,7 @@
     "url": "https://huggingface.co/api/daily_papers",
     "category": "tech",
     "subcategory": "trending-papers",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh",
       "en"
@@ -244,7 +244,7 @@
     "url": "https://www.ruanyifeng.com/blog/atom.xml",
     "category": "tech",
     "subcategory": "blog-weekly",
-    "enabled": false,
+    "enabled": true,
     "locales": [
       "zh"
     ]
