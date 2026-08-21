@@ -1,5 +1,38 @@
 [
   {
+    "id": "peoples-daily",
+    "name": "人民网时政",
+    "type": "rss",
+    "url": "http://www.people.com.cn/rss/politics.xml",
+    "category": "politics",
+    "enabled": true,
+    "locales": [
+      "zh"
+    ]
+  },
+   {
+    "id": "people-world",
+    "name": "人民网国际",
+    "type": "rss",
+    "url": "http://www.people.com.cn/rss/world.xml",
+    "category": "politics",
+    "enabled": true,
+    "locales": [
+      "zh"
+    ]
+  },
+  {
+    "id": "xinhua-politics",
+    "name": "新华网时政",
+    "type": "rss",
+    "url": "http://www.xinhuanet.com/politics/news_politics.xml",
+    "category": "politics",
+    "enabled": true,
+    "locales": [
+      "zh"
+    ]
+  },
+  {
     "id": "github-trending",
     "name": "GitHub Trending",
     "type": "scrape",
@@ -540,7 +573,7 @@
     "url": "https://rsshub.app/wallstreetcn/news/global",
     "category": "finance",
     "subcategory": "news",
-    "enabled": true,
+    "enabled": false,
     "locales": [
       "zh"
     ]
@@ -633,39 +666,6 @@
     "locales": [
       "zh",
       "en"
-    ]
-  },
-  {
-    "id": "peoples-daily",
-    "name": "人民网时政",
-    "type": "rss",
-    "url": "http://www.people.com.cn/rss/politics.xml",
-    "category": "politics",
-    "enabled": true,
-    "locales": [
-      "zh"
-    ]
-  },
-  {
-    "id": "people-world",
-    "name": "人民网国际",
-    "type": "rss",
-    "url": "http://www.people.com.cn/rss/world.xml",
-    "category": "politics",
-    "enabled": true,
-    "locales": [
-      "zh"
-    ]
-  },
-  {
-    "id": "xinhua-politics",
-    "name": "新华网时政",
-    "type": "rss",
-    "url": "http://www.xinhuanet.com/politics/news_politics.xml",
-    "category": "politics",
-    "enabled": true,
-    "locales": [
-      "zh"
     ]
   },
   {
