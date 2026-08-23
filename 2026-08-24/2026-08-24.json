@@ -1,0 +1,333 @@
+{
+  "hero_headline": "人形机器人短跑超人类 嫦娥7号推迟",
+  "daily_overview": "今日科技领域，北京世界人形机器人运动会开幕，机器人百米短跑超越人类纪录但制动仍是短板；嫦娥7号因台风推迟至2027年，体现对「绝对成功」的坚持。AI大厂动作频频，DeepMind推出新模型，Uber则因自动化停用司机面临近10亿欧元罚款。财经方面，美加贸易谈判破裂，加拿大宣布反制关税；恒大创始人许家印被判无期徒刑，标志地产时代落幕；投资者减弱对美英加息预期。时政上，特朗普扬言对伊朗实施“摧毁性”制裁，英国承诺助乌克兰制造远程导弹，金门台海议题再受关注。",
+  "tech_briefs": [
+    {
+      "title": "世界人形机器人运动会开幕 短跑超人类",
+      "url": "https://www.solidot.org/story?sid=85169",
+      "source": "Solidot 奇客",
+      "summary": "北京人形机器人运动会开幕，两机器人百米跑出快于博尔特世界纪录的成绩，但制动控制仍是短板，超四成项目要求完全自主运行。（多家报道）",
+      "importance": 9
+    },
+    {
+      "title": "嫦娥7号因台风推迟至2027年发射",
+      "url": "https://arstechnica.com/space/2026/08/due-to-need-for-absolute-success-china-delays-critical-moon-launch-to-2027/",
+      "source": "Ars Technica",
+      "summary": "原定8月24日发射的嫦娥7号因台风取消窗口，航天部门称今年已无窗口，任务推迟至2027年，探测器将赴月球南极寻找水冰。（多家报道）",
+      "importance": 8
+    },
+    {
+      "title": "Uber因自动化停用司机面临约10亿美元罚款",
+      "url": "https://techcrunch.com/2026/08/23/uber-faces-fine-of-nearly-1b-over-automated-driver-suspensions/",
+      "source": "TechCrunch",
+      "summary": "荷兰数据保护局依据GDPR对Uber处以8.25亿欧元罚款，事由是自动化系统不当停用司机账户，为欧洲第二高罚单。",
+      "importance": 8
+    },
+    {
+      "title": "卡巴斯基发现首款汽车Android恶意程序",
+      "url": "https://www.solidot.org/story?sid=85168",
+      "source": "Solidot 奇客",
+      "summary": "卡巴斯基披露首款针对汽车的Android恶意程序，经车载主机固件更新传播，关联MoYu组织与BADBOX僵尸网络，或用于组建住宅代理。",
+      "importance": 7
+    },
+    {
+      "title": "DeepMind发布Gemini 3.7 Flash模型",
+      "url": "https://deepmind.google/blog/introducing-gemini-3-7-flash/",
+      "source": "DeepMind Blog",
+      "summary": "Google DeepMind推出Gemini 3.7 Flash，面向快速推理与效率场景，进一步补齐Gemini产品线的速度与成本档位。",
+      "importance": 6
+    }
+  ],
+  "finance_briefs": [
+    {
+      "title": "美加贸易谈判破裂 加拿大9月起反制",
+      "url": "https://www.bbc.co.uk/news/articles/cx272np7vgyo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Business",
+      "summary": "美国对200亿美元加拿大商品加征50%关税，加拿大总理卡尼称将“对等”反制，指责美国挑起贸易战，谈判破裂加剧经济风险。（多家报道）",
+      "importance": 10
+    },
+    {
+      "title": "许家印被判无期徒刑 恒大时代落幕",
+      "url": "https://www.ftchinese.com/story/001110675",
+      "source": "FT中文网",
+      "summary": "中国恒大创始人许家印因相关罪行被判处无期徒刑，案件折射中国房地产行业从狂热到深度调整的时运变迁。",
+      "importance": 10
+    },
+    {
+      "title": "投资者缩减对美英加息押注",
+      "url": "https://www.ftchinese.com/story/001110680",
+      "source": "FT中文网",
+      "summary": "经济数据转弱压倒油价上涨担忧，交易员预计美联储年内按兵不动，英国央行未来一年加息次数或不超过两次。",
+      "importance": 7
+    },
+    {
+      "title": "伊朗总统呼吁见好就收结束战争",
+      "url": "https://www.ftchinese.com/story/001110689",
+      "source": "FT中文网",
+      "summary": "伊朗经济承压，总统佩泽什基安公开呼吁“最好今天就结束战争”，政权内部正激烈辩论冲突应持续多久。",
+      "importance": 7
+    }
+  ],
+  "politics_briefs": [
+    {
+      "title": "特朗普宣布对伊朗实施“摧毁性”制裁",
+      "url": "https://www.aljazeera.com/video/inside-story/2026/8/23/will-donald-trumps-new-sanctions-against-iran-work?traffic_source=rss",
+      "source": "Al Jazeera",
+      "summary": "美国总统特朗普称将对德黑兰采取“摧毁性”新制裁，中东局势进一步承压。伊朗国内已因经济压力出现停战呼声。",
+      "importance": 8
+    },
+    {
+      "title": "英国承诺助乌克兰制造远程导弹",
+      "url": "https://www.theguardian.com/politics/2026/aug/24/andy-burnham-ukraine-long-range-missile-technology-kyiv-visit",
+      "source": "The Guardian",
+      "summary": "英国首相伯纳姆将于乌克兰独立日访问，分享“风暴阴影”导弹部件分类信息，帮助乌克兰提升自行制造远程导弹的能力。",
+      "importance": 8
+    },
+    {
+      "title": "金门：台海潜在引爆点引关注",
+      "url": "https://thediplomat.com/2026/08/kinmen-the-sleepy-fishing-island-that-could-be-east-asias-biggest-flashpoint/",
+      "source": "The Diplomat",
+      "summary": "外媒聚焦距大陆仅3公里的金门，称其战略位置与文化独特性使台海风险点再度升温。台北当局行政，但地缘敏感性高。",
+      "importance": 6
+    }
+  ],
+  "research_briefs": [],
+  "editor_note": "今日信号：人形机器人突破与航天谨慎同行；美加贸易摩擦升级、恒大落幕震动财经；地缘政治博弈加剧。多事之秋，宜保持理性观察、审慎应对。",
+  "keywords": [
+    "人形机器人",
+    "嫦娥7号",
+    "Uber罚款",
+    "美加贸易战",
+    "许家印",
+    "伊朗制裁",
+    "远程导弹",
+    "金门"
+  ],
+  "trading": {
+    "market_overview": "美股三大指数技术面呈现中性偏多格局：标普500现价7674.37高于SMA20/50/200维持多头排列，但MACD线54.65已下穿信号线64.56形成死叉，且近5日回落1.43%；纳斯达克RSI 50.9、道指短线反弹0.98%，均未突破52周高点。加密市场方面，恐慌贪婪指数66处于贪婪区间，总市值2.63万亿美元，24小时下跌1.62%，BTC主导率59.1%、ETH占比11.3%，显示高位降温但情绪仍偏多。中国资产表现分化：上证指数空头排列，现价3905.20低于SMA50与SMA200，走势偏弱；恒生指数站上所有主要均线，RSI 61.9且5日上涨3.55%，相对强势。商品端黄金期货RSI 75.3进入超买区，近5日急涨5.65%，MACD线117.87高于信号线79.83，动量极强但回调压力积累。整体看，各资产方向不一，美股高位整理，中国股市多空分化，黄金一枝独秀但超买，加密处于贪婪后的温和修正阶段。",
+    "watchlist": [
+      {
+        "symbol": "^GSPC",
+        "display_name": "S&P 500(^GSPC)",
+        "stance": "中性",
+        "rationale": "现价7674.37高于SMA20(7644.43)、SMA50(7541.05)与SMA200(7095.72)，维持多头排列；但MACD线(54.65)已下穿信号线(64.56)形成死叉，RSI为53.9中性，近5日回落1.43%且距52周高仅1.82%，多空信号交织，技术状态中性。"
+      },
+      {
+        "symbol": "000001.SS",
+        "display_name": "上证指数(000001.SS)",
+        "stance": "偏下行",
+        "rationale": "现价3905.20低于SMA50(3958.04)和SMA200(4013.31)，呈空头排列；RSI为48.2略偏弱，距52周高-8.3%而距低点仅+4.62%，MACD线(0.36)虽略高于信号线(-5.61)但动能不足，整体技术状态偏下行。"
+      },
+      {
+        "symbol": "^HSI",
+        "display_name": "恒生指数(^HSI)",
+        "stance": "偏上行",
+        "rationale": "现价26009.46高于SMA20(25635.85)、SMA50(24710.06)及SMA200(25700.31)，短期均线向上发散；近5日上涨3.55%，昨日再涨1.21%，RSI升至61.9显示多头动能增强。尽管MACD线(211.18)略低于信号线(237.83)，但价格结构偏强，整体偏上行。"
+      },
+      {
+        "symbol": "GC=F",
+        "display_name": "黄金期货(GC=F)",
+        "stance": "偏上行",
+        "rationale": "现价4667.20远高于SMA20(4307.81)与SMA50(4187.48)，近5日急涨5.65%，RSI达75.3进入超买区；MACD线(117.87)高于信号线(79.83)维持多头动能，距52周低点已上涨38.66%，技术动量强劲但超买，偏上行状态需注意回踩风险。"
+      }
+    ],
+    "risk_caveat": "本报告仅基于历史价格与公开技术指标做客观读数，不构成任何投资建议。过去走势不代表未来表现，指标信号可能失效或反复。仅供技术指标解读参考，投资者需自行研判风险。",
+    "tickers": [
+      {
+        "symbol": "^GSPC",
+        "displayName": "S&P 500",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "SNP",
+        "currentPrice": 7674.37,
+        "pct1Day": 0.4346178207354583,
+        "pct5Day": -1.4306858800961002,
+        "pct52WeekHigh": -1.8208451136668917,
+        "pct52WeekLow": 21.4893041059632,
+        "sma20": 7644.426000976562,
+        "sma50": 7541.047412109375,
+        "sma200": 7095.72400390625,
+        "rsi14": 53.85223844365164,
+        "macd": 54.64951155107519,
+        "macdSignal": 64.56087838061099,
+        "macdHistogram": -9.911366829535794,
+        "trend": "bullish",
+        "rsiState": "normal",
+        "signals": [
+          {
+            "type": "macd-bear-cross",
+            "label": "MACD 死叉",
+            "daysAgo": 1
+          },
+          {
+            "type": "near-52w-high",
+            "label": "接近 52 周高"
+          },
+          {
+            "type": "above-sma50-sma200",
+            "label": "多头排列"
+          }
+        ]
+      },
+      {
+        "symbol": "^IXIC",
+        "displayName": "Nasdaq",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "NIM",
+        "currentPrice": 26180.455,
+        "pct1Day": 0.43458909603353363,
+        "pct5Day": -2.0528335085818106,
+        "pct52WeekHigh": -3.7136712073941225,
+        "pct52WeekLow": 26.53522794552991,
+        "sma20": 26066.70439453125,
+        "sma50": 25950.516328125,
+        "sma200": 24241.84302734375,
+        "rsi14": 50.8690023543877,
+        "macd": 158.35708075690854,
+        "macdSignal": 181.0547260677526,
+        "macdHistogram": -22.697645310844052,
+        "trend": "bullish",
+        "rsiState": "normal",
+        "signals": [
+          {
+            "type": "macd-bear-cross",
+            "label": "MACD 死叉",
+            "daysAgo": 1
+          },
+          {
+            "type": "above-sma50-sma200",
+            "label": "多头排列"
+          }
+        ]
+      },
+      {
+        "symbol": "^DJI",
+        "displayName": "Dow Jones",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "DJI",
+        "currentPrice": 53277.01,
+        "pct1Day": 0.981438223390795,
+        "pct5Day": -0.8475334624405026,
+        "pct52WeekHigh": -2.6803141074153247,
+        "pct52WeekLow": 18.529902002662617,
+        "sma20": 53309.651171875,
+        "sma50": 52589.292109375,
+        "sma200": 49554.51548828125,
+        "rsi14": 52.360724149561406,
+        "macd": 259.90408219658275,
+        "macdSignal": 378.6553236585311,
+        "macdHistogram": -118.75124146194833,
+        "trend": "bullish",
+        "rsiState": "normal",
+        "signals": [
+          {
+            "type": "macd-bear-cross",
+            "label": "MACD 死叉",
+            "daysAgo": 4
+          },
+          {
+            "type": "near-52w-high",
+            "label": "接近 52 周高"
+          },
+          {
+            "type": "above-sma50-sma200",
+            "label": "多头排列"
+          }
+        ]
+      },
+      {
+        "symbol": "000001.SS",
+        "displayName": "上证指数",
+        "group": "indices",
+        "currency": "CNY",
+        "exchangeName": "SHH",
+        "currentPrice": 3905.203,
+        "pct1Day": 0.037965130048885375,
+        "pct5Day": -0.5595368363126126,
+        "pct52WeekHigh": -8.304094308739217,
+        "pct52WeekLow": 4.617476237931436,
+        "sma20": 3893.277966308594,
+        "sma50": 3958.03634765625,
+        "sma200": 4013.311627197266,
+        "rsi14": 48.225151898945136,
+        "macd": 0.36017094726230425,
+        "macdSignal": -5.608997665128072,
+        "macdHistogram": 5.969168612390376,
+        "trend": "bearish",
+        "rsiState": "normal",
+        "signals": [
+          {
+            "type": "below-sma50-sma200",
+            "label": "空头排列"
+          }
+        ]
+      },
+      {
+        "symbol": "^HSI",
+        "displayName": "恒生指数",
+        "group": "indices",
+        "currency": "HKD",
+        "exchangeName": "HKG",
+        "currentPrice": 26009.46,
+        "pct1Day": 1.2100701745079074,
+        "pct5Day": 3.5538310118790837,
+        "pct52WeekHigh": -7.294812892739902,
+        "pct52WeekLow": 15.505195843325337,
+        "sma20": 25635.84755859375,
+        "sma50": 24710.0567578125,
+        "sma200": 25700.307314453126,
+        "rsi14": 61.913448046128686,
+        "macd": 211.17667954467834,
+        "macdSignal": 237.8347873095931,
+        "macdHistogram": -26.658107764914774,
+        "trend": "neutral",
+        "rsiState": "normal",
+        "signals": []
+      },
+      {
+        "symbol": "GC=F",
+        "displayName": "黄金期货",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "CMX",
+        "currentPrice": 4667.2,
+        "pct1Day": 0.9320711367298307,
+        "pct5Day": 5.645348506916816,
+        "pct52WeekHigh": -16.451254878092442,
+        "pct52WeekLow": 38.657159833630416,
+        "sma20": 4307.814978027343,
+        "sma50": 4187.481997070313,
+        "sma200": 4502.267489013672,
+        "rsi14": 75.26016526164462,
+        "macd": 117.8714278119487,
+        "macdSignal": 79.82538717958599,
+        "macdHistogram": 38.04604063236272,
+        "trend": "neutral",
+        "rsiState": "overbought",
+        "signals": [
+          {
+            "type": "rsi-overbought",
+            "label": "RSI 超买"
+          }
+        ]
+      }
+    ],
+    "crypto_fear_greed": {
+      "value": 66,
+      "classification": "Greed",
+      "classificationCn": "贪婪",
+      "timestamp": "2026-08-23T00:00:00.000Z"
+    },
+    "crypto_global": {
+      "totalMarketCapUsd": 2625557771679.6157,
+      "total24hVolumeUsd": 88757835767.72795,
+      "marketCapChangePct24h": -1.6171686016750761,
+      "btcDominance": 59.1394469026732,
+      "ethDominance": 11.263677900699795,
+      "activeCryptocurrencies": 18639
+    },
+    "generated_at": "2026-08-23T23:55:45.791Z"
+  }
+}
