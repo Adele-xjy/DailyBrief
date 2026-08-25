@@ -1,0 +1,312 @@
+{
+  "hero_headline": "美加贸易战升级 加拿大宣布对美加征50%关税",
+  "daily_overview": "今日全球焦点集中于美加贸易战骤然升级，加拿大宣布对美商品征收最高50%报复性关税，双边谈判破裂令市场担忧加剧。科技领域，OpenAI发布自研推理芯片Jalapeño并阐述全栈智能战略，国产开源8B模型与具身智能共建计划同步推进，AI竞争进入硬核比拼阶段。财经方面，IMF预计AI将推动全球增长且投资外溢，但美国消费疲软与中国就业市场偏弱构成隐忧；SpaceX千亿美元发射场投资与英伟达芯片走私案则折射产业扩张与监管风险。时政上，CIA局长突访莫斯科、巴西重罚TikTok等事件显示大国博弈与科技治理同步收紧。",
+  "tech_briefs": [
+    {
+      "title": "OpenAI发布自研推理芯片Jalapeño",
+      "url": "https://openai.com/index/jalapeno-first-results",
+      "source": "OpenAI News",
+      "summary": "OpenAI公布自研推理芯片Jalapeño首批成果，称推理速度更快、能效更高、时延更低，并配合全栈智能战略降低AI使用成本。",
+      "importance": 9
+    },
+    {
+      "title": "国产开源8B模型发布 称比肩闭源Image 2",
+      "url": "https://www.qbitai.com/2026/08/479192.html",
+      "source": "量子位",
+      "summary": "商汤发布开源模型SenseNova U1.5 Lite，以8B参数实现与闭源Image 2相当的效果，引发AI社区广泛关注。",
+      "importance": 8
+    },
+    {
+      "title": "范式联合优必选等发布具身智能共建计划",
+      "url": "https://www.qbitai.com/2026/08/479314.html",
+      "source": "量子位",
+      "summary": "范式举办PhanthyMotus生态社区共建计划发布会，联合优必选等十余家具身巨头，将通用具身Agent底座从开源推向多方共建。",
+      "importance": 8
+    },
+    {
+      "title": "实探上海人形机器人嘉年华",
+      "url": "https://www.technologyreview.com/2026/08/25/1141907/dispatch-shanghai-humanoid-robot-carnival/",
+      "source": "MIT Tech Review AI",
+      "summary": "上海举办人形机器人「嘉年华」，展示AI嵌入物理系统的应用场景，体现中国推动人工智能进入日常生活的战略意图。",
+      "importance": 7
+    },
+    {
+      "title": "X向开源项目Nitter发停止函",
+      "url": "https://techcrunch.com/2026/08/25/x-sends-cease-and-desist-to-open-source-project-nitter-over-alleged-scraping/",
+      "source": "TechCrunch",
+      "summary": "X向隐私友好的开源前端Nitter发送停止函，要求其关闭实例与代码仓库，理由是涉嫌数据抓取，引发对开源生态的担忧。",
+      "importance": 6
+    }
+  ],
+  "finance_briefs": [
+    {
+      "title": "IMF称AI将推动全球增长且投资外溢",
+      "url": "https://www.ft.com/content/6a76e78b-c493-409a-8694-6fa4ba9a674e?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "summary": "IMF总裁格奥尔基耶娃预计，AI将助力全球经济增长，投资正从美国扩散至其他地区，并认为世界经济能承受伊朗战争引发的能源危机。",
+      "importance": 9
+    },
+    {
+      "title": "英伟达驻台员工被控走私先进芯片",
+      "url": "https://www.ftchinese.com/story/001110709",
+      "source": "FT中文网",
+      "summary": "台湾检方认定，英伟达一名驻台资深经理为走私案核心人物，案件涉及130台旗舰级B300服务器，被指违规运往中国大陆。",
+      "importance": 8
+    },
+    {
+      "title": "SpaceX拟投千亿美元建第二发射场",
+      "url": "https://www.ft.com/content/0c59f1d7-2197-406b-ba9b-6592c12bcb3d?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "summary": "SpaceX计划在路易斯安那州建设第二个发射综合体，以支持更多Starship发射，投资规模达1000亿美元。",
+      "importance": 8
+    },
+    {
+      "title": "美国体育用品商警告消费疲软 股价大跌",
+      "url": "https://www.ft.com/content/1b066355-4412-43bd-b832-74956d3c0a52?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "summary": "Dick's Sporting Goods向分析师表示，因「地缘政治环境」，消费者支出谨慎，股价随之下滑，引发零售板块担忧。",
+      "importance": 7
+    },
+    {
+      "title": "经济学人：中国就业市场持续疲弱",
+      "url": "https://www.economist.com/finance-and-economics/2026/08/20/however-you-measure-it-chinas-job-market-is-weak",
+      "source": "The Economist Finance",
+      "summary": "经济学人分析称，无论以何种标准衡量，中国就业市场均表现疲弱，部分劳动者选择返回农村务农，凸显就业压力。",
+      "importance": 7
+    }
+  ],
+  "politics_briefs": [
+    {
+      "title": "加拿大对美征收最高50%报复性关税",
+      "url": "https://www.bbc.co.uk/news/articles/c3v4xg5klx7o?at_medium=RSS&at_campaign=rss",
+      "source": "BBC World",
+      "summary": "加拿大宣布对美商品征收最高50%的报复性关税，覆盖钢铁、家具、金枪鱼等；此前美加谈判破裂，特朗普已对加商品加征50%关税。（多家报道）",
+      "importance": 10
+    }
+  ],
+  "research_briefs": [],
+  "editor_note": "",
+  "keywords": [],
+  "trading": {
+    "market_overview": "当前全球主要资产技术面呈现分化：美股三大指数仍处多头排列，但标普与纳指MACD均已出现死叉，短期动能减弱，道指相对稳健；RSI普遍在50-56区间，中性偏强。中国资产方面，上证指数跌破所有主要均线，空头排列明确，近5日-2.34%，技术面偏弱；恒生指数多空信号交织，方向不明。商品端黄金强势，近5日+8.33%，RSI 77.4超买，MACD红柱扩张，但需警惕超买回调。加密市场方面，恐慌贪婪指数74（贪婪），总市值2.67T美元、24h-2.55%，BTC主导率59.2%，ETH占比11.1%，整体处于高位震荡，缺乏明确趋势信号。整体来看，美股中性略强、中国资产偏弱、商品偏强、加密中性，市场无一致方向。",
+    "watchlist": [
+      {
+        "symbol": "GC=F",
+        "display_name": "黄金期货 (GC=F)",
+        "stance": "偏上行",
+        "rationale": "当前价4729.8，近1日+1.92%，近5日+8.33%，RSI 77.4处于超买区；MACD柱（130.16对89.56）为正且扩张；价格远高于SMA20（4341.17）与SMA200（4505.88），多头动量明显。虽超买暗示短线过热，但技术setup整体偏上行。"
+      },
+      {
+        "symbol": "^GSPC",
+        "display_name": "标普500指数 (^GSPC)",
+        "stance": "中性",
+        "rationale": "当前价7677.28，近1日+0.32%，RSI 53.9中性；价格高于SMA20（7668.83）、SMA50（7551.14）、SMA200（7104.54）呈多头排列，但MACD（43.63）已下穿信号线（57.67）形成死叉；距52周高仅-1.78%，上方存在压力，多空信号并存，技术面中性。"
+      },
+      {
+        "symbol": "000001.SS",
+        "display_name": "上证指数 (000001.SS)",
+        "stance": "偏下行",
+        "rationale": "当前价3889.45，近1日-0.4%，近5日-2.34%；价格跌破SMA20（3894.47）、SMA50（3955.05）、SMA200（4012.64），均线呈空头排列；RSI 45.6偏弱，距52周高-8.67%，技术趋势偏下行。"
+      },
+      {
+        "symbol": "^HSI",
+        "display_name": "恒生指数 (^HSI)",
+        "stance": "中性",
+        "rationale": "当前价25511.1，近1日-1.92%，近5日+0.23%；RSI 52.4中性，价格略低于SMA20（25651.36）和SMA200（25696.16），但高于SMA50（24735.42）；MACD（189.59）低于信号线（228.19），柱为负，动能转弱但趋势栏neutral，方向不明朗，中性。"
+      }
+    ],
+    "risk_caveat": "本报告仅基于历史行情数据的技术指标计算结果，所有读数均反映过去走势，过去走势不代表未来表现，亦不构成任何投资建议。本内容仅供技术指标解读参考，市场存在不确定性，请读者独立判断。",
+    "tickers": [
+      {
+        "symbol": "^GSPC",
+        "displayName": "S&P 500",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "SNP",
+        "currentPrice": 7677.28,
+        "pct1Day": 0.3190981823137597,
+        "pct5Day": -0.18825036228655134,
+        "pct52WeekHigh": -1.7836171274322934,
+        "pct52WeekLow": 21.53537093294031,
+        "sma20": 7668.834985351563,
+        "sma50": 7551.135009765625,
+        "sma200": 7104.535502929688,
+        "rsi14": 53.94288308068678,
+        "macd": 43.62902571977065,
+        "macdSignal": 57.674001047117294,
+        "macdHistogram": -14.044975327346641,
+        "trend": "bullish",
+        "rsiState": "normal",
+        "signals": [
+          {
+            "type": "macd-bear-cross",
+            "label": "MACD 死叉",
+            "daysAgo": 3
+          },
+          {
+            "type": "near-52w-high",
+            "label": "接近 52 周高"
+          },
+          {
+            "type": "above-sma50-sma200",
+            "label": "多头排列"
+          }
+        ]
+      },
+      {
+        "symbol": "^IXIC",
+        "displayName": "Nasdaq",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "NIM",
+        "currentPrice": 26151.299,
+        "pct1Day": 0.658615470005425,
+        "pct5Day": -0.5264871029927083,
+        "pct52WeekHigh": -3.8209009786978476,
+        "pct52WeekLow": 26.39431133021592,
+        "sma20": 26182.829296875,
+        "sma50": 25959.17609375,
+        "sma200": 24268.25826171875,
+        "rsi14": 50.52727919415983,
+        "macd": 104.69419793210545,
+        "macdSignal": 156.23632051000646,
+        "macdHistogram": -51.54212257790101,
+        "trend": "bullish",
+        "rsiState": "normal",
+        "signals": [
+          {
+            "type": "macd-bear-cross",
+            "label": "MACD 死叉",
+            "daysAgo": 3
+          },
+          {
+            "type": "above-sma50-sma200",
+            "label": "多头排列"
+          }
+        ]
+      },
+      {
+        "symbol": "^DJI",
+        "displayName": "Dow Jones",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "DJI",
+        "currentPrice": 53577.4,
+        "pct1Day": 0.29997821539236735,
+        "pct5Day": 0.43867014354957207,
+        "pct52WeekHigh": -2.131599747407632,
+        "pct52WeekLow": 19.198205221303823,
+        "sma20": 53411.5091796875,
+        "sma50": 52688.163046875,
+        "sma200": 49617.50708984375,
+        "rsi14": 55.72377148350629,
+        "macd": 242.7900188560816,
+        "macdSignal": 330.050143874054,
+        "macdHistogram": -87.26012501797243,
+        "trend": "bullish",
+        "rsiState": "normal",
+        "signals": [
+          {
+            "type": "near-52w-high",
+            "label": "接近 52 周高"
+          },
+          {
+            "type": "above-sma50-sma200",
+            "label": "多头排列"
+          }
+        ]
+      },
+      {
+        "symbol": "000001.SS",
+        "displayName": "上证指数",
+        "group": "indices",
+        "currency": "CNY",
+        "exchangeName": "SHH",
+        "currentPrice": 3889.445,
+        "pct1Day": -0.40350991587682056,
+        "pct5Day": -2.3403753251021184,
+        "pct52WeekHigh": -8.674099166843359,
+        "pct52WeekLow": 4.195331168761586,
+        "sma20": 3894.46611328125,
+        "sma50": 3955.04625,
+        "sma200": 4012.6400122070313,
+        "rsi14": 45.60764285434675,
+        "macd": -2.6216660307177335,
+        "macdSignal": -5.011531522530332,
+        "macdHistogram": 2.389865491812598,
+        "trend": "bearish",
+        "rsiState": "normal",
+        "signals": [
+          {
+            "type": "below-sma50-sma200",
+            "label": "空头排列"
+          }
+        ]
+      },
+      {
+        "symbol": "^HSI",
+        "displayName": "恒生指数",
+        "group": "indices",
+        "currency": "HKD",
+        "exchangeName": "HKG",
+        "currentPrice": 25511.1,
+        "pct1Day": -1.9160756107077677,
+        "pct5Day": 0.22735633231721766,
+        "pct52WeekHigh": -9.071111095269835,
+        "pct52WeekLow": 13.292033040234472,
+        "sma20": 25651.355078125,
+        "sma50": 24735.417578125,
+        "sma200": 25696.16326171875,
+        "rsi14": 52.36144275769076,
+        "macd": 189.58593322387605,
+        "macdSignal": 228.18501555451064,
+        "macdHistogram": -38.59908233063459,
+        "trend": "neutral",
+        "rsiState": "normal",
+        "signals": []
+      },
+      {
+        "symbol": "GC=F",
+        "displayName": "黄金期货",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "CMX",
+        "currentPrice": 4729.8,
+        "pct1Day": 1.917777087100469,
+        "pct5Day": 8.33256985799359,
+        "pct52WeekHigh": -15.330636210661982,
+        "pct52WeekLow": 40.30435169529235,
+        "sma20": 4341.169946289063,
+        "sma50": 4197.249985351563,
+        "sma200": 4505.882985839844,
+        "rsi14": 77.4025717827823,
+        "macd": 130.16011446868106,
+        "macdSignal": 89.55537038669291,
+        "macdHistogram": 40.604744081988144,
+        "trend": "neutral",
+        "rsiState": "overbought",
+        "signals": [
+          {
+            "type": "rsi-overbought",
+            "label": "RSI 超买"
+          }
+        ]
+      }
+    ],
+    "crypto_fear_greed": {
+      "value": 74,
+      "classification": "Greed",
+      "classificationCn": "贪婪",
+      "timestamp": "2026-08-25T00:00:00.000Z"
+    },
+    "crypto_global": {
+      "totalMarketCapUsd": 2665854656260.4604,
+      "total24hVolumeUsd": 105200299831.69267,
+      "marketCapChangePct24h": -2.5514300789289712,
+      "btcDominance": 59.237157694720985,
+      "ethDominance": 11.076518652912002,
+      "activeCryptocurrencies": 18683
+    },
+    "generated_at": "2026-08-25T23:08:41.742Z"
+  }
+}
