@@ -1,0 +1,269 @@
+{
+  "hero_headline": "美加贸易战升级 特朗普威胁加征50%汽车关税",
+  "daily_overview": "今日科技、财经、时政三线并进。科技方面，OpenAI推出GPT-5.6，为开发者提供更高性价比的编程工具；斯坦福研究显示AI正重创入门级岗位，年轻就业率明显下滑；阿里达摩院发布肝癌AI诊断模型，可精准识别微小肿瘤。财经方面，美加贸易谈判破裂，特朗普威胁对加拿大汽车加征50%关税，市场忧虑升温；Shein传赴港IPO，目标估值约270亿美元；许家印因恒大案被判处无期徒刑。时政方面，英国新首相伯纳姆首次外访乌克兰，重申支持立场；日本跨党派议员团启程访华，寻求修复双边关系；基隆地检署起诉英伟达等企业员工涉嫌走私AI服务器至大陆。",
+  "tech_briefs": [
+    {
+      "title": "OpenAI发布GPT-5.6 降低开发者使用成本",
+      "url": "https://openai.com/index/gpt-5-6-in-kiro",
+      "source": "OpenAI News",
+      "summary": "OpenAI将GPT-5.6集成至Kiro开发平台，帮助开发者更高效地规划、构建、审查和测试软件，强调更优性价比。该版本面向编程场景优化，有望降低AI辅助开发的门槛与成本。",
+      "importance": 9
+    },
+    {
+      "title": "微软删除逾17万非营利组织云数据",
+      "url": "https://www.solidot.org/story?sid=85183",
+      "source": "Solidot 奇客",
+      "summary": "微软自2013年起向小型非营利组织免费提供Microsoft 365，今年7月起停止免费授权。据Slate报道，逾17万组织因未转为付费订阅，存储在OneDrive等平台的数据遭删除，引发广泛批评。",
+      "importance": 8
+    },
+    {
+      "title": "斯坦福研究：AI对入门级岗位冲击最大",
+      "url": "https://arstechnica.com/ai/2026/08/ai-is-hitting-entry-level-jobs-hardest-stanford-study-finds/",
+      "source": "Ars Technica",
+      "summary": "斯坦福研究发现，AI影响较大的领域内，年轻从业者就业率较其他职业低19%，入门级岗位受冲击最严重，反映生成式AI正重塑初级劳动力市场格局。",
+      "importance": 9
+    },
+    {
+      "title": "阿里达摩院推出肝癌AI诊断模型",
+      "url": "https://www.qbitai.com/2026/08/478473.html",
+      "source": "量子位",
+      "summary": "达摩院联合盛京医院等机构研发DAMO LiON模型，能精准识别1厘米级微小肝肿瘤，辅助早期肝癌筛查与诊断，为临床影像判读提供AI支持。",
+      "importance": 8
+    }
+  ],
+  "finance_briefs": [
+    {
+      "title": "美加贸易战升级 特朗普威胁对加汽车加征50%关税",
+      "url": "https://www.ft.com/content/52978bad-2b91-41e3-be94-7fb6776fbb91?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "summary": "在卡尼拒绝美方贸易方案后，特朗普宣布拟将加拿大汽车关税提高至50%，加剧双边贸易紧张。加拿大总理卡尼指责美方意图摧毁加汽车业，谈判陷入僵局。（多家报道）",
+      "importance": 10
+    }
+  ],
+  "politics_briefs": [],
+  "research_briefs": [],
+  "editor_note": "",
+  "keywords": [],
+  "trading": {
+    "market_overview": "从当前技术面观察，美股三大指数呈现分化态势：道指维持多头排列，现价高于各均线，距52周高点仅2.42%，RSI 53.9，技术setup偏强；标普500指数虽仍处多头排列，但MACD出现死叉（MACD线47.68低于信号线61.19），近5日下跌1.19%，短期动能减弱；纳斯达克指数已跌破20日均线，RSI降至47.6，MACD死叉后动量转弱，技术面偏空。中概及中国指数方面，上证指数跌破全部主要均线，空头排列，趋势明确偏弱；恒生指数在50日均线上方但在20日均线下方，RSI 61.9显示一定韧性，但MACD死叉，整体中性。商品端黄金期货表现抢眼，单日上涨2.38%，5日累计上涨7.16%，RSI升至77.3进入超买区，MACD金叉且柱体为正，动量强劲。加密市场方面，根据辅助数据，恐慌贪婪指数为73处于贪婪区间，总市值2.68万亿美元，BTC主导率59%，ETH占比11.2%，技术面情绪偏暖。整体而言，美股与中概分化，商品动量最强但超买，加密情绪乐观，资产间未见系统性同向风险。",
+    "watchlist": [
+      {
+        "symbol": "^DJI",
+        "display_name": "道琼斯指数",
+        "stance": "偏上行",
+        "rationale": "现价53417.16，高于SMA20 53370.01、SMA50 52640.66、SMA200 49586.18，维持多头排列；RSI 53.9处于中性偏强区域；近1日上涨0.26%，距离52周高点仅2.42%，MACD虽略低于信号线（244.70 vs 351.87）但整体动能仍向上。技术setup偏上行。"
+      },
+      {
+        "symbol": "^IXIC",
+        "display_name": "纳斯达克指数",
+        "stance": "偏下行",
+        "rationale": "现价25980.19，跌破SMA20 26119.11，但仍高于SMA50 25953.93和SMA200 24255；近5日下跌2.49%，近1日下跌0.76%，RSI 47.6回落至50下方；MACD（121.39）已死叉信号线（169.12），动量转弱。技术setup偏下行。"
+      },
+      {
+        "symbol": "000001.SS",
+        "display_name": "上证指数",
+        "stance": "偏下行",
+        "rationale": "现价3882.01，已跌破SMA20 3893.28、SMA50 3958.04、SMA200 4013.31，呈空头排列；MACD柱虽为正（0.36 vs -5.61），但趋势仍偏空，RSI 48.2略低于50；近5日下跌1.15%，距离52周高点回落8.85%。技术setup偏下行。"
+      },
+      {
+        "symbol": "^HSI",
+        "display_name": "恒生指数",
+        "stance": "中性",
+        "rationale": "现价25517.33，略低于SMA20 25635.85，但高于SMA50 24710.06，并贴近SMA200 25700.31；RSI 61.9处于中性偏强；MACD 211.18低于信号线237.83，死叉但动能平稳；近5日累计上涨1.59%。多空信号混杂，技术setup中性。"
+      }
+    ],
+    "risk_caveat": "本报告基于当前公开行情计算的技术指标，仅为客观状态描述，不构成任何投资建议。过去走势不代表未来表现，市场存在不确定性。所有解读仅供技术指标解读参考，请读者结合自身判断并注意风险。",
+    "tickers": [
+      {
+        "symbol": "^GSPC",
+        "displayName": "S&P 500",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "SNP",
+        "currentPrice": 7652.86,
+        "pct1Day": -0.28028511602960515,
+        "pct5Day": -1.1904369739708753,
+        "pct52WeekHigh": -2.096025176864919,
+        "pct52WeekLow": 21.14878951892618,
+        "sma20": 7656.409985351563,
+        "sma50": 7546.21861328125,
+        "sma200": 7100.130554199219,
+        "rsi14": 51.865554591396574,
+        "macd": 47.682710447959835,
+        "macdSignal": 61.18524485060111,
+        "macdHistogram": -13.502534402641274,
+        "trend": "bullish",
+        "rsiState": "normal",
+        "signals": [
+          {
+            "type": "macd-bear-cross",
+            "label": "MACD 死叉",
+            "daysAgo": 2
+          },
+          {
+            "type": "near-52w-high",
+            "label": "接近 52 周高"
+          },
+          {
+            "type": "above-sma50-sma200",
+            "label": "多头排列"
+          }
+        ]
+      },
+      {
+        "symbol": "^IXIC",
+        "displayName": "Nasdaq",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "NIM",
+        "currentPrice": 25980.191,
+        "pct1Day": -0.7649595550594042,
+        "pct5Day": -2.494732210962552,
+        "pct52WeekHigh": -4.450201009848766,
+        "pct52WeekLow": 25.56731310641485,
+        "sma20": 26119.1099609375,
+        "sma50": 25953.926953125,
+        "sma200": 24255.00078125,
+        "rsi14": 47.619059666567615,
+        "macd": 121.39050660315479,
+        "macdSignal": 169.12188227446507,
+        "macdHistogram": -47.731375671310275,
+        "trend": "bullish",
+        "rsiState": "normal",
+        "signals": [
+          {
+            "type": "macd-bear-cross",
+            "label": "MACD 死叉",
+            "daysAgo": 2
+          },
+          {
+            "type": "above-sma50-sma200",
+            "label": "多头排列"
+          }
+        ]
+      },
+      {
+        "symbol": "^DJI",
+        "displayName": "Dow Jones",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "DJI",
+        "currentPrice": 53417.16,
+        "pct1Day": 0.26305582225566254,
+        "pct5Day": -0.07972582192336694,
+        "pct52WeekHigh": -2.4243058596205276,
+        "pct52WeekLow": 18.841705644902927,
+        "sma20": 53370.0052734375,
+        "sma50": 52640.6603125,
+        "sma200": 49586.17509765625,
+        "rsi14": 53.92903579457046,
+        "macd": 244.7045779297041,
+        "macdSignal": 351.865175086304,
+        "macdHistogram": -107.16059715659992,
+        "trend": "bullish",
+        "rsiState": "normal",
+        "signals": [
+          {
+            "type": "near-52w-high",
+            "label": "接近 52 周高"
+          },
+          {
+            "type": "above-sma50-sma200",
+            "label": "多头排列"
+          }
+        ]
+      },
+      {
+        "symbol": "000001.SS",
+        "displayName": "上证指数",
+        "group": "indices",
+        "currency": "CNY",
+        "exchangeName": "SHH",
+        "currentPrice": 3882.008,
+        "pct1Day": -0.5562115622233218,
+        "pct5Day": -1.1501646584979754,
+        "pct52WeekHigh": -8.848723239042918,
+        "pct52WeekLow": 3.996099484574738,
+        "sma20": 3893.277966308594,
+        "sma50": 3958.03634765625,
+        "sma200": 4013.311627197266,
+        "rsi14": 48.22515126376922,
+        "macd": 0.36017079062094126,
+        "macdSignal": -5.608997895483481,
+        "macdHistogram": 5.969168686104422,
+        "trend": "bearish",
+        "rsiState": "normal",
+        "signals": [
+          {
+            "type": "below-sma50-sma200",
+            "label": "空头排列"
+          }
+        ]
+      },
+      {
+        "symbol": "^HSI",
+        "displayName": "恒生指数",
+        "group": "indices",
+        "currency": "HKD",
+        "exchangeName": "HKG",
+        "currentPrice": 25517.33,
+        "pct1Day": -0.7049450482218343,
+        "pct5Day": 1.5944690391247167,
+        "pct52WeekHigh": -9.048905585594566,
+        "pct52WeekLow": 13.31969979571899,
+        "sma20": 25635.84755859375,
+        "sma50": 24710.0567578125,
+        "sma200": 25700.307314453126,
+        "rsi14": 61.9134476508031,
+        "macd": 211.17667874743347,
+        "macdSignal": 237.8347861371693,
+        "macdHistogram": -26.658107389735818,
+        "trend": "neutral",
+        "rsiState": "normal",
+        "signals": []
+      },
+      {
+        "symbol": "GC=F",
+        "displayName": "黄金期货",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "CMX",
+        "currentPrice": 4734.3,
+        "pct1Day": 2.3831642917852407,
+        "pct5Day": 7.16420411302201,
+        "pct52WeekHigh": -15.250080555655002,
+        "pct52WeekLow": 40.65062388591801,
+        "sma20": 4311.169958496093,
+        "sma50": 4188.823989257812,
+        "sma200": 4502.602987060547,
+        "rsi14": 77.33626663133356,
+        "macd": 123.22410320368726,
+        "macdSignal": 80.8959222579337,
+        "macdHistogram": 42.32818094575356,
+        "trend": "neutral",
+        "rsiState": "overbought",
+        "signals": [
+          {
+            "type": "rsi-overbought",
+            "label": "RSI 超买"
+          }
+        ]
+      }
+    ],
+    "crypto_fear_greed": {
+      "value": 73,
+      "classification": "Greed",
+      "classificationCn": "贪婪",
+      "timestamp": "2026-08-24T00:00:00.000Z"
+    },
+    "crypto_global": {
+      "totalMarketCapUsd": 2675372130828.638,
+      "total24hVolumeUsd": 124351018239.95595,
+      "marketCapChangePct24h": -0.6145320301376951,
+      "btcDominance": 59.04448003641857,
+      "ethDominance": 11.167952694671925,
+      "activeCryptocurrencies": 18664
+    },
+    "generated_at": "2026-08-24T23:59:55.466Z"
+  }
+}
