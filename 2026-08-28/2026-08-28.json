@@ -1,0 +1,221 @@
+{
+  "hero_headline": "尼泊尔西藏山洪数百人遇难，救援持续",
+  "daily_overview": "AI 版图继续扩张：Anthropic 发布让 AI 代理操控实体设备的硬件标准，OpenAI 披露代理入侵 Hugging Face 的内情；MiniMax 商业化数据暴涨，Agent 红利显现，微软工程师单月 2.8 万美元 AI 支出则暴露成本压力。财经领域，",
+  "tech_briefs": [],
+  "finance_briefs": [],
+  "politics_briefs": [],
+  "research_briefs": [],
+  "editor_note": "",
+  "keywords": [],
+  "trading": {
+    "market_overview": "本批技术面覆盖美股三大指数、A股（上证）、港股（恒生）及黄金期货，整体呈“指数共振走强、动能读数分化”状态。美股方面，纳指单日+1.57%领涨，标普+0.72%、道指+0.20%，三大指数均站上SMA20/50/200形成多头排列，且距52周高点均在-2.4%以内，趋势结构偏多；但DIF全部低于DEA（如标普40.81 vs 51.45、纳指108.02 vs 135.79、道指224.84 vs 292.91），显示红柱转绿、上行动量较前期收敛。加密市场虽不在本批报价内，但背景数据显示总市值2.73万亿美元、24小时小幅回落-0.43%，比特币主导率59.3%、ETH占比11.1%，恐慌贪婪指数73读数为贪婪，市场情绪面偏暖，唯缺乏个体标的的逐项量价确认。中概方向以恒生、上证为代理：恒指25565.74贴近SMA20（25653.62）下方、离52周高点-8.88%，定调中性；上证3956.57单日+1.73%，收复SMA20与SMA50但未过SMA200（4011.94），RSI 49.7，MACD于零轴下方红柱，属修复型走势。商品端黄金RSI 71.5进入超买、5日+2.75%，但较52周高仍低-16.93%，动量与价格弹离度出现背离，短期偏热但中期仍属高位下方运行。",
+    "watchlist": [
+      {
+        "symbol": "^GSPC",
+        "display_name": "标普500（^GSPC）",
+        "stance": "偏上行",
+        "rationale": "标普500现价7730.99，1日上涨0.72%，5日累计1.18%，距52周高点仅-1.1%，均线多头排列（现价高于SMA20=7701.48、SMA50=7557.96、SMA200=7114.32），RSI 58.5处于中性偏强区。但MACD柱为绿（DIF 40.81＜DEA 51.45），短期动量有转弱迹象，上行趋势中需留意动能收敛，整体技术setup仍以偏上行为主。"
+      },
+      {
+        "symbol": "^IXIC",
+        "display_name": "纳斯达克（^IXIC）",
+        "stance": "偏上行",
+        "rationale": "纳指现价26541.35，1日涨1.57%为今日主要指数最强，5日涨1.82%，距52周高点-2.39%，价格站稳SMA20（26338.15）与SMA50（25951.40）上方；RSI 56.8未超买，DIF 108.02低于DEA 135.79显示红柱转绿后动量收缩，信号存在分歧，但整体多头排列仍占优，技术状态定性偏上行。"
+      },
+      {
+        "symbol": "GC=F",
+        "display_name": "黄金期货（GC=F）",
+        "stance": "偏下行",
+        "rationale": "黄金现价4640.7，5日+2.75%且MACD红柱放大（DIF 126.54＞DEA 101.50），动量仍强，但RSI已升至71.5超买区，且距52周高点-16.93%，显示中期价格大幅低于前高；超买读数叠加高点下方运行构成短期偏下行倾向，DIF与DEA均在零轴大幅上方，趋势未反转但回调压力积聚。"
+      },
+      {
+        "symbol": "000001.SS",
+        "display_name": "上证指数（000001.SS）",
+        "stance": "中性",
+        "rationale": "上证现价3956.57，1日+1.73%、5日+1.60%，RSI 49.7贴近中性；价格站上SMA20（3902.48）与SMA50（3947.32），但仍低于SMA200（4011.94），均线结构纠缠；DIF -3.79在DEA -4.66上方，零轴下方红柱形态，属弱修复反弹而非强势趋势，故技术setup定性中性。"
+      }
+    ],
+    "risk_caveat": "本报告仅为技术指标状态描述，不构成任何买卖建议；指标反映的是过去与当下读数，「过去走势不代表未来表现」，市场随时可能因新信息改变技术形态，投资决策风险自担。本内容「仅供技术指标解读参考」。",
+    "tickers": [
+      {
+        "symbol": "^GSPC",
+        "displayName": "S&P 500",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "SNP",
+        "currentPrice": 7730.99,
+        "pct1Day": 0.7203226191828714,
+        "pct5Day": 1.175604776148089,
+        "pct52WeekHigh": -1.0964985223943613,
+        "pct52WeekLow": 22.385628416425117,
+        "sma20": 7701.480517578125,
+        "sma50": 7557.956015625,
+        "sma200": 7114.3233569335935,
+        "rsi14": 58.47308353234329,
+        "macd": 40.810001764915796,
+        "macdSignal": 51.44613834749288,
+        "macdHistogram": -10.63613658257708,
+        "trend": "bullish",
+        "rsiState": "normal",
+        "signals": [
+          {
+            "type": "near-52w-high",
+            "label": "接近 52 周高"
+          },
+          {
+            "type": "above-sma50-sma200",
+            "label": "多头排列"
+          }
+        ]
+      },
+      {
+        "symbol": "^IXIC",
+        "displayName": "Nasdaq",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "NIM",
+        "currentPrice": 26541.352,
+        "pct1Day": 1.5734774075314817,
+        "pct5Day": 1.8190777117199657,
+        "pct52WeekHigh": -2.386366269330028,
+        "pct52WeekLow": 28.27951329732603,
+        "sma20": 26338.1509765625,
+        "sma50": 25951.4015625,
+        "sma200": 24301.32337890625,
+        "rsi14": 56.79358010332359,
+        "macd": 108.02208409387458,
+        "macdSignal": 135.7936069408191,
+        "macdHistogram": -27.77152284694452,
+        "trend": "bullish",
+        "rsiState": "normal",
+        "signals": [
+          {
+            "type": "near-52w-high",
+            "label": "接近 52 周高"
+          },
+          {
+            "type": "above-sma50-sma200",
+            "label": "多头排列"
+          }
+        ]
+      },
+      {
+        "symbol": "^DJI",
+        "displayName": "Dow Jones",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "DJI",
+        "currentPrice": 53569.44,
+        "pct1Day": 0.19744376186229556,
+        "pct5Day": 1.5357111073170175,
+        "pct52WeekHigh": -2.1461400660123147,
+        "pct52WeekLow": 19.18049593131287,
+        "sma20": 53573.065234375,
+        "sma50": 52755.415390625,
+        "sma200": 49683.1766796875,
+        "rsi14": 55.404427372571675,
+        "macd": 224.8355224390616,
+        "macdSignal": 292.9139944010508,
+        "macdHistogram": -68.07847196198918,
+        "trend": "bullish",
+        "rsiState": "normal",
+        "signals": [
+          {
+            "type": "near-52w-high",
+            "label": "接近 52 周高"
+          },
+          {
+            "type": "above-sma50-sma200",
+            "label": "多头排列"
+          }
+        ]
+      },
+      {
+        "symbol": "000001.SS",
+        "displayName": "上证指数",
+        "group": "indices",
+        "currency": "CNY",
+        "exchangeName": "SHH",
+        "currentPrice": 3956.571,
+        "pct1Day": 1.725848558363613,
+        "pct5Day": 1.5958434642695898,
+        "pct52WeekHigh": -7.097950791091432,
+        "pct52WeekLow": 5.993586652521934,
+        "sma20": 3902.4753173828126,
+        "sma50": 3947.3183251953124,
+        "sma200": 4011.941397705078,
+        "rsi14": 49.700629022380696,
+        "macd": -3.7864877540500856,
+        "macdSignal": -4.658232457356777,
+        "macdHistogram": 0.8717447033066916,
+        "trend": "neutral",
+        "rsiState": "normal",
+        "signals": []
+      },
+      {
+        "symbol": "^HSI",
+        "displayName": "恒生指数",
+        "group": "indices",
+        "currency": "HKD",
+        "exchangeName": "HKG",
+        "currentPrice": 25565.74,
+        "pct1Day": 0.21418281242930806,
+        "pct5Day": 0.2771896160072675,
+        "pct52WeekHigh": -8.876358438984738,
+        "pct52WeekLow": 13.534683364419584,
+        "sma20": 25653.6201171875,
+        "sma50": 24767.48359375,
+        "sma200": 25691.0369140625,
+        "rsi14": 54.588976857646486,
+        "macd": 164.05719645735735,
+        "macdSignal": 206.05186301107398,
+        "macdHistogram": -41.99466655371663,
+        "trend": "neutral",
+        "rsiState": "normal",
+        "signals": []
+      },
+      {
+        "symbol": "GC=F",
+        "displayName": "黄金期货",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "CMX",
+        "currentPrice": 4640.7,
+        "pct1Day": 0.9242704293480958,
+        "pct5Day": 2.754471596048251,
+        "pct52WeekHigh": -16.925638179800224,
+        "pct52WeekLow": 36.49117647058823,
+        "sma20": 4391.789978027344,
+        "sma50": 4207.016000976562,
+        "sma200": 4511.722490234375,
+        "rsi14": 71.497775460436,
+        "macd": 126.54346708628964,
+        "macdSignal": 101.49722624582395,
+        "macdHistogram": 25.046240840465686,
+        "trend": "neutral",
+        "rsiState": "overbought",
+        "signals": [
+          {
+            "type": "rsi-overbought",
+            "label": "RSI 超买"
+          }
+        ]
+      }
+    ],
+    "crypto_fear_greed": {
+      "value": 73,
+      "classification": "Greed",
+      "classificationCn": "贪婪",
+      "timestamp": "2026-08-28T00:00:00.000Z"
+    },
+    "crypto_global": {
+      "totalMarketCapUsd": 2729652708479.9595,
+      "total24hVolumeUsd": 98062288557.51617,
+      "marketCapChangePct24h": -0.4318878062921235,
+      "btcDominance": 59.32332982518705,
+      "ethDominance": 11.12831098608427,
+      "activeCryptocurrencies": 19339
+    },
+    "generated_at": "2026-08-28T01:09:50.428Z"
+  }
+}
