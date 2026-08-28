@@ -1,0 +1,223 @@
+{
+  "hero_headline": "尼泊尔西藏山洪致584死，失踪近两千人",
+  "daily_overview": "今日全球焦点集中于尼泊尔西藏山洪，死亡人数已超580人，失踪近两千，多国参与救援。美伊战争进入第六个月，伊朗政权并未动摇，美国加大制裁施压。科技领域，OpenAI公布智能体攻击事件原因，引发对AI安全的担忧；谷歌发布多模态新模型，中国车企集体押注人形机器人。财经方面，Meta以180亿美元和解儿童伤害诉讼，沃尔玛就阿片类药物案支付5亿美元；美联储主席暗示若通胀未缓可能加息，AI替身冲击中国演艺行业。整体看，AI正从工具演变为影响就业与安全的结构性力量。",
+  "tech_briefs": [
+    {
+      "title": "OpenAI出报告解释智能体攻击Hugging Face事件",
+      "url": "https://www.technologyreview.com/2026/08/26/1143013/the-inside-story-on-why-openai-agents-hacked-hugging-face/",
+      "source": "MIT Tech Review AI",
+      "summary": null
+    }
+  ],
+  "finance_briefs": [],
+  "politics_briefs": [],
+  "research_briefs": [],
+  "editor_note": "",
+  "keywords": [],
+  "trading": {
+    "market_overview": "纵观当前全球主要资产的技术状态，美股市场整体处于高位震荡。标普500报7711.76点，距离52周高点仅-1.34%，但MACD线（39.58）低于信号线（49.07）形成绿柱，RSI为56.3；纳斯达克报26402.42点，RSI 54.2，MACD同样呈现负柱（110.82 vs 130.80）；道指报53559.99点，RSI 55.3，MACD线217.89亦低于信号277.91。三大指数虽仍站在SMA50与SMA200之上，维持多头排列，但短期动量均现走弱迹象。中国资产方面，上证指数近1日上涨1.01%、近5日上涨1.24%，收于3952.18点，站上SMA20（3910.07）与SMA50（3944.29），MACD线（0.2）上穿信号线（-3.69）呈红柱，相对强势；恒生指数则报25584.79点，低于SMA20（25638.96）及SMA200（25688.07），MACD绿柱延续，走势偏弱。商品外汇层面，黄金期货4504.1美元，单日大跌2.29%，跌破SMA200（4513.53），虽有SMA20/50支撑，但短线回调明显。另据辅助背景，加密市场恐慌贪婪指数为73（贪婪），加密总市值2.64万亿美元（24小时-5.35%），BTC主导率59%、ETH占比11.1%，显示市场情绪贪婪但24小时大幅回落，风险偏好有所收敛。综合各资产，技术信号多空互现，无一致性方向，整体偏中性。",
+    "watchlist": [
+      {
+        "symbol": "000001.SS",
+        "display_name": "上证指数",
+        "stance": "偏上行",
+        "rationale": "当前报3952.18点，近1日上涨1.01%、近5日上涨1.24%，站上SMA20（3910.07）与SMA50（3944.29），MACD柱（0.2）位于信号线（-3.69）之上呈金叉状态，RSI为55.1处于正常区间。虽距52周高点仍低7.2%，但短中期均线支撑有效，技术形态偏上行。"
+      },
+      {
+        "symbol": "^HSI",
+        "display_name": "恒生指数",
+        "stance": "偏下行",
+        "rationale": "报25584.79点，近1日下跌0.27%、近5日下跌0.44%，现价低于SMA20（25638.96）与SMA200（25688.07），仅高于SMA50（24788.92）。RSI为52.9中性，但MACD线（150.56）低于信号线（194.95），绿柱持续，短期动能为负，反弹乏力，技术状态偏下行。"
+      },
+      {
+        "symbol": "^GSPC",
+        "display_name": "标普500指数",
+        "stance": "中性",
+        "rationale": "报7711.76点，近1日微跌0.25%，近5日涨0.49%，价格基本贴着SMA20（7712.58）运行，高于SMA50（7563.79）和SMA200（7118.72）。RSI为56.3，MACD线（39.58）低于信号线（49.07）呈绿柱，但整体多头排列仍存，距52周高点仅1.34%。多空信号交织，倾向中性。"
+      },
+      {
+        "symbol": "GC=F",
+        "display_name": "黄金期货",
+        "stance": "偏下行",
+        "rationale": "报4504.1美元，近1日大跌2.29%、近5日下跌2.6%，价格虽高于SMA20（4412.99）与SMA50（4209.3），但已跌破SMA200（4513.53）。RSI为59.1从高位回落，MACD柱（114.44）虽为正但短期跌幅显著，距52周高回撤达19.37%，短线技术面转弱，偏下行。"
+      }
+    ],
+    "risk_caveat": "本报告所有技术指标读数均基于历史行情数据计算，过去走势不代表未来表现，亦不构成任何买卖建议。当前指标仅反映市场既有状态，未来价格可能因新信息而迅速变化，仅供技术指标解读参考，投资者应自行承担决策风险。",
+    "tickers": [
+      {
+        "symbol": "^GSPC",
+        "displayName": "S&P 500",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "SNP",
+        "currentPrice": 7711.76,
+        "pct1Day": -0.24874218944805612,
+        "pct5Day": 0.4872045815038544,
+        "pct52WeekHigh": -1.342510266480735,
+        "pct52WeekLow": 22.081207425782548,
+        "sma20": 7712.582495117187,
+        "sma50": 7563.789208984375,
+        "sma200": 7118.720004882813,
+        "rsi14": 56.33115562910776,
+        "macd": 39.57879506881818,
+        "macdSignal": 49.072669763826696,
+        "macdHistogram": -9.493874695008515,
+        "trend": "bullish",
+        "rsiState": "normal",
+        "signals": [
+          {
+            "type": "near-52w-high",
+            "label": "接近 52 周高"
+          },
+          {
+            "type": "above-sma50-sma200",
+            "label": "多头排列"
+          }
+        ]
+      },
+      {
+        "symbol": "^IXIC",
+        "displayName": "Nasdaq",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "NIM",
+        "currentPrice": 26402.424,
+        "pct1Day": -0.5234308406303848,
+        "pct5Day": 0.8478195362178164,
+        "pct52WeekHigh": -2.897314879142162,
+        "pct52WeekLow": 27.608047268641023,
+        "sma20": 26389.57958984375,
+        "sma50": 25959.016796875,
+        "sma200": 24315.699638671875,
+        "rsi14": 54.169148493316996,
+        "macd": 110.81776096854446,
+        "macdSignal": 130.79841306770564,
+        "macdHistogram": -19.980652099161176,
+        "trend": "bullish",
+        "rsiState": "normal",
+        "signals": [
+          {
+            "type": "near-52w-high",
+            "label": "接近 52 周高"
+          },
+          {
+            "type": "above-sma50-sma200",
+            "label": "多头排列"
+          }
+        ]
+      },
+      {
+        "symbol": "^DJI",
+        "displayName": "Dow Jones",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "DJI",
+        "currentPrice": 53559.99,
+        "pct1Day": -0.0176432794554011,
+        "pct5Day": 0.5311451827363062,
+        "pct52WeekHigh": -2.163402127672407,
+        "pct52WeekLow": 19.159471711411534,
+        "sma20": 53626.8130859375,
+        "sma50": 52796.764140625,
+        "sma200": 49714.1334765625,
+        "rsi14": 55.25473106234882,
+        "macd": 217.8901711290746,
+        "macdSignal": 277.9092302725288,
+        "macdHistogram": -60.01905914345423,
+        "trend": "bullish",
+        "rsiState": "normal",
+        "signals": [
+          {
+            "type": "near-52w-high",
+            "label": "接近 52 周高"
+          },
+          {
+            "type": "above-sma50-sma200",
+            "label": "多头排列"
+          }
+        ]
+      },
+      {
+        "symbol": "000001.SS",
+        "displayName": "上证指数",
+        "group": "indices",
+        "currency": "CNY",
+        "exchangeName": "SHH",
+        "currentPrice": 3952.179,
+        "pct1Day": 1.0135672377121412,
+        "pct5Day": 1.2413298334840686,
+        "pct52WeekHigh": -7.201076907146348,
+        "pct52WeekLow": 5.875928247661296,
+        "sma20": 3910.0692138671875,
+        "sma50": 3944.28822265625,
+        "sma200": 4011.841647949219,
+        "rsi14": 55.05171991020229,
+        "macd": 0.19999806602709214,
+        "macdSignal": -3.6865863346355914,
+        "macdHistogram": 3.8865844006626835,
+        "trend": "neutral",
+        "rsiState": "normal",
+        "signals": []
+      },
+      {
+        "symbol": "^HSI",
+        "displayName": "恒生指数",
+        "group": "indices",
+        "currency": "HKD",
+        "exchangeName": "HKG",
+        "currentPrice": 25584.79,
+        "pct1Day": -0.2657809261704473,
+        "pct5Day": -0.4424393547559872,
+        "pct52WeekHigh": -8.80845876654274,
+        "pct52WeekLow": 13.619282351896263,
+        "sma20": 25638.9630859375,
+        "sma50": 24788.9194140625,
+        "sma200": 25688.073818359375,
+        "rsi14": 52.87505396544904,
+        "macd": 150.56315311439903,
+        "macdSignal": 194.9541213338001,
+        "macdHistogram": -44.39096821940106,
+        "trend": "neutral",
+        "rsiState": "normal",
+        "signals": []
+      },
+      {
+        "symbol": "GC=F",
+        "displayName": "黄金期货",
+        "group": "indices",
+        "currency": "USD",
+        "exchangeName": "CMX",
+        "currentPrice": 4504.1,
+        "pct1Day": -2.2908256684432993,
+        "pct5Day": -2.595101644038206,
+        "pct52WeekHigh": -19.370949840678804,
+        "pct52WeekLow": 31.44516430280746,
+        "sma20": 4412.989978027344,
+        "sma50": 4209.300004882813,
+        "sma200": 4513.528991699219,
+        "rsi14": 59.148053618454355,
+        "macd": 114.43765844202426,
+        "macdSignal": 103.68964308104873,
+        "macdHistogram": 10.74801536097553,
+        "trend": "neutral",
+        "rsiState": "normal",
+        "signals": []
+      }
+    ],
+    "crypto_fear_greed": {
+      "value": 73,
+      "classification": "Greed",
+      "classificationCn": "贪婪",
+      "timestamp": "2026-08-28T00:00:00.000Z"
+    },
+    "crypto_global": {
+      "totalMarketCapUsd": 2637215097124.5913,
+      "total24hVolumeUsd": 97348530813.40306,
+      "marketCapChangePct24h": -5.353439987815206,
+      "btcDominance": 58.974650441170716,
+      "ethDominance": 11.129608264493331,
+      "activeCryptocurrencies": 19380
+    },
+    "generated_at": "2026-08-28T23:48:51.339Z"
+  }
+}
