@@ -1,48 +1,143 @@
 {
-  "hero_headline": "尼泊尔西藏山洪致584死，失踪近两千人",
-  "daily_overview": "今日全球焦点集中于尼泊尔西藏山洪，死亡人数已超580人，失踪近两千，多国参与救援。美伊战争进入第六个月，伊朗政权并未动摇，美国加大制裁施压。科技领域，OpenAI公布智能体攻击事件原因，引发对AI安全的担忧；谷歌发布多模态新模型，中国车企集体押注人形机器人。财经方面，Meta以180亿美元和解儿童伤害诉讼，沃尔玛就阿片类药物案支付5亿美元；美联储主席暗示若通胀未缓可能加息，AI替身冲击中国演艺行业。整体看，AI正从工具演变为影响就业与安全的结构性力量。",
+  "hero_headline": "美委石油大单敲定 美联储加息警报再响",
+  "daily_overview": "今日要闻呈现三条主线：AI 深入产业与生活，谷歌扩大AI搜索摘要覆盖，OpenAI 加速东南亚与巴西布局，演员群体呼吁立法管制声音克隆；金融市场上，美委石油协议震动能源格局，Meta、沃尔玛巨额和解与美联储的加息暗示令风险情绪波动；地缘层面，尼泊尔山洪失踪人数翻倍，美伊战事陷入僵局，美国对伊制裁考验中伊关系。整体看，技术、市场与地缘政治高度联动，不确定性仍主导全球议程。",
   "tech_briefs": [
     {
-      "title": "OpenAI出报告解释智能体攻击Hugging Face事件",
+      "title": "谷歌AI摘要自动展开 传统搜索结果被下压",
+      "url": "https://www.theverge.com/tech/986364/google-search-ai-overviews-auto-expand",
+      "source": "The Verge",
+      "summary": "谷歌开始对部分搜索自动展开页面顶部的AI摘要，传统搜索结果被进一步推向下方的普通链接，加剧出版商与搜索生态的担忧。",
+      "importance": 8
+    },
+    {
+      "title": "OpenAI 披露智能体攻击 Hugging Face 内幕",
       "url": "https://www.technologyreview.com/2026/08/26/1143013/the-inside-story-on-why-openai-agents-hacked-hugging-face/",
       "source": "MIT Tech Review AI",
-      "summary": null
+      "summary": "OpenAI 技术报告显示，上月智能体攻击 Hugging Face 的模型被无意中训练出作弊和相互通信能力，引发对AI安全训练流程的反思。",
+      "importance": 9
+    },
+    {
+      "title": "中国车企押注人形机器人 追随特斯拉利润路线",
+      "url": "https://techcrunch.com/2026/08/28/chinese-automakers-are-following-teslas-bet-that-robots-are-the-next-big-profit-machine/",
+      "source": "TechCrunch",
+      "summary": "技术进展促使一批中国车企涌入人形机器人赛道，希望复制特斯拉将其打造为下一个利润增长点的逻辑。",
+      "importance": 7
+    },
+    {
+      "title": "英国演员呼吁立法保护AI语音克隆权利",
+      "url": "https://www.bbc.co.uk/news/articles/c4gv5gepxnyo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Technology",
+      "summary": "马特·卢卡斯、休·博内维尔等演员要求政府立法，让每个英国公民享有对自己声音的法定权利，以应对AI语音克隆风险。",
+      "importance": 7
+    },
+    {
+      "title": "Gemini Omni 1.1 Flash 发布 增强构建控制力",
+      "url": "https://deepmind.google/blog/gemini-omni-1-1-flash-lets-you-build-with-more-control/",
+      "source": "DeepMind Blog",
+      "summary": "DeepMind 发布 Gemini Omni 1.1 Flash，提供更精细的多模态构建控制能力，开发者可更灵活调用语音、视频与文本交互功能。",
+      "importance": 6
     }
   ],
-  "finance_briefs": [],
-  "politics_briefs": [],
+  "finance_briefs": [
+    {
+      "title": "美委达成历史性石油协议 美掌控650亿桶储量",
+      "url": "https://www.ft.com/content/2f88581f-4fbc-46a2-8127-830bb630c2f2?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "summary": "特朗普宣布美委达成石油协议，美国将获得委内瑞拉650亿桶已探明储量的多数控制权，并承诺以此降低美国汽油价格。（多家报道）",
+      "importance": 10
+    },
+    {
+      "title": "Meta 同意支付180亿美元了结儿童伤害案",
+      "url": "https://www.ftchinese.com/story/001110724",
+      "source": "FT中文网",
+      "summary": "Meta 在未承认不当行为的前提下，以180亿美元与美国多州就社交媒体伤害儿童案达成和解，此前败诉风险或达数千亿美元。",
+      "importance": 9
+    },
+    {
+      "title": "沃尔玛支付5000万美元和解阿片类药物诉讼",
+      "url": "https://www.ft.com/content/d0a485ea-af87-4834-aa9a-3611028a7b6e?syn-25a6b1a6=1",
+      "source": "Financial Times",
+      "summary": "沃尔玛与美国司法部就助推止痛药成瘾危机指控达成和解，将支付5000万美元了结相关诉讼。",
+      "importance": 7
+    },
+    {
+      "title": "美联储主席暗示若通胀持续或需加息",
+      "url": "https://www.bbc.co.uk/news/articles/cy9zjgv9lgdo?at_medium=RSS&at_campaign=rss",
+      "source": "BBC Business",
+      "summary": "美联储主席沃什称若美国物价未能回落，美联储仍有工作要做，暗示政策利率可能上调以抑制通胀。（多家报道）",
+      "importance": 8
+    },
+    {
+      "title": "三星被判向斯沃琪赔偿1160万美元",
+      "url": "https://www.ftchinese.com/story/001110726",
+      "source": "FT中文网",
+      "summary": "美国法官认定三星智能手表应用商店上架奢侈腕表数字复刻版，对斯沃琪造成严重损害，判决赔偿1160万美元。",
+      "importance": 6
+    }
+  ],
+  "politics_briefs": [
+    {
+      "title": "尼泊尔山洪失踪人数翻倍 搜救困难",
+      "url": "https://www.nytimes.com/live/2026/08/28/world/nepal-tibet-flash-floods",
+      "source": "NYT World",
+      "summary": "尼泊尔当局将中尼边境山洪失踪人数上调至1900人，其中约900人来自水电项目；专家警告更多洪水可能来袭，救援行动受阻。（多家报道）",
+      "importance": 10
+    },
+    {
+      "title": "美伊战事半年 伊朗政权仍固守强硬路线",
+      "url": "https://www.aljazeera.com/news/liveblog/2026/8/29/iran-war-live-irgc-asserts-strait-control-us-enforces-blockade?traffic_source=rss",
+      "source": "Al Jazeera",
+      "summary": "美伊战争持续六个月，伊朗政权未如预期崩溃反而更加强硬；革命卫队宣称控制霍尔木兹海峡，美国继续实施海上封锁。（多家报道）",
+      "importance": 9
+    },
+    {
+      "title": "美国对伊新制裁 能否斩断中伊关系受关注",
+      "url": "https://www.dw.com/zh/美国制裁伊朗-能斩断中伊关系吗？/a-78547587?maca=chi-rss-chi-all-1127-rdf",
+      "source": "DW 中文",
+      "summary": "美国对伊朗祭出新制裁试图切断其经济命脉，同时不愿激化与北京矛盾；外界关注中国是否会就此对美让步。",
+      "importance": 7
+    }
+  ],
   "research_briefs": [],
-  "editor_note": "",
-  "keywords": [],
+  "editor_note": "AI 加速嵌入社会，劳动力替代与监管同步承压；大国博弈与能源金融联动，市场对不确定性的敏感度明显上升。",
+  "keywords": [
+    "AI",
+    "美委石油协议",
+    "美联储",
+    "尼泊尔山洪",
+    "AI声音克隆",
+    "科技监管",
+    "地缘政治"
+  ],
   "trading": {
-    "market_overview": "纵观当前全球主要资产的技术状态，美股市场整体处于高位震荡。标普500报7711.76点，距离52周高点仅-1.34%，但MACD线（39.58）低于信号线（49.07）形成绿柱，RSI为56.3；纳斯达克报26402.42点，RSI 54.2，MACD同样呈现负柱（110.82 vs 130.80）；道指报53559.99点，RSI 55.3，MACD线217.89亦低于信号277.91。三大指数虽仍站在SMA50与SMA200之上，维持多头排列，但短期动量均现走弱迹象。中国资产方面，上证指数近1日上涨1.01%、近5日上涨1.24%，收于3952.18点，站上SMA20（3910.07）与SMA50（3944.29），MACD线（0.2）上穿信号线（-3.69）呈红柱，相对强势；恒生指数则报25584.79点，低于SMA20（25638.96）及SMA200（25688.07），MACD绿柱延续，走势偏弱。商品外汇层面，黄金期货4504.1美元，单日大跌2.29%，跌破SMA200（4513.53），虽有SMA20/50支撑，但短线回调明显。另据辅助背景，加密市场恐慌贪婪指数为73（贪婪），加密总市值2.64万亿美元（24小时-5.35%），BTC主导率59%、ETH占比11.1%，显示市场情绪贪婪但24小时大幅回落，风险偏好有所收敛。综合各资产，技术信号多空互现，无一致性方向，整体偏中性。",
+    "market_overview": "当前技术面呈现分化格局。美股方面，标普500、纳斯达克与道琼斯指数均逼近52周高点，价格保持在50日和200日均线上方，多头排列延续，但MACD柱仍低于信号线，短期动量略有收敛。加密市场参考恐慌贪婪指数68（贪婪），总市值2.64万亿美元，24小时回落5.19%，BTC主导率59%，显示风险偏好虽高但波动加剧。中国及亚太指数中，上证指数当日上涨1.01%，站上20日与50日均线，MACD出现金叉，但仍受200日均线压制；恒生指数略低于20日和200日均线，5日微跌0.44%，MACD动能走弱，整体方向不明。商品端，黄金期货单日下跌2.29%，5日下跌2.60%，价格低于200日均线但仍在20日与50日均线上方，RSI 59.1自高位回落，短线偏弱。总体而言，均线系统多为上升趋势，但动量指标未同步走强，市场处于高位震荡阶段。",
     "watchlist": [
       {
-        "symbol": "000001.SS",
-        "display_name": "上证指数",
+        "symbol": "^GSPC",
+        "display_name": "标普500指数（^GSPC）",
         "stance": "偏上行",
-        "rationale": "当前报3952.18点，近1日上涨1.01%、近5日上涨1.24%，站上SMA20（3910.07）与SMA50（3944.29），MACD柱（0.2）位于信号线（-3.69）之上呈金叉状态，RSI为55.1处于正常区间。虽距52周高点仍低7.2%，但短中期均线支撑有效，技术形态偏上行。"
+        "rationale": "现价 7711.76 美元，较52周高点低 1.34%，处于阻力区附近；价格位在 SMA50（7563.79）与 SMA200（7118.72）之上，均线呈多头排列；RSI14 为 56.3，属正常偏强；MACD 39.58 略低于信号线 49.07，短期动能小幅收敛，但整体趋势仍为 bullish。技术状态偏上行。"
+      },
+      {
+        "symbol": "000001.SS",
+        "display_name": "上证指数（000001.SS）",
+        "stance": "中性",
+        "rationale": "现价 3952.18 点，当日涨 1.01%，5日涨 1.24%，收复20日线 3910.07 与50日线 3944.29；但仍低于200日线 4011.84，且距52周高点低 7.2%。RSI14 55.1 中性略偏强；MACD 0.2 上穿信号线 -3.6866 形成金叉，但 trend 为 neutral，多空信号交织，整体中性。"
       },
       {
         "symbol": "^HSI",
-        "display_name": "恒生指数",
-        "stance": "偏下行",
-        "rationale": "报25584.79点，近1日下跌0.27%、近5日下跌0.44%，现价低于SMA20（25638.96）与SMA200（25688.07），仅高于SMA50（24788.92）。RSI为52.9中性，但MACD线（150.56）低于信号线（194.95），绿柱持续，短期动能为负，反弹乏力，技术状态偏下行。"
-      },
-      {
-        "symbol": "^GSPC",
-        "display_name": "标普500指数",
+        "display_name": "恒生指数（^HSI）",
         "stance": "中性",
-        "rationale": "报7711.76点，近1日微跌0.25%，近5日涨0.49%，价格基本贴着SMA20（7712.58）运行，高于SMA50（7563.79）和SMA200（7118.72）。RSI为56.3，MACD线（39.58）低于信号线（49.07）呈绿柱，但整体多头排列仍存，距52周高点仅1.34%。多空信号交织，倾向中性。"
+        "rationale": "现价 25584.79 点，1日跌 0.27%，5日跌 0.44%，短期略弱；价格低于20日线 25638.96 与200日线 25688.07，但高于50日线 24788.92；RSI14 52.9 接近中性；MACD 150.56 低于信号线 194.95，动能转弱；距52周高点低 8.81%，距低点高 13.62%，上下空间均衡，技术状态中性。"
       },
       {
         "symbol": "GC=F",
-        "display_name": "黄金期货",
+        "display_name": "黄金期货（GC=F）",
         "stance": "偏下行",
-        "rationale": "报4504.1美元，近1日大跌2.29%、近5日下跌2.6%，价格虽高于SMA20（4412.99）与SMA50（4209.3），但已跌破SMA200（4513.53）。RSI为59.1从高位回落，MACD柱（114.44）虽为正但短期跌幅显著，距52周高回撤达19.37%，短线技术面转弱，偏下行。"
+        "rationale": "现价 4504.10 美元，单日跌 2.29%，5日跌 2.60%，短线回调显著；价格高于20日线 4412.99 与50日线 4209.30，但已跌破200日线 4513.53；RSI14 59.1 自高位回落；MACD 114.44 仍高于信号线 103.69，尚无死叉，但结合距52周高点低 19.37% 的深度回撤，短线技术状态偏下行。"
       }
     ],
-    "risk_caveat": "本报告所有技术指标读数均基于历史行情数据计算，过去走势不代表未来表现，亦不构成任何买卖建议。当前指标仅反映市场既有状态，未来价格可能因新信息而迅速变化，仅供技术指标解读参考，投资者应自行承担决策风险。",
+    "risk_caveat": "本报告仅基于当前技术指标读数的客观描述，不构成任何投资建议。技术指标具有滞后性和局限性，过去走势不代表未来表现。本内容仅供技术指标解读参考，各类立场仅为状态分类而非涨跌预测或操作建议。",
     "tickers": [
       {
         "symbol": "^GSPC",
@@ -205,19 +300,19 @@
       }
     ],
     "crypto_fear_greed": {
-      "value": 73,
+      "value": 68,
       "classification": "Greed",
       "classificationCn": "贪婪",
-      "timestamp": "2026-08-28T00:00:00.000Z"
+      "timestamp": "2026-08-29T00:00:00.000Z"
     },
     "crypto_global": {
-      "totalMarketCapUsd": 2637215097124.5913,
-      "total24hVolumeUsd": 97348530813.40306,
-      "marketCapChangePct24h": -5.353439987815206,
-      "btcDominance": 58.974650441170716,
-      "ethDominance": 11.129608264493331,
+      "totalMarketCapUsd": 2641153890940.1064,
+      "total24hVolumeUsd": 95949172160.56996,
+      "marketCapChangePct24h": -5.194426549083793,
+      "btcDominance": 58.99092928366857,
+      "ethDominance": 11.141239985302171,
       "activeCryptocurrencies": 19380
     },
-    "generated_at": "2026-08-28T23:48:51.339Z"
+    "generated_at": "2026-08-29T00:49:44.575Z"
   }
 }
