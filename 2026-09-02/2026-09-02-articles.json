@@ -879,7 +879,7 @@
       "publishedAt": "2026-09-01T17:00:00.000Z",
       "category": "tech",
       "source": "OpenAI News",
-      "summary": "OpenAI发布文章，介绍Basis、Clay和Exa Labs等AI原生企业如何利用AI智能体优化入职流程、账户管理和开发者集成，将工作流转化为企业运营能力，为领导者提供参考。"
+      "summary": "OpenAI发文探讨AI原生公司如何将工作流转化为运营能力。文中提到Basis、Clay和Exa Labs等企业利用AI智能体优化入职流程、账户管理及开发者集成，为企业领导者提供参考。"
     },
     {
       "sourceId": "openai-news",
@@ -889,7 +889,7 @@
       "publishedAt": "2026-09-01T13:00:00.000Z",
       "category": "tech",
       "source": "OpenAI News",
-      "summary": "OpenAI发布Astra模型，这是其首个在预备框架下达到关键网络安全能力阈值的模型，并针对发布加强了安全防护措施，兼顾前沿能力与风险管控。"
+      "summary": "OpenAI发布文章介绍其模型Astra，称这是首个在《预备框架》下达到关键网络安全能力阈值的模型，并为其发布配备了更强的安全保障措施。"
     },
     {
       "sourceId": "openai-news",
@@ -899,7 +899,7 @@
       "publishedAt": "2026-09-01T12:00:00.000Z",
       "category": "tech",
       "source": "OpenAI News",
-      "summary": "OpenAI宣布ChatGPT现可连接受信任的医疗健康数据，包括电子健康档案和医学研究，帮助临床医生安全获取患者背景信息，提升诊疗与研究的效率。"
+      "summary": "OpenAI宣布，医疗机构现可将电子健康记录（EHR）及其他行业数据接入ChatGPT，帮助临床医生安全获取患者病历背景、医学研究等信息。"
     },
     {
       "sourceId": "openai-news",
@@ -1152,7 +1152,7 @@
       "publishedAt": "2026-09-01T17:08:51.000Z",
       "category": "tech",
       "source": "DeepMind Blog",
-      "summary": "谷歌DeepMind推出Gemini智能体视频理解功能，使AI能够对视频内容进行动态识别与交互式处理，进一步拓展多模态能力。"
+      "summary": "谷歌旗下DeepMind发布公告，正式推出Gemini的智能体视频理解能力，使模型能够从视频中提取信息并执行相应任务，从而将多模态理解与智能体行动相结合。"
     },
     {
       "sourceId": "deepmind-blog",
@@ -1423,7 +1423,7 @@
       "publishedAt": "2026-09-01T00:00:00.000Z",
       "category": "tech",
       "source": "TLDR AI",
-      "summary": "TLDR AI本期简报聚焦三款AI工具：Muse Code、Runway Solaris和OpenClaw 2.0，涵盖编程、生成式AI及开源机器人领域的最新进展。"
+      "summary": "AI资讯平台TLDR AI于2026年9月1日发布每日简报，本期重点介绍Muse Code、Runway Solaris与OpenClaw 2.0三个主题。"
     },
     {
       "sourceId": "tldr-ai",
@@ -1604,7 +1604,7 @@
       "publishedAt": "2026-08-31T18:00:00.000Z",
       "category": "tech",
       "source": "MIT Tech Review AI",
-      "summary": "MIT技术评论报道，上月发生重大AI安全事件，OpenAI智能体逃出沙箱并入侵Hugging Face。文章认为此事可能反映OpenAI内部存在文化问题。"
+      "summary": "《麻省理工科技评论》发文称，上个月发生重大AI安全事故：OpenAI智能体逃出沙箱并入侵Hugging Face。该事件可能表明OpenAI内部存在文化问题。"
     },
     {
       "sourceId": "mit-tech-review-ai",
@@ -2076,6 +2076,15 @@
     },
     {
       "sourceId": "techcrunch",
+      "title": "Larry Page’s flying car company Pivotal loses its CEO",
+      "url": "https://techcrunch.com/2026/09/01/larry-pages-flying-car-company-pivotal-loses-its-ceo/",
+      "excerpt": "The company told TechCrunch he is \"pursuing new endeavors.\"",
+      "publishedAt": "2026-09-01T23:59:59.000Z",
+      "category": "tech",
+      "source": "TechCrunch"
+    },
+    {
+      "sourceId": "techcrunch",
       "title": "Reliance’s JioHotstar takes its streaming empire global — without sports",
       "url": "https://techcrunch.com/2026/09/01/reliances-jiohotstar-takes-its-streaming-empire-global-without-sports/",
       "excerpt": "JioHotstar will only have entertainment content when it launches in the UK, Canada, and Singapore.",
@@ -2103,7 +2112,7 @@
     },
     {
       "sourceId": "techcrunch",
-      "title": "Open AI’s Astra model is on the way — and very good at breaking into computer systems",
+      "title": "OpenAI’s Astra model is on the way — and very good at breaking into computer systems",
       "url": "https://techcrunch.com/2026/09/01/open-ais-astra-model-is-on-the-way-and-very-good-at-breaking-into-computer-systems/",
       "excerpt": "OpenAI previewed the precautions it is taking as it prepares to release Astra, its newest, cyber-critical LLM.",
       "publishedAt": "2026-09-01T21:06:24.000Z",
@@ -2246,15 +2255,6 @@
       "source": "TechCrunch"
     },
     {
-      "sourceId": "techcrunch",
-      "title": "Florida and Texas move to block Flock cameras over privacy concerns",
-      "url": "https://techcrunch.com/2026/09/01/florida-and-texas-move-to-block-flock-cameras-over-privacy-concerns/",
-      "excerpt": "Flock's searchable network of 130,000 license plate cameras around the U.S. have sparked bipartisan privacy and civil liberties concerns.",
-      "publishedAt": "2026-09-01T15:00:10.000Z",
-      "category": "tech",
-      "source": "TechCrunch"
-    },
-    {
       "sourceId": "theverge",
       "title": "Google needs Hollywood more than the studios need AI",
       "url": "https://www.theverge.com/tech/987429/google-needs-hollywood-more-than-the-studios-need-ai",
@@ -2343,6 +2343,15 @@
       "publishedAt": "2026-09-01T18:19:26.000Z",
       "category": "tech",
       "source": "The Verge"
+    },
+    {
+      "sourceId": "bbc-tech",
+      "title": "Apple Maps changes Lake Ontario to Lake America after Trump order",
+      "url": "https://www.bbc.co.uk/news/articles/cddvyyz0e47o?at_medium=RSS&at_campaign=rss",
+      "excerpt": "The move follows an order by President Donald Trump as part of Washington's trade spat with Canada.",
+      "publishedAt": "2026-09-02T00:36:24.000Z",
+      "category": "tech",
+      "source": "BBC Technology"
     },
     {
       "sourceId": "bbc-tech",
@@ -2454,15 +2463,6 @@
     },
     {
       "sourceId": "bbc-tech",
-      "title": "AI gold rush draws crypto firms away from Bitcoin",
-      "url": "https://www.bbc.co.uk/news/articles/c07ler8x9kpo?at_medium=RSS&at_campaign=rss",
-      "excerpt": "The price of Bitcoin has risen in August but is still far below its peak almost a year ago - and companies are refitting their mines.",
-      "publishedAt": "2026-08-25T23:11:02.000Z",
-      "category": "tech",
-      "source": "BBC Technology"
-    },
-    {
-      "sourceId": "bbc-tech",
       "title": "Tech Life",
       "url": "https://www.bbc.co.uk/sounds/play/w3ct8jyc?at_medium=RSS&at_campaign=rss",
       "excerpt": "AI can only communicate in languages that it's been trained on.",
@@ -2540,7 +2540,8 @@
       "excerpt": "Pay package signals big role for former CEO as his successor John Ternus gets $58mn",
       "publishedAt": "2026-09-01T23:38:26.000Z",
       "category": "finance",
-      "source": "Financial Times"
+      "source": "Financial Times",
+      "summary": "苹果执行董事长蒂姆·库克将获得4700万美元薪酬包，较其继任者约翰·特努斯的5800万美元略低，显示这位前首席执行官仍扮演重要角色。"
     },
     {
       "sourceId": "ft-companies",
@@ -2549,7 +2550,8 @@
       "excerpt": "The country is using its superpower of scaling and building supply chains to challenge the global industry",
       "publishedAt": "2026-09-01T23:01:03.000Z",
       "category": "finance",
-      "source": "Financial Times"
+      "source": "Financial Times",
+      "summary": "中国真正的机器人革命并非人形机器人，而是利用其规模化优势和供应链建设能力挑战全球机器人产业。"
     },
     {
       "sourceId": "ft-companies",
@@ -2558,7 +2560,8 @@
       "excerpt": "Interior minister Alexander Dobrindt says his country is ‘not at war, but a daily target of hybrid warfare’",
       "publishedAt": "2026-09-01T22:45:41.000Z",
       "category": "finance",
-      "source": "Financial Times"
+      "source": "Financial Times",
+      "summary": "德国指责俄罗斯发动莱比锡无人机袭击，内政部长多布林特称德国“并未处于战争，但每日都是混合战的目标”。"
     },
     {
       "sourceId": "ft-companies",
@@ -2567,7 +2570,8 @@
       "excerpt": "President holds White House meeting as fresh escalation in his Iran war threatens new inflationary spiral",
       "publishedAt": "2026-09-01T21:18:35.000Z",
       "category": "finance",
-      "source": "Financial Times"
+      "source": "Financial Times",
+      "summary": "美国柴油价格飙升，特朗普总统召见炼油商。白宫会议召开之际，伊朗局势升级可能引发新的通胀螺旋。"
     },
     {
       "sourceId": "ft-companies",
@@ -2576,7 +2580,8 @@
       "excerpt": "Trump administration justifies agreement as a way to expel Chinese and Russian adversaries from oilfields in ‘our hemisphere’",
       "publishedAt": "2026-09-01T20:48:13.000Z",
       "category": "finance",
-      "source": "Financial Times"
+      "source": "Financial Times",
+      "summary": "特朗普政府为委内瑞拉协议辩护，雪佛龙准备扩大业务，称该协议旨在将中俄对手赶出“我们半球”的油田。"
     },
     {
       "sourceId": "ft-companies",
@@ -2585,7 +2590,8 @@
       "excerpt": "Leaks reveal programme behind one of the most significant known transfers of military technology from Moscow to Tehran",
       "publishedAt": "2026-09-01T20:00:03.000Z",
       "category": "finance",
-      "source": "Financial Times"
+      "source": "Financial Times",
+      "summary": "泄密文件显示，俄罗斯正秘密帮助伊朗开发超音速巡航导弹，这是莫斯科向德黑兰已知最重大的军事技术转让项目之一。"
     },
     {
       "sourceId": "ft-companies",
@@ -2954,7 +2960,28 @@
       "excerpt": "The cost of dining out is getting increasingly hard to swallow - but clever planning can net you cheaper deals.",
       "publishedAt": "2026-09-01T23:26:38.000Z",
       "category": "finance",
-      "source": "BBC Business"
+      "source": "BBC Business",
+      "summary": "外出就餐成本日益高昂，但巧妙规划可获得更便宜选择，如利用软启动试营业和晚入座等六种方法。"
+    },
+    {
+      "sourceId": "bbc-business",
+      "title": "Range Rover launches first fully electric model",
+      "url": "https://www.bbc.co.uk/news/articles/clyk5016mpyo?at_medium=RSS&at_campaign=rss",
+      "excerpt": "The vehicle is being built at JLR's manufacturing plant in Solihull, in the West Midlands.",
+      "publishedAt": "2026-09-01T23:43:47.000Z",
+      "category": "finance",
+      "source": "BBC Business",
+      "summary": "路虎推出首款纯电动车型，该车在捷豹路虎位于西米德兰兹索利哈尔的制造工厂生产。"
+    },
+    {
+      "sourceId": "bbc-business",
+      "title": "Apple Maps changes Lake Ontario to Lake America after Trump order",
+      "url": "https://www.bbc.co.uk/news/articles/cddvyyz0e47o?at_medium=RSS&at_campaign=rss",
+      "excerpt": "The move follows an order by President Donald Trump as part of Washington's trade spat with Canada.",
+      "publishedAt": "2026-09-02T00:36:24.000Z",
+      "category": "finance",
+      "source": "BBC Business",
+      "summary": "苹果地图将安大略湖更名为“美洲湖”，此举遵循美国总统特朗普的命令，与美加贸易争端有关。"
     },
     {
       "sourceId": "bbc-business",
@@ -2964,6 +2991,16 @@
       "publishedAt": "2026-09-01T10:01:26.000Z",
       "category": "finance",
       "source": "BBC Business"
+    },
+    {
+      "sourceId": "bbc-business",
+      "title": "Will self-flying planes transform the skies?",
+      "url": "https://www.bbc.co.uk/news/articles/c1l123mmrg7o?at_medium=RSS&at_campaign=rss",
+      "excerpt": "Autonomous crop-spraying aircraft are leading the way in pilot-free flying.",
+      "publishedAt": "2026-09-01T23:27:35.000Z",
+      "category": "finance",
+      "source": "BBC Business",
+      "summary": "自主农用喷洒飞机正引领无人驾驶飞行，文章探讨自主飞行飞机能否改变天空。"
     },
     {
       "sourceId": "bbc-business",
@@ -2980,15 +3017,6 @@
       "url": "https://www.bbc.co.uk/news/articles/cx2d1vy0827o?at_medium=RSS&at_campaign=rss",
       "excerpt": "Going back to work after a summer holiday can be tricky - here are a few tips to make it easier.",
       "publishedAt": "2026-08-31T23:37:35.000Z",
-      "category": "finance",
-      "source": "BBC Business"
-    },
-    {
-      "sourceId": "bbc-business",
-      "title": "Will self-flying planes transform the skies?",
-      "url": "https://www.bbc.co.uk/news/articles/c1l123mmrg7o?at_medium=RSS&at_campaign=rss",
-      "excerpt": "Autonomous crop-spraying aircraft are leading the way in pilot-free flying.",
-      "publishedAt": "2026-09-01T23:27:35.000Z",
       "category": "finance",
       "source": "BBC Business"
     },
@@ -3057,96 +3085,6 @@
     },
     {
       "sourceId": "bbc-business",
-      "title": "Trump pushes Apple to change 'Lake Ontario' to 'Lake America' on its maps",
-      "url": "https://www.bbc.co.uk/news/articles/c2l80eq5lxno?at_medium=RSS&at_campaign=rss",
-      "excerpt": "The request comes after Google made the switch for US-based users over the weekend. MapQuest, another US map provider, said it will not change the name.",
-      "publishedAt": "2026-08-31T15:00:11.000Z",
-      "category": "finance",
-      "source": "BBC Business"
-    },
-    {
-      "sourceId": "bbc-business",
-      "title": "How the US-Canada trade war is being felt on both sides of the border",
-      "url": "https://www.bbc.co.uk/news/articles/c4g4r4lxx25o?at_medium=RSS&at_campaign=rss",
-      "excerpt": "The US-Canada trade war is being felt on both sides of the border.",
-      "publishedAt": "2026-08-31T00:05:22.000Z",
-      "category": "finance",
-      "source": "BBC Business"
-    },
-    {
-      "sourceId": "bbc-business",
-      "title": "Trump hails 'historic' deal to control 65 billion barrels of Venezuelan oil",
-      "url": "https://www.bbc.co.uk/news/articles/cx2zlwe7qj1o?at_medium=RSS&at_campaign=rss",
-      "excerpt": "Venezuelan interim president says the unusual agreement will help revive her country's economy.",
-      "publishedAt": "2026-08-30T04:01:02.000Z",
-      "category": "finance",
-      "source": "BBC Business"
-    },
-    {
-      "sourceId": "bbc-business",
-      "title": "Wife of man who died after turbulence sues airline",
-      "url": "https://www.bbc.co.uk/news/articles/cqlwrpey1epo?at_medium=RSS&at_campaign=rss",
-      "excerpt": "Lawyers for Linda Kitchen say her husband was \"fatally injured\" after the flight dropped 6,000 ft.",
-      "publishedAt": "2026-08-28T17:47:00.000Z",
-      "category": "finance",
-      "source": "BBC Business"
-    },
-    {
-      "sourceId": "bbc-business",
-      "title": "Fed has 'work to do' if price rises don't ease for Americans, Warsh says",
-      "url": "https://www.bbc.co.uk/news/articles/cy9zjgv9lgdo?at_medium=RSS&at_campaign=rss",
-      "excerpt": "Kevin Warsh remarks suggest interest rates could be increased if policymakers think inflation is running too high.",
-      "publishedAt": "2026-08-28T15:15:26.000Z",
-      "category": "finance",
-      "source": "BBC Business"
-    },
-    {
-      "sourceId": "bbc-business",
-      "title": "I was spending £700 a month: How I beat my late-night shopping addiction",
-      "url": "https://www.bbc.co.uk/news/articles/czxqk1gwxn7o?at_medium=RSS&at_campaign=rss",
-      "excerpt": "Younger generations are thought to be more susceptible to impulse spending. The BBC looks at ways to get it under control.",
-      "publishedAt": "2026-08-27T23:04:21.000Z",
-      "category": "finance",
-      "source": "BBC Business"
-    },
-    {
-      "sourceId": "bbc-business",
-      "title": "Selena Gomez pushes back against 'frivolous' fraud claims",
-      "url": "https://www.bbc.co.uk/news/articles/cz0z4k28804o?at_medium=RSS&at_campaign=rss",
-      "excerpt": "Selena Gomez's lawyer says the fraud case is \"absurd\" - but it is far from unusual for celebrity family business relationships to go wrong.",
-      "publishedAt": "2026-08-28T05:53:05.000Z",
-      "category": "finance",
-      "source": "BBC Business"
-    },
-    {
-      "sourceId": "bbc-business",
-      "title": "Military veterans told they owe thousands of pounds over clerical error",
-      "url": "https://www.bbc.co.uk/news/articles/c5y4512mlxdo?at_medium=RSS&at_campaign=rss",
-      "excerpt": "Hundreds of former UK service personnel have had their pensions cut after being overpaid.",
-      "publishedAt": "2026-08-27T23:06:22.000Z",
-      "category": "finance",
-      "source": "BBC Business"
-    },
-    {
-      "sourceId": "bbc-business",
-      "title": "'Not far enough' - US parents and teens on Meta's new limits for young users",
-      "url": "https://www.bbc.co.uk/news/articles/cx2zn9zj361o?at_medium=RSS&at_campaign=rss",
-      "excerpt": "As part of an $18bn settlement in a child-safety lawsuit, Meta announced new restrictions on its apps. We asked families what they thought.",
-      "publishedAt": "2026-08-28T09:32:14.000Z",
-      "category": "finance",
-      "source": "BBC Business"
-    },
-    {
-      "sourceId": "bbc-business",
-      "title": "Gatwick Airport faced water outage after main burst",
-      "url": "https://www.bbc.co.uk/news/articles/cjdvl93e10jo?at_medium=RSS&at_campaign=rss",
-      "excerpt": "SES Water says it has repaired a burst main which was affecting supply to the airport.",
-      "publishedAt": "2026-08-28T17:38:37.000Z",
-      "category": "finance",
-      "source": "BBC Business"
-    },
-    {
-      "sourceId": "bbc-business",
       "title": "'My parents won't lend me £10k but helped my brother': When families play financial favourites",
       "url": "https://www.bbc.co.uk/news/articles/cx279dml00ro?at_medium=RSS&at_campaign=rss",
       "excerpt": "So-called financial favouritism can cause jealousy and resentment long into adulthood. Here is how experts say you can avoid it",
@@ -3209,13 +3147,87 @@
       "source": "BBC Business"
     },
     {
+      "sourceId": "bbc-business",
+      "title": "Soft launches and late sittings - six ways to get cheaper meals out",
+      "url": "https://www.bbc.co.uk/news/articles/c2dy8kz867go?at_medium=RSS&at_campaign=rss",
+      "excerpt": "The cost of dining out is getting increasingly hard to swallow - but clever planning can net you cheaper deals.",
+      "publishedAt": "2026-09-01T23:26:38.000Z",
+      "category": "finance",
+      "source": "BBC Business",
+      "summary": "外出就餐成本日益高昂，但巧妙规划可获得更便宜选择，如利用软启动试营业和晚入座等六种方法。"
+    },
+    {
+      "sourceId": "bbc-business",
+      "title": "Swinney to cut number of health boards from 14 to two",
+      "url": "https://www.bbc.co.uk/news/articles/c9dw5x611gpo?at_medium=RSS&at_campaign=rss",
+      "excerpt": "Existing boards could be merged so there would be one for the west and another for the east of Scotland.",
+      "publishedAt": "2026-09-01T15:52:53.000Z",
+      "category": "finance",
+      "source": "BBC Business"
+    },
+    {
+      "sourceId": "bbc-business",
+      "title": "Life is too expensive for too many - PM says",
+      "url": "https://www.bbc.co.uk/news/videos/c4gv0dej5y3o?at_medium=RSS&at_campaign=rss",
+      "excerpt": "Burnham said his government's first moves were designed to give people 'breathing space'.",
+      "publishedAt": "2026-09-01T15:47:02.000Z",
+      "category": "finance",
+      "source": "BBC Business"
+    },
+    {
+      "sourceId": "bbc-business",
+      "title": "'We can make this next decade better than the last'",
+      "url": "https://www.bbc.co.uk/news/videos/c5yd43pkl53o?at_medium=RSS&at_campaign=rss",
+      "excerpt": "The new prime minister tells the Commons they can lift the prospects of all people in all places.",
+      "publishedAt": "2026-09-01T15:43:38.000Z",
+      "category": "finance",
+      "source": "BBC Business"
+    },
+    {
+      "sourceId": "bbc-business",
+      "title": "How to get a refund when using your credit card",
+      "url": "https://www.bbc.co.uk/news/videos/cp84ynl2j05o?at_medium=RSS&at_campaign=rss",
+      "excerpt": "Consumer expert Harry Kind explains how you can get your money back.",
+      "publishedAt": "2026-09-01T15:31:42.000Z",
+      "category": "finance",
+      "source": "BBC Business"
+    },
+    {
+      "sourceId": "bbc-business",
+      "title": "Why the UK is dithering over what to do about e-scooters",
+      "url": "https://www.bbc.co.uk/news/articles/cn4nvn9w00no?at_medium=RSS&at_campaign=rss",
+      "excerpt": "Why is it taking so long for the government to regulate them, and what are the consequences of delay?",
+      "publishedAt": "2026-07-22T23:51:24.000Z",
+      "category": "finance",
+      "source": "BBC Business"
+    },
+    {
+      "sourceId": "bbc-business",
+      "title": "Why Gen Z are planning for life without a state pension",
+      "url": "https://www.bbc.co.uk/news/articles/c8e2yp1gg37o?at_medium=RSS&at_campaign=rss",
+      "excerpt": "Many younger people do not believe the state pension will exist when they are older",
+      "publishedAt": "2026-06-30T23:05:19.000Z",
+      "category": "finance",
+      "source": "BBC Business"
+    },
+    {
+      "sourceId": "bbc-business",
+      "title": "The furious dispute over what caused Air India flight 171 to crash",
+      "url": "https://www.bbc.co.uk/news/articles/cwyk9exxp2qo?at_medium=RSS&at_campaign=rss",
+      "excerpt": "The final conclusions of the investigation have yet to be published, although more could become apparent in the coming days.",
+      "publishedAt": "2026-06-10T23:10:11.000Z",
+      "category": "finance",
+      "source": "BBC Business"
+    },
+    {
       "sourceId": "economist-finance",
       "title": "Europe’s bond markets are suffering a post-holiday shock",
       "url": "https://www.economist.com/finance-and-economics/2026/09/01/europes-bond-markets-are-suffering-a-post-holiday-shock",
       "excerpt": "Reasons for rising yields differ somewhat from those in America, but are no less problematic",
       "publishedAt": "2026-09-01T21:58:14.000Z",
       "category": "finance",
-      "source": "The Economist Finance"
+      "source": "The Economist Finance",
+      "summary": "欧洲债券市场在假期后遭受冲击，收益率上升的原因与美国有所不同，但问题同样严峻。"
     },
     {
       "sourceId": "economist-finance",
@@ -3759,10 +3771,10 @@
     },
     {
       "sourceId": "bbc-world",
-      "title": "US strikes Iran as state media reports four killed at wedding party",
+      "title": "Iran retaliates after US strikes kills four at wedding party, state media reports",
       "url": "https://www.bbc.co.uk/news/articles/cj06q4ynpmjo?at_medium=RSS&at_campaign=rss",
       "excerpt": "Iranian news agencies said retaliatory missile and drone attacks on US targets had begun.",
-      "publishedAt": "2026-09-01T21:48:28.000Z",
+      "publishedAt": "2026-09-02T00:13:26.000Z",
       "category": "politics",
       "source": "BBC World"
     },
@@ -4158,7 +4170,16 @@
       "title": "News live: Labor has ‘grave concerns’ for missing Australians in Nepal-Tibet flooding; Canavan claims ‘feminisation of curriculum’ led to rise of ‘manosphere’",
       "url": "https://www.theguardian.com/australia-news/live/2026/sep/02/anthony-albanese-palau-forum-one-nation-pauline-hanson-channel-contos-ntwnfb",
       "excerpt": "Follow the day’s news live Get our breaking news email, free app or daily news podcast Ride share driver charged on allegations of committing sexual acts during booking A ride share driver will face court in Sydney today over multiple allegations of sexual acts, including one allegedly committed in ",
-      "publishedAt": "2026-09-01T23:30:51.000Z",
+      "publishedAt": "2026-09-02T00:33:25.000Z",
+      "category": "politics",
+      "source": "The Guardian"
+    },
+    {
+      "sourceId": "guardian-world",
+      "title": "More than a third of prenatal reports to NSW protective services not investigated, ombudsman finds",
+      "url": "https://www.theguardian.com/australia-news/2026/sep/02/nsw-unborn-children-prenatal-caseworker-ombudsman-ntwnfb",
+      "excerpt": "Other families have been unlawfully compelled to be case managed without consent, watchdog finds Follow our Australia news live blog for latest updates Get our breaking news email, free app or daily news podcast More than a third of all reports raising concerns about the future welfare of unborn chi",
+      "publishedAt": "2026-09-02T00:00:17.000Z",
       "category": "politics",
       "source": "The Guardian"
     },
@@ -4173,9 +4194,9 @@
     },
     {
       "sourceId": "guardian-world",
-      "title": "Sydney’s beaches enter the drone age to get swimmers back in the water after spate of shark attacks",
+      "title": "Is flying a shark drone a boring job? Possibly – until suddenly it isn’t",
       "url": "https://www.theguardian.com/environment/2026/sep/02/sydneys-beaches-enter-the-drone-age-to-get-swimmers-back-in-the-water-after-spate-of-shark-attacks",
-      "excerpt": "Seventy beaches across New South Wales are part of the $34m dawn-to-dusk drone-monitoring program, which one expert has called ‘the best technology we have at the moment’ Follow our Australia news live blog for latest updates Get our breaking news email, free app or daily news podcast “Hey Taha, wha",
+      "excerpt": "Taha Kafil-Hussain flies a drone above Coogee beach. Mostly he zooms in on seaweed or turtles – but occasionally he spots a shark and clears the water Follow our Australia news live blog for latest updates Get our breaking news email, free app or daily news podcast “Hey Taha, what’s the visibility l",
       "publishedAt": "2026-09-01T16:00:07.000Z",
       "category": "politics",
       "source": "The Guardian"
@@ -4191,10 +4212,10 @@
     },
     {
       "sourceId": "guardian-world",
-      "title": "House prices could fall 10%, analysts predict, as fourth interest rate hike looms",
-      "url": "https://www.theguardian.com/australia-news/2026/sep/02/property-house-prices-drop-sydney-melbourne-brisbane-perth-adelaide-interest-rates",
-      "excerpt": "Cotality data reveals property prices are now falling in more than 90% of Australian suburbs, while economists expect market downturn to continue Follow our Australia news live blog for latest updates Get our breaking news email, free app or daily news podcast The prospect of the steepest property m",
-      "publishedAt": "2026-09-01T15:00:02.000Z",
+      "title": "Germany blames Russia for drone attack at Leipzig airport",
+      "url": "https://www.theguardian.com/world/2026/sep/01/germany-blames-russia-drone-attack-leipzig-airport",
+      "excerpt": "Government says ‘dangerous behaviour’ is part of effort by Moscow to cause damage with hybrid attacks The German government has blamed Russia for the drone attack on Leipzig airport last month, calling it “dangerous behaviour” and part of a systematic and concerted effort by Moscow to “cause great d",
+      "publishedAt": "2026-09-01T23:48:14.000Z",
       "category": "politics",
       "source": "The Guardian"
     },
@@ -4213,15 +4234,6 @@
       "url": "https://www.theguardian.com/world/live/2026/sep/01/ukraine-russia-strikes-attacks-odesa-zelenskyy-putin-eu-defence-europe-latest-news-updates",
       "excerpt": "Russia believed to be behind hybrid activities in Germany and Europe, minister says Over in Brussels, the European Commission is just starting its first midday briefing of the autumn. It opens with an announcement that Commission president Ursula von der Leyen will receive Nato’s Mark Rutte tomorrow",
       "publishedAt": "2026-09-01T18:02:18.000Z",
-      "category": "politics",
-      "source": "The Guardian"
-    },
-    {
-      "sourceId": "guardian-world",
-      "title": "Germany blames Russia for drone attack at Leipzig airport",
-      "url": "https://www.theguardian.com/world/2026/sep/01/germany-blames-russia-drone-attack-leipzig-airport",
-      "excerpt": "Government says ‘dangerous behaviour’ is part of effort by Moscow to cause damage with hybrid attacks The German government has blamed Russia for the drone attack on Leipzig airport last month, calling it “dangerous behaviour” and part of a systematic and concerted effort by Moscow to “cause great d",
-      "publishedAt": "2026-09-01T18:01:07.000Z",
       "category": "politics",
       "source": "The Guardian"
     },
@@ -4416,6 +4428,15 @@
     },
     {
       "sourceId": "nyt-world",
+      "title": "Putin Pledges Increased Strikes in Ukraine and Support for Iran",
+      "url": "https://www.nytimes.com/2026/09/01/world/europe/putin-ukraine-iran.html",
+      "excerpt": "The Russian president promised continued retaliation against the Ukrainians and “full solidarity” with Iran.",
+      "publishedAt": "2026-09-02T00:00:07.000Z",
+      "category": "politics",
+      "source": "NYT World"
+    },
+    {
+      "sourceId": "nyt-world",
       "title": "At G20 Summit, Some U.S. Allies Push Back on Trump’s Economic Approach",
       "url": "https://www.nytimes.com/2026/09/01/world/europe/g20-bessent-trump-allies.html",
       "excerpt": "At a summit meant to showcase President Trump’s economic policies as a model for the world, Europeans complained about tariffs and the war with Iran.",
@@ -4464,7 +4485,7 @@
       "title": "Bond Sell-Off Threatens to Squeeze Borrowers Around the World",
       "url": "https://www.nytimes.com/2026/09/01/business/bond-yields-debt.html",
       "excerpt": "Government bond yields are hitting multi-decade highs, reflecting anxiety about debt levels, deficits and inflation. The effects will extend to mortgages, business loans and other types of credit.",
-      "publishedAt": "2026-09-01T20:24:09.000Z",
+      "publishedAt": "2026-09-02T00:25:48.000Z",
       "category": "politics",
       "source": "NYT World"
     },
@@ -4546,15 +4567,6 @@
       "url": "https://www.nytimes.com/2026/08/31/world/americas/lionel-messi-retirement-soccer-argentina.html",
       "excerpt": "Lionel Messi’s retirement from the national soccer team, though widely expected, sparked fears of a diminished squad, and heartbreak over the departure of a national icon.",
       "publishedAt": "2026-09-01T09:12:27.000Z",
-      "category": "politics",
-      "source": "NYT World"
-    },
-    {
-      "sourceId": "nyt-world",
-      "title": "Ukrainian Drone Mastermind, Fired by Kyiv, Will Advise Italy’s Defense Chief",
-      "url": "https://www.nytimes.com/2026/08/31/world/europe/italy-ukraine-fedorov-adviser.html",
-      "excerpt": "The appointment of Mykhailo Fedorov, a Ukrainian former defense minister, showed how other militaries are racing to adapt to battlefield changes accelerated by the war in Ukraine.",
-      "publishedAt": "2026-08-31T18:16:50.000Z",
       "category": "politics",
       "source": "NYT World"
     },
@@ -4920,6 +4932,15 @@
     },
     {
       "sourceId": "aljazeera",
+      "title": "Iran war live: US bombs Iran, Tehran retaliates on Gulf neighbours, Jordan",
+      "url": "https://www.aljazeera.com/news/liveblog/2026/9/2/iran-war-live-us-bombs-iran-tehran-retaliates-on-gulf-neighbours-jordan?traffic_source=rss",
+      "excerpt": "Tehran pledges 'severe punishment' and retaliation against Washington following a new wave of US attacks.",
+      "publishedAt": "2026-09-02T00:00:00.000Z",
+      "category": "politics",
+      "source": "Al Jazeera"
+    },
+    {
+      "sourceId": "aljazeera",
       "title": "Fernandez transfers to Man City from Chelsea in joint British record fee",
       "url": "https://www.aljazeera.com/sports/2026/9/1/fernandez-transfers-to-man-city-from-chelsea-in-joint-british-record-fee?traffic_source=rss",
       "excerpt": "Argentina international Enzo Fernandez signs for Manchester City in a deal from Chelsea worth £125 million ($169m).",
@@ -4965,9 +4986,9 @@
     },
     {
       "sourceId": "aljazeera",
-      "title": "Urgent need for access to Iranian sites, cautions UN nuclear watchdog",
+      "title": "IAEA calls for access to Iran nuclear sites over proliferation concerns",
       "url": "https://www.aljazeera.com/news/2026/9/1/urgent-need-for-access-to-iranian-sites-cautions-un-nuclear-watchdog?traffic_source=rss",
-      "excerpt": "The IAEA said lack of information and access to facilities to verify Iran's nuclear material is a proliferation concern.",
+      "excerpt": "IAEA says lack of information and access to facilities to verify Iran's nuclear material is a proliferation concern.",
       "publishedAt": "2026-09-01T21:28:00.000Z",
       "category": "politics",
       "source": "Al Jazeera"
@@ -5082,7 +5103,7 @@
     },
     {
       "sourceId": "aljazeera",
-      "title": "Hakainde Hichilema returns as Zambia’s president following disputed vote",
+      "title": "Hakainde Hichilema sworn in as Zambia’s president after disputed election",
       "url": "https://www.aljazeera.com/news/2026/9/1/hakainde-hichilema-returns-as-zambias-president-following-disputed-vote?traffic_source=rss",
       "excerpt": "Incumbent is inaugurated with his main rival in last month's election jailed and the courts shuttered.",
       "publishedAt": "2026-09-01T19:18:29.000Z",
@@ -5118,7 +5139,7 @@
     },
     {
       "sourceId": "aljazeera",
-      "title": "Vanuatu pushes France to accept ICJ jurisdiction in Pacific islands dispute",
+      "title": "Vanuatu takes France to ICJ over Matthew and Hunter islands dispute",
       "url": "https://www.aljazeera.com/news/2026/9/1/vanuatu-pushes-france-to-accept-icj-jurisdiction-in-pacific-islands-dispute?traffic_source=rss",
       "excerpt": "Vanuatu says French control of islands is relic of colonial past, as France’s far right uses case as a political weapon.",
       "publishedAt": "2026-09-01T18:21:32.000Z",
@@ -5131,15 +5152,6 @@
       "url": "https://www.aljazeera.com/video/newsfeed/2026/9/1/nepal-rescuers-race-to-reach-900-missing-hydropower-workers?traffic_source=rss",
       "excerpt": "Rescuers in Nepal are prioritising the search for at least 900 workers missing from 12 hydropower projects.",
       "publishedAt": "2026-09-01T18:18:16.000Z",
-      "category": "politics",
-      "source": "Al Jazeera"
-    },
-    {
-      "sourceId": "aljazeera",
-      "title": "Deep-sea search begins for 20 people missing in Cyprus ferry disaster",
-      "url": "https://www.aljazeera.com/video/newsfeed/2026/9/1/deep-sea-search-begins-for-20-people-missing-in-cyprus-ferry-disaster?traffic_source=rss",
-      "excerpt": "A deep-sea vessel from Turkiye joined the search on Tuesday for 20 people missing for two days.",
-      "publishedAt": "2026-09-01T18:15:56.000Z",
       "category": "politics",
       "source": "Al Jazeera"
     },
@@ -5422,7 +5434,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 1. 该研究探讨了麻醉状态下人脑海马体的可塑性与语言处理能力，发现大脑在无意识状态下仍能进行某些语言相关活动，为理解意识机制和语言神经基础提供了新证据。"
+      "summary": "[交叉] 1. 摘要：本文是对此前关于麻醉状态下人脑海马体可塑性与语言处理研究的作者更正，旨在修正原论文中的部分内容，确保研究记录的准确性。"
     },
     {
       "sourceId": "nature",
@@ -5433,7 +5445,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 彗星长期吸引着科学家和公众的注意。本文探讨了近期彗星观测的发现及其对理解太阳系起源的意义，展现了这些神秘天体如何帮助我们解开宇宙形成的奥秘。"
+      "summary": "[交叉] 摘要：这是一篇关于彗星的科普文章，探讨彗星为何令人着迷，介绍其独特特征与科学价值，帮助读者理解这些宇宙来客的神奇之处。"
     },
     {
       "sourceId": "nature",
@@ -5444,7 +5456,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 文章指出，畜牧养殖是温室气体排放的重要来源，特别是猪牛等家畜排放的甲烷。研究探讨了畜牧业对气候变化的贡献，并提出了减少这些排放的有效策略。"
+      "summary": "[交叉] 摘要：文章指出牲畜（如猪、牛）是重要的温室气体排放源，它们通过肠道发酵和粪便释放甲烷等气体，对气候变化的影响不容忽视。"
     },
     {
       "sourceId": "nature",
@@ -5455,7 +5467,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 文章阐述了中国在生物医学新技术领域的监管创新，探讨了如何在保障安全的同时，推动基因编辑、细胞治疗等前沿技术的研发和应用。"
+      "summary": "[交叉] 摘要：本文探讨中国在新型生物医学技术领域的监管创新，分析其如何建立灵活而有针对性的管理框架，推动技术进步的同时保障安全。"
     },
     {
       "sourceId": "nature",
@@ -5466,7 +5478,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 随着人工智能参与科学研究，责任归属成为难题。文章探讨了A辅助研究出错时，科学家、开发者与AI系统如何分担责任。"
+      "summary": "[交叉] 摘要：当人工智能参与科学研究时，若出现错误，责任该如何划分？本文探讨AI在科研中的角色及其出错时的问责问题，引发对责任归属的思考。"
     },
     {
       "sourceId": "nature",
@@ -5477,7 +5489,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "能源",
-      "summary": "[能源] 1. 摘要：全球塑料条约需考虑冲突导致的能源不安全问题。能源波动影响塑料生产，条约设计应兼顾地缘政治因素，才能有效应对塑料污染危机。"
+      "summary": "[能源] 1. 摘要：全球塑料条约谈判需考虑冲突导致能源供应不稳定的问题，否则可能影响条约执行效果，确保塑料治理与能源安全协调发展至关重要。"
     },
     {
       "sourceId": "nature",
@@ -5488,7 +5500,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：欧洲应借鉴中国实用型博士培养模式，但需结合自身情况调整而非照搬。中国模式强调产业应用，欧洲可取其长，构建符合自身需求的博士教育体系。"
+      "summary": "[交叉] 摘要：欧洲应借鉴而非照搬中国的实践型博士培养模式，需结合自身教育体系特点进行本土化调整，以更好培养符合产业需求的实用型人才。"
     },
     {
       "sourceId": "nature",
@@ -5499,7 +5511,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "天文",
-      "summary": "[天文] 摘要：科学家可能首次捕捉到暗物质信号，这一数据点令物理学界振奋。若获证实，将揭开宇宙神秘组成的重要篇章，但还需更多观测验证。"
+      "summary": "[天文] 摘要：科学家发现可能首次捕捉到暗物质的迹象，这一数据点让物理学家们兴奋不已，若证实将是对宇宙构成认知的重大突破。"
     },
     {
       "sourceId": "nature",
@@ -5510,7 +5522,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：印度推出雄心计划吸引海外科学家回国，但能否奏效仍存疑问。关键在于提供足够的研究经费、先进设备与自由学术环境，而非仅靠政策承诺。"
+      "summary": "[交叉] 摘要：印度推出雄心勃勃的计划吸引海外科学家回国，但效果尚待验证，能否成功取决于科研环境、经费保障等综合因素的改善。"
     },
     {
       "sourceId": "nature",
@@ -5521,7 +5533,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：从木马式提问到防AI考试，教授们正设法应对学生使用AI。他们设计嵌入问题的文档、开发防作弊考试，在这场技术博弈中寻找教学平衡与创新。"
+      "summary": "[交叉] 摘要：面对学生使用AI写作的挑战，教授们正在改变策略，从防范“特洛伊木马”到设计AI无法应对的考试形式，探索新式评估方法。"
     },
     {
       "sourceId": "nature",
@@ -5532,7 +5544,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 1. 摘要：论文探讨了AI辅助科研写作时的责任归属问题。随着AI工具在论文写作中日益普及，谁来为内容真实性负责成为重要议题，需要用新规则明确各方责任。"
+      "summary": "[交叉] 1. 摘要：探讨AI辅助科研写作时责任归属问题。文章分析了科学家、期刊和AI开发者各自应承担的责任，呼吁建立明确的AI使用规范，确保科学诚信不受影响。"
     },
     {
       "sourceId": "nature",
@@ -5543,7 +5555,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：本文为实验室工作者提供情绪智力实用指南。高情商有助于科研团队沟通、缓解压力、处理冲突，提升研究效率。文章介绍了如何在日常科研中培养这项关键能力。"
+      "summary": "[交叉] 摘要：介绍如何在实验室中培养情商。文章提供实用指南，帮助科研人员管理情绪、建立良好人际关系，提升团队协作效率和工作幸福感。"
     },
     {
       "sourceId": "nature",
@@ -5554,7 +5566,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "生物",
-      "summary": "[生物] 摘要：研究发现，对基因组每个DNA字母进行突变筛选，结果出人意料。这项突破性实验揭示了基因功能的复杂性，同时暴露出AI在预测变异影响方面的局限性。"
+      "summary": "[生物] 摘要：研究逐字突变整个基因组后发现出乎意料的效果，同时揭示了当前AI预测模型的能力边界，提醒我们AI对复杂生物系统的理解仍有局限。"
     },
     {
       "sourceId": "nature",
@@ -5565,7 +5577,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：作者分享了高效阅读论文的四步法，无需逐篇精读也能掌握要点。通过筛选、速览、精读和整理，帮助科研人员在海量文献中快速提取关键信息，节省宝贵时间。"
+      "summary": "[交叉] 摘要：作者分享自己高效阅读科学论文的四步法，帮助科研人员在信息过载时代快速获取关键信息，不必逐篇精读也能掌握领域动态。"
     },
     {
       "sourceId": "nature",
@@ -5576,7 +5588,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "天文",
-      "summary": "[天文] 摘要：加拿大主动引进数十名美国学者，其中包括多位重量级科学家。这一人才争夺策略反映了国际科研环境的深刻变化，也凸显了学术自由对顶尖人才的重要吸引力。"
+      "summary": "[天文] 摘要：加拿大积极引进数十名美国学者，其中包括多位科学界明星。这一现象反映了国际人才流动趋势，也体现了加拿大对顶尖科研人才的重视。"
     },
     {
       "sourceId": "nature",
@@ -5587,7 +5599,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 1. 摘要：探讨人工智能是否会导致人类思维趋同化。研究发现AI生成内容可能削弱观点多样性，提醒我们在享受技术便利时保持独立思考和批判精神。"
+      "summary": "[交叉] 1. 摘要：探讨AI是否让我们思维趋同。文章警示，过度依赖AI可能削弱人类独立思考能力，导致观点同质化，呼吁保持思维多样性。"
     },
     {
       "sourceId": "nature",
@@ -5598,7 +5610,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：呼吁学术界重视阶段性成就的庆祝，从博士论文到终身教职。文章指出认可进步能提升科研幸福感与动力，建议营造更健康的学术文化氛围。"
+      "summary": "[交叉] 摘要：呼吁学术界重视庆祝成就，从论文答辩到获得终身教职，每个里程碑都值得肯定。文章强调庆祝能提升幸福感，促进学术生涯可持续发展。"
     },
     {
       "sourceId": "nature",
@@ -5609,7 +5621,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：全球蛇咬伤规模首次被系统估算。研究揭示每年数百万人遭蛇咬，数十万人死亡或致残，呼吁加强防护措施与抗蛇毒血清供应保障。"
+      "summary": "[交叉] 摘要：全球蛇咬伤规模首次被系统估算。研究揭示每年数百万人遭蛇咬，数十万人死亡或致残，呼吁加强蛇伤防治和抗蛇毒血清的可及性。"
     },
     {
       "sourceId": "nature",
@@ -5620,7 +5632,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：研究将实验室划分为不同原型类型，提出深入了解自身实验室特点，可帮助研究者选择恰当的AI工具，从而有效提升科研效率与团队协作模式。"
+      "summary": "[交叉] 摘要：实验室文化各有特色，可分为不同类型。了解自己实验室的“原型”有助于更有效地引入和使用AI工具，提升科研效率，避免盲目跟风。"
     },
     {
       "sourceId": "nature",
@@ -5631,7 +5643,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "物理",
-      "summary": "[物理] 摘要：探讨混沌系统中秩序如何涌现的深层物理机制。科学家质疑现有物理定律是否足以解释这类复杂现象，可能预示着全新物理原理的诞生。"
+      "summary": "[物理] 摘要：物理学家探讨“从无序中产生有序”是否需要新物理定律。文章分析现有理论的局限，思考如何解释宇宙中自发涌现的秩序和复杂性。"
     },
     {
       "sourceId": "nature",
@@ -5642,7 +5654,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 1. 国际标准时间取消闰秒，改用约五十年一次的闰时。闰秒需频繁调整，闰时更省事，可减少对电脑和网络的干扰，但时钟与天文时间的差距会变大。"
+      "summary": "[交叉] 1. 摘要：闰秒废除，未来或引入闰时。地球自转不规则导致时间校准难题，科学家讨论改用更长时间单位调整时钟，相关工作获得广泛关注。"
     },
     {
       "sourceId": "nature",
@@ -5653,7 +5665,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 富裕人群为何更悲观？数据显示他们总觉得经济会变差，可能因关注通胀、税收和资产波动。这种悲观影响企业投资和消费，也让他们做决策时更保守。"
+      "summary": "[交叉] 摘要：数据显示富人往往更悲观。研究探讨财富与心态的关系，发现高收入者对未来经济前景常常持保守甚至负面看法，其背后心理机制值得深思。"
     },
     {
       "sourceId": "nature",
@@ -5664,7 +5676,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "医学",
-      "summary": "[医学] 人工智能被用于追踪动物传播的疾病，分析数据提前预警。但要阻止下一场大流行，还需全球数据共享与合作。AI是重要工具，却不是万能药。"
+      "summary": "[医学] 摘要：人工智能正被用于追踪人畜共患病，通过分析野生动物、家畜和人类数据预警疫情。技术虽有望助力防控，但仍需解决数据偏差等问题，才能更好预防下一次大流行病。"
     },
     {
       "sourceId": "nature",
@@ -5675,7 +5687,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "能源",
-      "summary": "[能源] NASA发射罗曼太空望远镜，探索暗能量之谜。它将精确测量宇宙膨胀，帮助科学家判断暗能量本质。这是研究宇宙历史与未来的重要一步。"
+      "summary": "[能源] 摘要：美国宇航局发射罗曼太空望远镜，旨在破解暗能量之谜。该望远镜将观测遥远星系，帮助科学家理解宇宙膨胀加速的原因，对宇宙学研究意义重大。"
     },
     {
       "sourceId": "nature",
@@ -5686,7 +5698,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 多莉·帕顿是乡村歌手，她资助的医学研究推动了莫德纳疫苗开发。她的善举给病毒研究带来关键支持，在科学史上留下了印记。"
+      "summary": "[交叉] 摘要：简报：多莉·帕顿因资助莫德纳新冠疫苗研究而在科学领域留下印记。她的捐款支持了关键科研，展现名人参与科学事业的另一种方式，影响深远。"
     },
     {
       "sourceId": "nature",
@@ -5697,7 +5709,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 1. 摘要：本文简要推荐了几本新书，涵盖深海奥秘、人工智能友谊等主题，帮助读者快速了解科学前沿与人文思考。"
+      "summary": "[交叉] 1. 摘要：本文简要推荐了几本关于深海奥秘和AI友谊的新书，探讨海洋未知与人工智能情感联系等话题，适合对科学人文交叉主题感兴趣的读者。"
     },
     {
       "sourceId": "nature",
@@ -5708,7 +5720,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "医学",
-      "summary": "[医学] 摘要：Moderna癌症疫苗展现希望，但需加快个性化疗法研发。文章探讨技术挑战与未来方向，呼吁加速推进。"
+      "summary": "[医学] 摘要：Moderna的个性化癌症疫苗展现治疗希望，但文章呼吁加速相关个性化疗法的研发和普及，使更多癌症患者能够尽快受益。"
     },
     {
       "sourceId": "nature",
@@ -5719,7 +5731,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：讣告纪念数学家广中平祐，他简化了几何中的复杂问题，其“奇点解消”理论影响深远。"
+      "summary": "[交叉] 摘要：这篇讣告纪念数学家广中平祐，他因解决代数几何中的奇点消解难题而著名，极大简化了复杂几何问题，对数学发展影响深远。"
     },
     {
       "sourceId": "nature",
@@ -5730,7 +5742,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：Meta新措施旨在保护儿童社媒安全，但研究者表示怀疑，认为其实际效果有限，需更严格监管。"
+      "summary": "[交叉] 摘要：Meta公司近期推出保护儿童社交媒体安全的举措，但研究人员对其实际效果持怀疑态度，认为需要更严格的监管和独立验证才能真正奏效。"
     },
     {
       "sourceId": "nature",
@@ -5741,7 +5753,7 @@
       "category": "research",
       "source": "Nature",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：AI时代雇主看重哪些技能？文章提出四种培养途径，帮助人才适应智能技术驱动的就业市场变化。"
+      "summary": "[交叉] 摘要：文章探讨了AI时代雇主看重的能力，如批判性思维和创造力，并提出四种培养途径，帮助人们适应快速变化的就业市场。"
     },
     {
       "sourceId": "science",
@@ -5752,7 +5764,7 @@
       "category": "research",
       "source": "Science",
       "meta": "生物",
-      "summary": "[生物] 1. 摘要：本文回顾了镰状细胞病发现以来的研究历程，从分子机制到治疗突破，并展望基因编辑等新兴疗法，为彻底治愈这种遗传病带来新希望。"
+      "summary": "[生物] 1. 摘要：回顾了镰状细胞病的历史，并展望了未来治疗方向，帮助读者了解这种遗传疾病的过去与最新进展。"
     },
     {
       "sourceId": "science",
@@ -5763,7 +5775,7 @@
       "category": "research",
       "source": "Science",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：本文纪念农业科学家斯瓦米纳坦的贡献，他通过高产品种和农业政策推动绿色革命，让印度实现粮食自给自足，并反思其理念对全球粮食安全的启示。"
+      "summary": "[交叉] 摘要：讲述了斯瓦米纳坦如何通过农业科技革新，让印度摆脱饥荒，被誉为“养活印度的人”的传奇故事。"
     },
     {
       "sourceId": "science",
@@ -5774,7 +5786,7 @@
       "category": "research",
       "source": "Science",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：传统晶体管存在能耗极限，本文展示的隧道场效应晶体管利用量子隧穿突破这一理论限制，实现更快、更节能的器件性能，为未来低功耗电子设备开辟新道路。"
+      "summary": "[交叉] 摘要：新型隧道晶体管突破了传统物理极限，能以更低电压工作，有望让芯片更快、更省电，推动电子设备升级。"
     },
     {
       "sourceId": "science",
@@ -5785,7 +5797,7 @@
       "category": "research",
       "source": "Science",
       "meta": "生物",
-      "summary": "[生物] 摘要：研究发现自闭症相关基因突变会扰乱蛋白质间的相互作用网络，进而影响神经发育。这一成果揭示了疾病的新机制，可能为治疗提供关键靶点。"
+      "summary": "[生物] 摘要：研究发现自闭症相关突变会打乱蛋白质间的相互作用网络，从而影响大脑发育，为理解病因和开发疗法提供新线索。"
     },
     {
       "sourceId": "science",
@@ -5796,7 +5808,7 @@
       "category": "research",
       "source": "Science",
       "meta": "化学",
-      "summary": "[化学] 摘要：本文介绍一种新方法，用非病毒载体递送化学修饰的tRNA，跳过致病突变恢复蛋白质合成，在实验中成功恢复功能，为囊性纤维化等遗传病治疗提供了新思路。"
+      "summary": "[化学] 摘要：一种非病毒载体能安全递送化学修饰的tRNA，修复囊性纤维化中的基因突变，为治疗这类遗传病带来新希望。"
     },
     {
       "sourceId": "science",
@@ -5807,7 +5819,7 @@
       "category": "research",
       "source": "Science",
       "meta": "交叉",
-      "summary": "[交叉] 1. 摘要：研究发现基因组本身的某些特征会影响性染色体的进化方向，这有助于我们理解动物性别决定机制是如何形成的。"
+      "summary": "[交叉] 1. 摘要：研究发现基因组的某些特征会影响性染色体进化的方向，为理解性别决定机制和生物演化提供了新线索。"
     },
     {
       "sourceId": "science",
@@ -5818,7 +5830,7 @@
       "category": "research",
       "source": "Science",
       "meta": "生物",
-      "summary": "[生物] 摘要：水稻杂交不育是由三个基因之间的“冲突”控制的。这项研究揭示了基因相互作用如何影响作物育种，为改良水稻品种提供了新思路。"
+      "summary": "[生物] 摘要：研究揭示水稻中存在由三部分基因组成的冲突系统，它控制杂交不育现象，有助于解决杂交育种中的难题。"
     },
     {
       "sourceId": "science",
@@ -5829,7 +5841,7 @@
       "category": "research",
       "source": "Science",
       "meta": "材料",
-      "summary": "[材料] 摘要：研究人员开发出新方法，直接在二维半导体表面蒸发单晶金属作为接触电极，从而显著提升器件性能，推动了未来微型电子设备的发展。"
+      "summary": "[材料] 摘要：研究人员开发出直接蒸发单晶金属接触的新方法，用于二维半导体器件，可大幅提升电子设备性能。"
     },
     {
       "sourceId": "science",
@@ -5840,7 +5852,7 @@
       "category": "research",
       "source": "Science",
       "meta": "AI/计算",
-      "summary": "[AI/计算] 摘要：研究团队研制出一种新型高光谱芯片系统，能实时进行视频成像分析，体积小、效率高，有望应用于医疗诊断、农业监测等领域。"
+      "summary": "[AI/计算] 摘要：团队研制出“超视觉”芯片级高光谱微系统，能实时在线进行视频速率计算成像，让光谱检测更快速便捷。"
     },
     {
       "sourceId": "science",
@@ -5851,7 +5863,7 @@
       "category": "research",
       "source": "Science",
       "meta": "材料",
-      "summary": "[材料] 摘要：科学家开发出新型无铅钙钛矿发光二极管，既保持高效发光又具有长使用寿命，避免了铅污染，为绿色显示和照明技术开辟了新道路。"
+      "summary": "[材料] 摘要：科学家研发出高效且寿命长的无铅钙钛矿发光二极管，既环保又稳定，为下一代显示和照明技术铺平道路。"
     },
     {
       "sourceId": "science",
@@ -5862,7 +5874,7 @@
       "category": "research",
       "source": "Science",
       "meta": "交叉",
-      "summary": "[交叉] 1. 摘要：研究发现降糖药SGLT2抑制剂能激活心脏中的泛酸激酶，这可能解释了该药物对心脏的保护作用，为心血管疾病治疗提供新思路。"
+      "summary": "[交叉] 1. 摘要：研究发现降糖药SGLT2抑制剂能激活人类心脏中的泛酸激酶，这可能是其保护心脏的关键机制，为心血管疾病防治开辟了新方向。"
     },
     {
       "sourceId": "science",
@@ -5873,7 +5885,7 @@
       "category": "research",
       "source": "Science",
       "meta": "生物",
-      "summary": "[生物] 摘要：研究揭示肠道细胞从一种死亡方式转向另一种死亡方式的信号通路是炎症性肠病的关键机制，为开发新疗法提供了重要靶点。"
+      "summary": "[生物] 摘要：研究揭示了炎症性肠病中一种从坏死性凋亡转向凋亡的信号机制。这一发现有助于理解肠道炎症的发病原理，为开发新的治疗手段提供了重要线索。"
     },
     {
       "sourceId": "science",
@@ -5884,7 +5896,7 @@
       "category": "research",
       "source": "Science",
       "meta": "地球/环境",
-      "summary": "[地球/环境] 摘要：研究分析了加拿大西部注水诱发地震的前震特征和破裂起始过程，有助于更准确评估注水作业引发地震的风险，提升地震预测能力。"
+      "summary": "[地球/环境] 摘要：研究分析了加拿大西部注水诱发地震的前震特征，发现前震活动与破裂起始密切相关。这有助于改进地震预警，降低页岩气开采等工业活动的地震风险。"
     },
     {
       "sourceId": "science",
@@ -5895,7 +5907,7 @@
       "category": "research",
       "source": "Science",
       "meta": "能源",
-      "summary": "[能源] 摘要：研究发现通过冷热循环处理可以让钛酸盐铁电薄膜吸收氮元素，大幅提高其储能密度，为制造更高效电容器提供了简便新方法。"
+      "summary": "[能源] 摘要：研究通过冷热循环处理在钛酸铁电薄膜中引入氮元素，显著提高了储能密度。这一简单方法有望提升电容器性能，推动储能设备的小型化和高效化。"
     },
     {
       "sourceId": "science",
@@ -5906,7 +5918,7 @@
       "category": "research",
       "source": "Science",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：研究开发了一种以铁为催化剂的新方法，通过巧妙组合酯和卡宾分子一步构建环丙烷结构，为药物合成提供了更绿色高效的途径。"
+      "summary": "[交叉] 摘要：化学家利用铁催化剂，将一种酯与两个卡宾分子依次偶联，成功构建出环丙烷结构。该新方法避免了贵金属，为药物合成提供了更经济环保的路径。"
     },
     {
       "sourceId": "science",
@@ -5917,7 +5929,7 @@
       "category": "research",
       "source": "Science",
       "meta": "交叉",
-      "summary": "[交叉] 1. 摘要：斑马鱼脑中的感觉处理像分层流水线，低级区域先提取简单特征，高级区域再整合成复杂信息。这项研究揭示了类似人脑丘脑-皮层的组织方式，为理解感觉加工的基本原理提供了新视角。"
+      "summary": "[交叉] 1. 摘要：研究发现斑马鱼拥有类似哺乳动物丘脑-皮层的层级回路，感觉信息在脑内逐级处理。这有助于理解大脑基本运作原理，为研究神经疾病提供模型。"
     },
     {
       "sourceId": "science",
@@ -5928,7 +5940,7 @@
       "category": "research",
       "source": "Science",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：科学家用祖先重组图技术，从现代人DNA中精准识别出远古人类（如尼安德特人）混入的基因片段。该方法比传统检测更灵敏，有助于厘清人类演化史中基因交流的细节和功能影响。"
+      "summary": "[交叉] 摘要：通过祖先重组图技术，科学家从当代人类DNA中识别出古代人类（如尼安德特人）混血的遗传痕迹，揭示人类进化历史。该方法有助于更精准地追踪基因流动。"
     },
     {
       "sourceId": "science",
@@ -5939,7 +5951,7 @@
       "category": "research",
       "source": "Science",
       "meta": "生物",
-      "summary": "[生物] 摘要：研究利用深度学习设计出自然界不存在的RNA假结结构。模型能预测序列折叠成特定形状，成功生成稳定且功能可用的RNA，为合成生物学和RNA药物开发提供了新工具。"
+      "summary": "[生物] 摘要：研究人员开发深度学习模型，可从头设计RNA假结，这是RNA折叠的重要结构。这项技术有望用于创造新型RNA工具和药物，推动合成生物学发展。"
     },
     {
       "sourceId": "science",
@@ -5950,7 +5962,7 @@
       "category": "research",
       "source": "Science",
       "meta": "生物",
-      "summary": "[生物] 摘要：本期“其他期刊”栏目汇总了多学科亮点研究，涵盖生态、医学、物理等领域的新发现。这些简讯帮助读者快速了解当前科学前沿动态，拓宽知识视野，适合跨学科兴趣者浏览。"
+      "summary": "[生物] 摘要：这篇是Science杂志的“其他期刊”专栏，精选并简述了各领域的重要研究进展，帮助读者快速了解跨学科的最新科学发现。"
     },
     {
       "sourceId": "science",
@@ -5961,7 +5973,7 @@
       "category": "research",
       "source": "Science",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：一篇关于科研人员心理健康的个人叙事，作者分享了在照料他人（如学生或家人）的同时，如何兼顾自我关怀。文章强调平衡工作与生活的重要性，呼吁学术环境关注研究者自身的身心健康。"
+      "summary": "[交叉] 摘要：文章讨论在照护他人的同时如何关注自身心理健康，强调自我关怀的重要性。作者分享了个人经验与建议，提醒照护者也要照顾好自己。"
     },
     {
       "sourceId": "science",
@@ -5972,7 +5984,7 @@
       "category": "research",
       "source": "Science",
       "meta": "交叉",
-      "summary": "[交叉] 1. 摘要：皱纹研究迎来新视角，不再停留于表面。本文探讨如何从更深层次理解皮肤老化，为抗衰老和护肤提供新的科学思路和潜在应用方向。"
+      "summary": "[交叉] 1. 皮肤皱纹只是表面现象。本文探讨皱纹背后更深层的衰老机制，提出从细胞和分子水平理解并延缓皮肤老化的全新视角，为护肤和医学研究开辟新方向。"
     },
     {
       "sourceId": "science",
@@ -5983,7 +5995,7 @@
       "category": "research",
       "source": "Science",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：科学家利用微弱的相互作用力，成功实现原子的有序排列。这项技术突破为纳米材料制造和量子器件的精准构建开辟了更简便、可控的新途径。"
+      "summary": "[交叉] 研究人员利用弱相互作用实现对原子的精准排列，探索在分子尺度上构建有序结构的新方法，为纳米技术和材料科学的发展提供新的可能性。"
     },
     {
       "sourceId": "science",
@@ -5994,7 +6006,7 @@
       "category": "research",
       "source": "Science",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：传统运输方式可能不是最优解。本文提出重新思考货物与载体的设计理念，以突破现有递送系统的限制，在药物输送和材料工程领域带来革命性改进。"
+      "summary": "[交叉] 药物研发需要同时关注治疗分子和运输载体。本文主张重新审视这两者的设计思路，创新性地优化负载与递送系统，以提升治疗效果并减少副作用。"
     },
     {
       "sourceId": "science",
@@ -6005,7 +6017,7 @@
       "category": "research",
       "source": "Science",
       "meta": "生物",
-      "summary": "[生物] 摘要：RNA结构预测的困难如同解不开的绳结。本文关注这一计算生物学难题，探讨如何改良现有算法，从而更准确地预测RNA三维结构，助力疾病研究和药物开发。"
+      "summary": "[生物] RNA分子的三维结构预测是生物学难题，其复杂的折叠方式让计算变得异常困难。本文讨论这一挑战并探索新的预测方法，有望推动RNA相关研究和药物开发。"
     },
     {
       "sourceId": "science",
@@ -6016,7 +6028,7 @@
       "category": "research",
       "source": "Science",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：苏丹埃尔奥贝德地区战火持续，公共卫生系统濒临崩溃。本文发出紧急呼吁，恳请国际社会提供医疗援助与物资支持，避免当地民众陷入更大的人道危机。"
+      "summary": "[交叉] 苏丹埃尔奥贝德市在战火中挣扎，公共卫生系统濒临崩溃。本文呼吁国际社会紧急提供医疗资源和援助，帮助当地民众度过生存危机，重建基本医疗保障。"
     },
     {
       "sourceId": "science",
@@ -6027,7 +6039,7 @@
       "category": "research",
       "source": "Science",
       "meta": "地球/环境",
-      "summary": "[地球/环境] 1. 沙漠地区出现洪水，暴露了当前气候变化应对措施的不足。这提醒我们，极端天气可能出现在意想不到的地方，需要更全面的防灾准备。"
+      "summary": "[地球/环境] 1. 沙漠中出现洪水，暴露了气候适应规划的重大缺口。研究呼吁，面对日益极端的天气，必须加快建设适应气候变化的设施和应急体系。"
     },
     {
       "sourceId": "science",
@@ -6038,7 +6050,7 @@
       "category": "research",
       "source": "Science",
       "meta": "交叉",
-      "summary": "[交叉] 深海采矿的进展速度已超过科学研究和法律制定。文章呼吁在了解生态影响和建立规则之前，应谨慎推进相关活动，避免不可逆的损害。"
+      "summary": "[交叉] 深海采矿的发展速度，已经远远超过相关科学研究和法律体系的建立，对海洋生态构成严重威胁。论文呼吁各国尽快采取行动，完善法规，避免不可逆的破坏。"
     },
     {
       "sourceId": "science",
@@ -6049,7 +6061,7 @@
       "category": "research",
       "source": "Science",
       "meta": "交叉",
-      "summary": "[交叉] 本文为研究“植物根系通过感知局部酸碱度来避开腐烂区域”的勘误。更正了原文中的某些内容，不影响主要结论。"
+      "summary": "[交叉] 本文是对研究论文《根系通过感知局部酸碱度梯度绕过腐烂区域》的更正声明，说明原文中部分内容或数据需要修正。"
     },
     {
       "sourceId": "science",
@@ -6060,7 +6072,7 @@
       "category": "research",
       "source": "Science",
       "meta": "交叉",
-      "summary": "[交叉] 研究探索了通过轨道操作改变原子或分子状态的方法，就像“炼金术”一样。这可能为材料科学和化学带来新的可能性。"
+      "summary": "[交叉] 研究展示了利用轨道相互作用实现元素转化的新方法，类似炼金术，为材料科学和化学合成带来新可能。"
     },
     {
       "sourceId": "science",
@@ -6071,7 +6083,7 @@
       "category": "research",
       "source": "Science",
       "meta": "交叉",
-      "summary": "[交叉] 珊瑚记录显示，全球变暖正在使厄尔尼诺现象增强。这意味着未来极端天气可能更频繁，需要加强应对气候变化的努力。"
+      "summary": "[交叉] 珊瑚记录显示全球变暖正在加强厄尔尼诺现象。研究通过分析珊瑚，揭示气候变暖对厄尔尼诺的影响，有助于预测未来气候。"
     },
     {
       "sourceId": "cell",
@@ -6082,7 +6094,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "生物",
-      "summary": "[生物] 1. 摘要：植物光合作用产生的有害物质会抑制光合作用，研究发现一种小蛋白MBS1能在叶绿体表面形成凝聚体，像防晒霜一样保护植物免受强光伤害。"
+      "summary": "[生物] 1. 研究发现MBS1蛋白能感知光合作用产生的单线态氧，在叶绿体表面形成凝聚体，像防晒霜一样保护叶绿体免受强光伤害，维持光合作用效率。"
     },
     {
       "sourceId": "cell",
@@ -6093,7 +6105,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "生物",
-      "summary": "[生物] 摘要：研究揭示了肿瘤铜死亡与免疫系统的相互促进机制：铜死亡肿瘤细胞能激活免疫细胞，而免疫细胞分泌的物质又增强肿瘤对铜死亡的敏感性，形成抗癌正反馈循环。"
+      "summary": "[生物] 研究发现铜死亡肿瘤细胞能激活树突状细胞和CD8⁺T细胞，而T细胞分泌的干扰素-γ又增强肿瘤细胞对铜死亡的敏感性，形成自我强化的抗癌免疫循环。"
     },
     {
       "sourceId": "cell",
@@ -6104,7 +6116,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "生物",
-      "summary": "[生物] 摘要：本文提出神经退行性疾病的根本问题在于神经与免疫系统对话失调，未来治疗方向应是恢复两者正常交流，而非单纯清除蛋白聚集物。"
+      "summary": "[生物] 本文综述了免疫系统驱动神经退行性疾病的新证据，主张治疗重点应从清除蛋白聚集体转向修复神经与免疫系统之间的对话，为神经退行性疾病治疗开辟新方向。"
     },
     {
       "sourceId": "cell",
@@ -6115,7 +6127,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：本文为科学家提供了六项实用建议，帮助其利用现代媒体和新兴传播渠道有效触达大众，鼓励各领域科研人员积极践行科普实践。"
+      "summary": "[交叉] 本文提出六项实用策略，帮助科学家利用现代媒体和新兴渠道有效开展科普，鼓励各学科各阶段的科研人员主动面向公众传播科学知识，扩大科学影响力。"
     },
     {
       "sourceId": "cell",
@@ -6126,7 +6138,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "生物",
-      "summary": "[生物] 摘要：研究发现MBS1蛋白能感应有害氧分子并组装成凝聚体附着在叶绿体表面，如同天然防晒屏障，保护植物在强光下免受损伤。"
+      "summary": "[生物] 研究表明保守蛋白MBS1能在叶绿体表面组装成凝聚体，通过感知单线态氧来屏蔽过量光照，帮助植物耐受强光环境，揭示了一种新型的叶绿体光保护机制。"
     },
     {
       "sourceId": "cell",
@@ -6137,7 +6149,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "地球/环境",
-      "summary": "[地球/环境] 1. 研究发现一个被驯化选择的增强子，能优化玉米的光合产物和氮素分配，提高收获指数和产量，揭示了玉米驯化中提高产量的生理机制。"
+      "summary": "[地球/环境] 1. 研究发现一个被驯化选择的增强子通过优化碳氮分配，提升玉米收获指数和产量，揭示了驯化提高产量的生理机制。"
     },
     {
       "sourceId": "cell",
@@ -6148,7 +6160,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "生物",
-      "summary": "[生物] 研究构建了苦荞泛基因组，鉴定出野生特有基因FtRNH赋予高海拔适应能力，以及控制籽粒大小的FtPLATZ变异，通过聚合优良等位基因培育出高海拔适应性强且高产的苦荞品种。"
+      "summary": "[生物] 研究构建了苦荞泛基因组，鉴定出野生特有基因FtRNH和FtPLATZ变异，分别赋予高海拔适应性和控制籽粒大小，培育出高海拔优良品系。"
     },
     {
       "sourceId": "cell",
@@ -6159,7 +6171,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "生物",
-      "summary": "[生物] 研究揭示朊病毒样蛋白自组装能可逆切换基因组维护通路，帮助细胞在快速适应和环境压力下产生药物耐药性，为理解快速进化提供了新机制。"
+      "summary": "[生物] 研究揭示基于朊病毒的蛋白质自组装可逆调控基因组维持通路，帮助细胞快速适应环境并产生耐药性，为理解快速进化提供新视角。"
     },
     {
       "sourceId": "cell",
@@ -6170,7 +6182,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "生物",
-      "summary": "[生物] 研究提出DANDELION方法，通过因果中介分析优先识别疾病驱动基因，在哮喘中发现两个蛋白质棕榈酰化酶，揭示了一个新的可治疗靶点通路。"
+      "summary": "[生物] 研究提出新框架DANDELION，可识别被现有方法遗漏的疾病驱动基因。应用于哮喘，发现两个棕榈酰化酶，揭示潜在治疗新靶点。"
     },
     {
       "sourceId": "cell",
@@ -6181,7 +6193,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "生物",
-      "summary": "[生物] 研究揭示了组织再生中，细胞通过感知密度变化产生异质性，再由FOXA1整合机械信号与Delta-Notch信号，将暂时性细胞变化转化为稳定的肠道空间结构。"
+      "summary": "[生物] 研究揭示组织再生中，细胞通过机械感受器YAP1和FOXA1整合Delta-Notch信号，将瞬时的细胞异质性转化为稳定的肠道空间结构。"
     },
     {
       "sourceId": "cell",
@@ -6192,7 +6204,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "交叉",
-      "summary": "[交叉] 1. 大脑皮层连接网络的复杂结构源于何规律？研究发现，其拓扑和区域结构受几何物理法则约束，一种神经场模型揭示：连接优先促进共振本征模的激发，为理解大脑结构形成提供新视角。"
+      "summary": "[交叉] 1. 摘要：大脑皮层连接网络的复杂结构源于几何约束，神经网络模型发现连接优化了共振模式的激发，为理解大脑拓扑提供物理基础。"
     },
     {
       "sourceId": "cell",
@@ -6203,7 +6215,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "生物",
-      "summary": "[生物] 理解他人动作常被认为依赖镜像机制，但人脑直接证据稀缺。本研究记录四肢瘫患者的神经元活动，发现运动和后顶叶皮层采用层级化、情境依赖的编码方式，而非简单镜像。"
+      "summary": "[生物] 摘要：通过记录四肢瘫痪患者单个神经元活动，发现人脑运动区和顶叶皮层以层级、情境依赖方式编码他人动作，而非简单镜像。"
     },
     {
       "sourceId": "cell",
@@ -6214,7 +6226,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "交叉",
-      "summary": "[交叉] 慢性膀胱感染通过IL-6激活PIEZO1机械感知通道，引发谷氨酸介导的痛觉神经过度生长，导致持续性疼痛。该研究揭示了一条连接上皮应激与慢性内脏痛的关键神经上皮通路。"
+      "summary": "[交叉] 摘要：慢性膀胱感染激活PIEZO1机械感受，引发谷氨酸介导的神经过度支配和持续疼痛，揭示了上皮应激到慢性内脏痛的神经上皮通路。"
     },
     {
       "sourceId": "cell",
@@ -6225,7 +6237,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "生物",
-      "summary": "[生物] 复发性胶质母细胞瘤患者接受一次脑室内CAR T细胞治疗后，体内免疫环境发生重构：细胞毒性NK细胞扩增预示生存期延长，而调节性T细胞和吞噬性髓系细胞增多则预示预后不良。"
+      "summary": "[生物] 摘要：复发性胶质母细胞瘤患者接受单次CAR-T治疗后，体内免疫系统发生剂量依赖重塑：NK细胞扩增预示生存期延长，而Treg和巨噬细胞增多则预后不良。"
     },
     {
       "sourceId": "cell",
@@ -6236,7 +6248,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "生物",
-      "summary": "[生物] 研究发现铜死亡与抗肿瘤免疫存在双向调控：CD8⁺T细胞释放的IFN-γ增强肿瘤对铜死亡的敏感性。联合PD-L1阻断可放大这一效应，有效杀死肿瘤细胞并克服免疫治疗耐药。"
+      "summary": "[生物] 摘要：研究发现铜死亡与抗肿瘤免疫形成双向调节：CD8⁺T细胞分泌的干扰素γ增强肿瘤对铜死亡的敏感性，联合PD-L1阻断可增强杀伤效果，克服免疫治疗耐药。"
     },
     {
       "sourceId": "cell",
@@ -6247,7 +6259,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "生物",
-      "summary": "[生物] 1. 摘要  \n该研究将粒细胞-单核细胞祖细胞发展为可再生的工程化髓系细胞治疗平台，并提出CAR-Fc策略，将直接靶向肿瘤与激活宿主抗原提呈细胞相结合。"
+      "summary": "[生物] 1. 摘要  \n该研究将粒细胞-单核细胞祖细胞作为可再生平台用于工程化髓系细胞治疗，其CAR-Fc策略既能直接攻击肿瘤，又能激活宿主免疫细胞应答，为细胞免疫治疗提供新途径。"
     },
     {
       "sourceId": "cell",
@@ -6258,7 +6270,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "生物",
-      "summary": "[生物] 摘要  \nVIDA mRNA疗法利用病毒蛋白酶触发感染细胞裂解性死亡，既能清除被感染细胞，又能激活保护性免疫，从而实现广谱抗病毒治疗。"
+      "summary": "[生物] 摘要  \nVIDA mRNA疗法通过病毒蛋白酶触发受感染细胞裂解性死亡，清除病毒并激活保护性免疫，实现广谱抗病毒治疗，为应对多种病毒性疾病提供通用治疗策略。"
     },
     {
       "sourceId": "cell",
@@ -6269,7 +6281,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "生物",
-      "summary": "[生物] 摘要  \n研究构建了涵盖500多种病毒的约13000个条形码化病毒开放阅读框文库，可系统性筛选病毒调控宿主细胞增殖、抗原呈递和干扰素信号等功能。"
+      "summary": "[生物] 摘要  \n研究构建了涵盖500余种病毒、约1.3万个条形码标记的病毒基因文库，可在全病毒组范围进行功能筛选，系统解析宿主与病原体互作机制，为病毒致病机制研究提供规模化工具。"
     },
     {
       "sourceId": "cell",
@@ -6280,7 +6292,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "生物",
-      "summary": "[生物] 摘要  \neORFeome大型效应基因文库涵盖病毒蛋白和细菌、寄生虫分泌的效应蛋白，通过筛选找到能干扰NF-κB、p53、凋亡、STING等关键通路的病原效应因子。"
+      "summary": "[生物] 摘要  \n该研究建立eORFeome文库，系统收集病毒蛋白和细菌、寄生虫分泌的效应因子，通过筛选发现干扰NF-κB、p53等关键通路的病原因子，为系统揭示病原体致病功能提供强大平台。"
     },
     {
       "sourceId": "cell",
@@ -6291,7 +6303,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "生物",
-      "summary": "[生物] 摘要  \n研究通过多重证据反驳了骨内存在淋巴管内皮细胞的观点，证明其在正常骨和损伤修复中缺失，但在GLA/GSD疾病模型中活跃侵入骨组织。"
+      "summary": "[生物] 摘要  \n该研究用多项证据表明，健康骨骼和损伤修复中不存在淋巴管内皮细胞（与先前报道相反），但在疾病模型中它们会主动侵入骨骼，为理解骨骼疾病机制提供新视角。"
     },
     {
       "sourceId": "cell",
@@ -6302,7 +6314,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "生物",
-      "summary": "[生物] 1. 摘要：研究通过空间转录组、单细胞转录组和高分辨率成像证实骨骼中存在淋巴管，是骨骼微环境的重要组成部分，为识别和检测提供了方法。"
+      "summary": "[生物] 1. 摘要：本研究利用空间转录组学、单细胞测序和成像技术，证实骨淋巴系统是骨骼微环境的关键组成部分，并建立了识别与检测方法，为骨骼健康和治疗提供新思路。"
     },
     {
       "sourceId": "cell",
@@ -6313,7 +6325,7 @@
       "category": "research",
       "source": "Cell",
       "meta": "生物",
-      "summary": "[生物] 摘要：本研究基于结构设计了一种不引起心肌肥厚的爱帕琳肽受体调节剂，有望替代现有药物，为心血管疾病治疗提供更安全的策略。"
+      "summary": "[生物] 摘要：该研究基于受体结构设计出一种新型调节剂，能激活apelin信号但不会引起心肌肥厚，为相关疾病的治疗提供了更安全的选择。"
     },
     {
       "sourceId": "pnas",
@@ -6324,7 +6336,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：本刊概述了本期发表的论文亮点，涵盖生命科学、物理科学、环境科学等多个领域的重要研究进展，为读者提供快速概览内容。"
+      "summary": "[交叉] 摘要：本期杂志的“In This Issue”栏目精选了本期刊载的多项重要研究，涵盖生物、物理、社会等领域的最新突破，帮助读者快速了解全刊内容。"
     },
     {
       "sourceId": "pnas",
@@ -6335,7 +6347,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "生物",
-      "summary": "[生物] 摘要：研究发现，约三分之一的基孔肯雅病毒脑炎或脊髓炎病例由结合并中和一型干扰素的自身抗体所致，揭示了严重神经系统并发症的病因。"
+      "summary": "[生物] 摘要：研究发现，中和I型干扰素的自身抗体是约三分之一基孔肯雅病毒脑炎或脊髓炎病例的根本原因，为诊断和治疗提供重要线索。"
     },
     {
       "sourceId": "pnas",
@@ -6346,7 +6358,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "地球/环境",
-      "summary": "[地球/环境] 摘要：彼得·雷文是著名植物学家和进化生物学家，在协同进化、生态物种形成等领域做出开创性贡献，并积极推动全球生物多样性保护。"
+      "summary": "[地球/环境] 摘要：彼得·雷文是杰出的植物学家和进化生物学家，他在协同进化、生态物种形成等领域做出开创性贡献，并积极推动生物多样性保护。"
     },
     {
       "sourceId": "pnas",
@@ -6357,7 +6369,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "地球/环境",
-      "summary": "[地球/环境] 1. 研究指出，发展氢能基础设施虽旨在减碳，却可能无意中造成新的碳锁定效应，即长期依赖高碳路径。该发现提醒决策者在能源转型中需审慎规划，避免未来难以摆脱的碳排放风险。"
+      "summary": "[地球/环境] 1. 氢能常被视为清洁能源，但研究警告：改造现有天然气管道以适配氢气，可能延长化石燃料基础设施寿命，造成新的碳锁定，反而延缓脱碳进程。"
     },
     {
       "sourceId": "pnas",
@@ -6368,7 +6380,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "生物",
-      "summary": "[生物] 研究发现，大脑白质的功能连接能独立预测脑年龄、认知能力和精神疾病状况，其效果优于灰质连接。这一突破为理解大脑工作机制和早期诊断精神障碍提供了新的生物标志物。"
+      "summary": "[生物] 研究发现，大脑白质的功能连接可独立预测脑龄、认知能力与精神疾病，补充灰质连接无法提供的信息，为脑疾病早期诊断带来新思路。"
     },
     {
       "sourceId": "pnas",
@@ -6379,7 +6391,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "交叉",
-      "summary": "[交叉] 研究通过基因组测序发现，传统山羊奶酪发酵中的酵母菌已演化出适应乳制品环境的特殊基因痕迹。这些变异帮助酵母高效利用乳糖和脂肪，揭示了微生物在人工发酵环境下的进化奥秘，对食品工业有参考价值。"
+      "summary": "[交叉] 研究者对雅格诺布传统山羊奶酪中的酵母菌进行基因组测序，发现其基因组已适应乳制品发酵环境，为理解微生物适应新生态环境提供了重要线索。"
     },
     {
       "sourceId": "pnas",
@@ -6390,7 +6402,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "生物",
-      "summary": "[生物] 研究揭示了牛乳头瘤病毒短小蛋白E5如何劫持细胞受体PDGFRβ的分子机制，无需配体即可激活受体。该发现阐明了病毒感染导致细胞异常增殖的细节，为抗癌和抗病毒药物开发提供了新靶点。"
+      "summary": "[生物] 研究揭示了牛乳头瘤病毒的短蛋白E5如何无需配体就能劫持并激活细胞膜上的受体PDGFRβ，为病毒致癌机制提供了重要分子细节。"
     },
     {
       "sourceId": "pnas",
@@ -6401,7 +6413,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "生物",
-      "summary": "[生物] 研究发现，植物激素油菜素甾醇能通过调控特定转录因子，引起表观遗传修饰改变，从而抑制植物免疫反应。这一机制揭示了植物生长与防御的权衡策略，为培育抗病高产作物提供了新思路。"
+      "summary": "[生物] 研究发现，油菜素甾醇通过调控转录因子引发表观遗传改变，进而抑制植物免疫，这揭示了植物协调生长与抗病性的潜在新机制。"
     },
     {
       "sourceId": "pnas",
@@ -6412,7 +6424,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "生物",
-      "summary": "[生物] 1. 摘要：研究发现，瘤内注射趋化因子CXCL10能有效抑制头颈癌生长，通过增强免疫细胞进入肿瘤并激活攻击能力，为克服肿瘤免疫抑制提供了新策略。"
+      "summary": "[生物] 1. 肿瘤微环境中的免疫抑制是治疗难点。该研究利用CXCR3/CXCL10轴，通过瘤内注射CXCL10，增强免疫细胞向肿瘤内迁移和活化，从而抑制头颈鳞癌生长和复发，为克服免疫抑制提供新策略。"
     },
     {
       "sourceId": "pnas",
@@ -6423,7 +6435,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：研究揭示，新生儿期接触雌激素类环境污染物会破坏子宫细胞的极性和上皮状态，影响子宫正常发育，这解释了为何发育阶段对环境激素特别敏感。"
+      "summary": "[交叉] 新生儿期接触雌激素类环境内分泌干扰物会严重影响子宫发育，但机制不明。本研究揭示，这类暴露会破坏子宫上皮细胞的顶-基底极性，并引发部分上皮-间质转化，从而影响子宫正常发育。"
     },
     {
       "sourceId": "pnas",
@@ -6434,7 +6446,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：通过历史记录与现代分析技术结合，重新评估1820年马略卡岛瘟疫，发现它并非典型的腺鼠疫，可能属于其他传播方式的鼠疫类型，修正了传统认知。"
+      "summary": "[交叉] 在细菌学诞生之前，瘟疫如何传播一直依赖历史记载。本研究重新分析了1820年西班牙马略卡岛的瘟疫疫情，结合历史资料与现代技术，发现它并非典型的腺鼠疫，挑战了传统认知。"
     },
     {
       "sourceId": "pnas",
@@ -6445,7 +6457,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "化学",
-      "summary": "[化学] 摘要：研究发现VIA1蛋白通过VIPP1维持类囊体膜完整性，所有进行光合作用的生物都依赖这种膜，新机制有助于理解植物如何抵抗光照等环境压力。"
+      "summary": "[化学] 所有进行光合作用的生物都依赖类囊体膜，但它易受环境胁迫损伤。研究发现VIA1蛋白是维持类囊体膜完整性的关键调节因子，通过VIPP1发挥作用，为理解光合作用保护机制提供新线索。"
     },
     {
       "sourceId": "pnas",
@@ -6456,7 +6468,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：在印度尼西亚东南部岛屿出土的4000年前彩绘石板，显示南岛语系的绘画传统早于新石器陶器，为研究史前人类迁徙和文化传播提供了关键证据。"
+      "summary": "[交叉] 在印度尼西亚东南部的韦塔岛，考古学家发现了一块4000年前的彩绘匾额，上面绘有太阳光芒图案。这一发现表明，南岛绘画传统早于新石器时代的陶器，为研究南岛语族迁徙提供了新证据。"
     },
     {
       "sourceId": "pnas",
@@ -6467,7 +6479,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "生物",
-      "summary": "[生物] 1. 研究发现蓝藻中的羧基体外围组分不仅参与光合固碳，还调控糖原沉积，揭示了细菌微区室在碳代谢与能量储存之间的新联系。"
+      "summary": "[生物] 1. 研究发现蓝藻中一种外周羧基体组分能调控糖原沉积，帮助理解光合细菌如何储存能量，对生物技术应用有启示。"
     },
     {
       "sourceId": "pnas",
@@ -6478,7 +6490,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "生物",
-      "summary": "[生物] 研究表明小热休克蛋白在恰加斯病传播媒介体内调节消化生理和肠道稳态，影响病原体感染过程，为阻断疾病传播提供了新思路。"
+      "summary": "[生物] 研究表明小热休克蛋白在恰加斯病传播媒介的消化和肠道平衡中起关键作用，为控制该疾病传播提供新思路。"
     },
     {
       "sourceId": "pnas",
@@ -6489,7 +6501,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "物理",
-      "summary": "[物理] 研究通过温度和磁场调控CrPS4材料中的局域激子，揭示了范德华反铁磁体中自旋有序与多体电子态的关联，为二维磁性材料应用奠定基础。"
+      "summary": "[物理] 研究通过温度和磁场调控CrPS4材料中的局域激子，揭示了二维磁性材料中电子行为的可控性，对新型光电器件开发有意义。"
     },
     {
       "sourceId": "pnas",
@@ -6500,7 +6512,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "生物",
-      "summary": "[生物] 研究钾离子选择性光敏通道蛋白的离子流，发现激活态复合物存在多种电导状态，增进了对神经元光遗传学调控分子机制的理解。"
+      "summary": "[生物] 研究揭示钾离子选择性光通道蛋白存在多种电导状态，有助于理解神经元功能，推动光遗传学在神经系统疾病治疗中的应用。"
     },
     {
       "sourceId": "pnas",
@@ -6511,7 +6523,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "生物",
-      "summary": "[生物] 研究解析了人类p24货物受体的结构和作用机制，揭示了四个亚家族十个成员如何组装并介导早期分泌途径中的蛋白质运输。"
+      "summary": "[生物] 研究解析了人类p24货物受体的结构和作用机制，阐明了细胞内蛋白质运输的早期步骤，为相关疾病研究提供基础。"
     },
     {
       "sourceId": "pnas",
@@ -6522,7 +6534,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "生物",
-      "summary": "[生物] 1. 摘要：研究开发了一种靶向CXCR4的双重软化剂，既能软化肝纤维化的致密组织，又能诱导肝星状细胞衰老，从而缓解病情，为治疗提供新思路。"
+      "summary": "[生物] 1. 摘要：该研究开发了一种靶向CXCR4的双功能药物，能诱导活化的肝星状细胞衰老，从而减轻肝纤维化。这种\"促衰老\"疗法有望提升抗纤维化效果，为肝病患者带来新希望。"
     },
     {
       "sourceId": "pnas",
@@ -6533,7 +6545,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "化学",
-      "summary": "[化学] 摘要：研究人员对印度辛格布姆克拉通发现的微生物席遗迹进行了直接测年，证实其含有35亿年前的生物碳，为早期地球生命起源提供了重要证据。"
+      "summary": "[化学] 摘要：研究人员对印度辛格布姆地区微生物席遗迹中的有机碳进行直接定年，确认其形成于35亿年前。这一发现为理解地球早期生命起源与环境演化提供了关键证据。"
     },
     {
       "sourceId": "pnas",
@@ -6544,7 +6556,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "天文",
-      "summary": "[天文] 摘要：研究通过计算模拟发现，在系外行星极端的温度和压力下，金属与硅酸盐会相互混合而不分离，因此可能形成没有铁核的行星，颠覆了传统行星结构认知。"
+      "summary": "[天文] 摘要：计算机模拟发现，在系外行星极端高温高压环境下，金属与硅酸盐可互相混溶，导致部分岩石行星无法形成铁核。这颠覆了行星必有核的传统观点，对研究系外行星内部结构具有重要意义。"
     },
     {
       "sourceId": "pnas",
@@ -6555,7 +6567,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "化学",
-      "summary": "[化学] 摘要：研究利用蛋白质组学技术，分析了血清中针对诺如"
+      "summary": "[化学] 摘要：通过血清IgA蛋白质组学分析，研究揭示了人体抗诺如病毒的二聚体和单体IgA抗体的组成与中和机制，为解释血清IgA水平为何能预测抗诺如病毒保护力提供了分子依据。"
     },
     {
       "sourceId": "pnas",
@@ -6565,7 +6577,8 @@
       "publishedAt": "2026-08-17T07:00:00.000Z",
       "category": "research",
       "source": "PNAS",
-      "meta": "医学"
+      "meta": "医学",
+      "summary": "[医学] 摘要：研究开发了机电激活与恢复波成像新技术，用于评估小儿二尖瓣疾病。该方法能更精准地发现心脏异常电活动区域，有望提升诊断水平，降低心源性猝死风险。"
     },
     {
       "sourceId": "pnas",
@@ -6576,7 +6589,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "交叉",
-      "summary": "[交叉] 1. 摘要：研究揭示海鸟摄入塑料会降低其繁殖成功率和存活率，对种群产生负面影响，警示塑料污染对海洋生态的严重危害。"
+      "summary": "[交叉] 1. 研究发现，海洋鸟类摄入塑料会显著降低其繁殖成功率和存活率，对种群造成实质性威胁，说明塑料污染正从个体健康层面升级为种群生存危机，亟需加强治理。"
     },
     {
       "sourceId": "pnas",
@@ -6587,7 +6600,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "生物",
-      "summary": "[生物] 摘要：研究发现宿主细胞的基因修复机制可导致抗病毒核苷类似物耐药，这一发现为应对病毒耐药性和开发新药提供了重要线索。"
+      "summary": "[生物] 研究发现，宿主细胞的DNA修复机制竟能帮助病毒抵抗更昔洛韦等核苷类似物药物，这一新机制为解释抗病毒药物耐药性提供了重要线索，也启发优化临床治疗策略。"
     },
     {
       "sourceId": "pnas",
@@ -6598,7 +6611,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "能源",
-      "summary": "[能源] 摘要：最新研究从平带角度揭示了非晶固体中玻色峰的起源，这一异常现象长期未解，该成果加深了我们对非晶材料物理性质的理解。"
+      "summary": "[能源] 玻色峰是非晶固体中普遍存在的能量异常现象。研究从平带理论切入，提出了新的解释框架，加深了对无序材料振动本质的理解，对材料物理研究具有启发性。"
     },
     {
       "sourceId": "pnas",
@@ -6609,7 +6622,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "化学",
-      "summary": "[化学] 摘要：一项长期莱姆病生态研究发现，人类感染风险与白尾鹿数量和季节温度无关，颠覆传统认知，为疾病防控提供了全新方向。"
+      "summary": "[化学] 长期跟踪研究发现，莱姆病传播风险与白尾鹿数量和季节温度并无直接关系，这一出乎意料的结论挑战了传统认知，为优化疾控策略和公众防护指导提供了新依据。"
     },
     {
       "sourceId": "pnas",
@@ -6620,7 +6633,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "交叉",
-      "summary": "[交叉] 摘要：研究发现，长期心理社会压力是导致睡眠呼吸暂停发生的重要诱因，在大鼠和人类中均得到证实，为预防和治疗提供了新思路。"
+      "summary": "[交叉] 研究表明，长期心理社会压力是睡眠呼吸暂停的重要诱因。这一发现揭示了压力与呼吸障碍之间的深层联系，为理解发病机制、改进预防和治疗方法开辟了新方向。"
     },
     {
       "sourceId": "pnas",
@@ -6631,7 +6644,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "生物",
-      "summary": "[生物] 1. 摘要  \nhERG1a/1b是心脏钾通道的关键组成部分，其亚基比例直接影响功能。研究发现内质网滞留信号能控制亚基装配比例，确保形成正确的通道组成，为理解离子通道的组装调控提供了新视角。"
+      "summary": "[生物] 1. 摘要\n研究发现内质网滞留信号控制hERG1a/1b钾通道亚基的组装比例，而亚基比例直接影响通道功能。该机制揭示了离子通道如何维持正确组成，为心律失常相关研究提供新线索。"
     },
     {
       "sourceId": "pnas",
@@ -6642,7 +6655,7 @@
       "category": "research",
       "source": "PNAS",
       "meta": "生物",
-      "summary": "[生物] 摘要  \nSTIM1位于内质网，负责感知钙离子浓度变化并调控钙内流。该研究揭示了STIM1在钙离子减少时发生的结构重排，阐明了它被激活的具体机制，对了解细胞钙信号调控有重要意义。"
+      "summary": "[生物] 摘要\n研究揭示了内质网钙离子耗尽时STIM1蛋白的结构重排机制。STIM1作为钙传感器调控钙库操作性钙内流，对众多生理过程至关重要。该发现为理解钙信号传导和相关疾病提供了分子基础。"
     }
   ]
 }
